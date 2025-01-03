@@ -526,9 +526,9 @@
                             cellSize: cellSize, 
                             splitLine: { lineStyle: { color: '#E0E0E0', width: 1 } }, 
                             itemStyle: { borderWidth: 1, borderColor: '#E0E0E0' }, 
-                            dayLabel: { show: true },
+                            dayLabel: { show: false },
                             monthLabel: { show: true },
-                            yearLabel: { show: false }, // 隐藏年份标签
+                            yearLabel: { show: false },
                         },
                         visualMap: { 
                             min: 0, 
@@ -540,7 +540,7 @@
                             inRange: { color: ["#ACE7AE","#69C16D","#549F57"] } // 使用 heatmapColors
                         },
                         legend: {
-                            // type: 'scroll', // 滚动图例
+                            type: 'scroll', // 滚动图例
                             data: years, // 显示所有年份
                             orient: 'vertical', // 垂直排列
                             right: '5%', // 放在右边
