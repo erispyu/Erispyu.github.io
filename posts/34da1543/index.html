@@ -579,7 +579,7 @@
                             itemHeight: 20, // 色块高度
                             itemGap: 10, // 图例项之间的间距
                             selectedMode: 'single', // 单选模式
-                            selected: { [latestYear]: true } // 默认选中最新年份
+                            selected: {}, // 默认不选中
                         },
                         series: years.map(year => ({
                             type: 'heatmap',
