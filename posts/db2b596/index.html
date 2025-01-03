@@ -32,8 +32,8 @@
 <meta property="article:modified_time" content="2025-01-02T15:59:21.526Z">
 <meta property="article:author" content="Erispyu">
 <meta property="article:tag" content="2024">
-<meta property="article:tag" content="政治军事-政治">
 <meta property="article:tag" content="李光耀">
+<meta property="article:tag" content="政治军事-政治">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://cdn.weread.qq.com/weread/cover/79/cpplatform_wdghcvhzndnxtmgbbdm5dg/t7_cpplatform_wdghcvhzndnxtmgbbdm5dg1698833759.jpg">
 
@@ -216,17 +216,17 @@
       </a>
     </li>
     <li class="popular-posts-item">
-      <a class="popular-posts-link" href="/posts/d7b52ab1/" rel="bookmark">
-        <time class="popular-posts-time">2023-12-01</time>
-        <br>
-      中国历代政治得失
-      </a>
-    </li>
-    <li class="popular-posts-item">
       <a class="popular-posts-link" href="/posts/435a3825/" rel="bookmark">
         <time class="popular-posts-time">2023-11-07</time>
         <br>
       中苏关系史纲：1917～1991年中苏关系若干问题再探讨（第3版）（全2册）（社科文献学术文库·文史哲研究系列）
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/posts/6fd4a82f/" rel="bookmark">
+        <time class="popular-posts-time">2023-12-27</time>
+        <br>
+      马克思恩格斯列宁斯大林论妇女
       </a>
     </li>
     <li class="popular-posts-item">
@@ -383,8 +383,8 @@
 
           <div class="post-tags">
               <a href="/tags/2024/" rel="tag"><i class="fa fa-tag"></i> 2024</a>
-              <a href="/tags/%E6%94%BF%E6%B2%BB%E5%86%9B%E4%BA%8B-%E6%94%BF%E6%B2%BB/" rel="tag"><i class="fa fa-tag"></i> 政治军事-政治</a>
               <a href="/tags/%E6%9D%8E%E5%85%89%E8%80%80/" rel="tag"><i class="fa fa-tag"></i> 李光耀</a>
+              <a href="/tags/%E6%94%BF%E6%B2%BB%E5%86%9B%E4%BA%8B-%E6%94%BF%E6%B2%BB/" rel="tag"><i class="fa fa-tag"></i> 政治军事-政治</a>
           </div>
 
         
@@ -601,6 +601,15 @@
                         buttonLeft.style.display = 'none';
                         buttonRight.style.display = 'none';
                     });
+                    
+                    heatmapChartDom.addEventListener('resize', function () {
+                        const containerWidth = document.getElementById('heatmapChart').offsetWidth;
+                        const cellSize = Math.max(Math.floor(containerWidth / 58), 10);
+                        heatmapChart.setOption({
+                            calendar: { cellSize }
+                        });
+                        heatmapChart.resize();
+                    });
                 }
             })
         </script>
@@ -749,7 +758,7 @@
                         },
                         series: [{
                             type: 'tree',
-                            data: [{"name":"Categories","children":[{"name":"English","children":[],"count":1,"path":"English"},{"name":"BookNotes","children":[{"name":"公众号","children":[],"count":11,"path":"BookNotes/公众号"},{"name":"人物传记","children":[],"count":4,"path":"BookNotes/人物传记"},{"name":"政治军事","children":[],"count":7,"path":"BookNotes/政治军事"},{"name":"教育学习","children":[],"count":1,"path":"BookNotes/教育学习"},{"name":"历史","children":[],"count":26,"path":"BookNotes/历史"},{"name":"个人成长","children":[],"count":1,"path":"BookNotes/个人成长"},{"name":"文学","children":[],"count":45,"path":"BookNotes/文学"},{"name":"期刊杂志","children":[],"count":1,"path":"BookNotes/期刊杂志"},{"name":"社会文化","children":[],"count":4,"path":"BookNotes/社会文化"},{"name":"科学技术","children":[],"count":4,"path":"BookNotes/科学技术"},{"name":"生活百科","children":[],"count":1,"path":"BookNotes/生活百科"},{"name":"精品小说","children":[],"count":8,"path":"BookNotes/精品小说"},{"name":"导入书籍","children":[],"count":14,"path":"BookNotes/导入书籍"},{"name":"经济理财","children":[],"count":5,"path":"BookNotes/经济理财"},{"name":"计算机","children":[],"count":9,"path":"BookNotes/计算机"}],"count":141,"path":"BookNotes"},{"name":"Python","children":[],"count":1,"path":"Python"}],"count":0,"path":""}],
+                            data: [{"name":"Categories","children":[{"name":"Python","children":[],"count":1,"path":"Python"},{"name":"English","children":[],"count":1,"path":"English"},{"name":"BookNotes","children":[{"name":"个人成长","children":[],"count":1,"path":"BookNotes/个人成长"},{"name":"人物传记","children":[],"count":4,"path":"BookNotes/人物传记"},{"name":"公众号","children":[],"count":11,"path":"BookNotes/公众号"},{"name":"历史","children":[],"count":26,"path":"BookNotes/历史"},{"name":"教育学习","children":[],"count":1,"path":"BookNotes/教育学习"},{"name":"期刊杂志","children":[],"count":1,"path":"BookNotes/期刊杂志"},{"name":"文学","children":[],"count":45,"path":"BookNotes/文学"},{"name":"导入书籍","children":[],"count":14,"path":"BookNotes/导入书籍"},{"name":"社会文化","children":[],"count":4,"path":"BookNotes/社会文化"},{"name":"生活百科","children":[],"count":1,"path":"BookNotes/生活百科"},{"name":"精品小说","children":[],"count":8,"path":"BookNotes/精品小说"},{"name":"经济理财","children":[],"count":5,"path":"BookNotes/经济理财"},{"name":"计算机","children":[],"count":9,"path":"BookNotes/计算机"},{"name":"政治军事","children":[],"count":7,"path":"BookNotes/政治军事"},{"name":"科学技术","children":[],"count":4,"path":"BookNotes/科学技术"}],"count":141,"path":"BookNotes"}],"count":0,"path":""}],
                             initialTreeDepth: -1,
                             top: '5%',
                             bottom: '10%',
