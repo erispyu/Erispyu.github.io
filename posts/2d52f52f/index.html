@@ -629,12 +629,14 @@
                             yearLabel: { show: false },
                         },
                         visualMap: { 
-                            type: 'piecewise',
-                            orient: 'horizontal',
-                            text: ['Less', 'More'],
                             show: true,
                             right: '8%',
                             bottom: '5%',
+                            type: 'piecewise',
+                            orient: 'horizontal',
+                            text: ['Less', 'More'],
+                            min: 0,
+                            max: Math.max(...groupedData[initYear].map(item => item[1])),
                             inRange: { color: ["#ACE7AE","#69C16D","#549F57"] }
                         },
                         legend: {
@@ -676,6 +678,9 @@
                             heatmapChart.setOption({
                                 calendar: {
                                     range: selectedYear,
+                                },
+                                visualMap: {
+                                    max: Math.max(...groupedData[selectedYear].map(item => item[1])),
                                 },
                                 series: years.map(year => ({
                                     type: 'heatmap',
