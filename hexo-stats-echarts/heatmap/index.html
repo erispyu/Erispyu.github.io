@@ -28,7 +28,7 @@
 <meta property="og:description" content="HeatmapThe Heatmap tag allows you to display the number of articles on your site in a visually appealing calendar view.Powered by Apache ECharts, it creates interactive and customizable heatmaps to sh">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2025-01-07T16:54:08.000Z">
-<meta property="article:modified_time" content="2025-01-07T18:00:47.674Z">
+<meta property="article:modified_time" content="2025-01-07T18:09:33.323Z">
 <meta property="article:author" content="Erispyu">
 <meta name="twitter:card" content="summary">
 
@@ -244,12 +244,12 @@
 </tr>
 </thead>
 <tbody><tr>
-<td><code>blues</code></td>
+<td><code>ocean</code></td>
 <td><code>[&quot;#A6D8E8&quot;, &quot;#6FB3D2&quot;, &quot;#4A90BF&quot;, &quot;#2E6A8E&quot;, &quot;#1A4461&quot;]</code></td>
 <td><span style="display: inline-block; width: 20px; height: 20px; background: #A6D8E8;"></span> <span style="display: inline-block; width: 20px; height: 20px; background: #6FB3D2;"></span> <span style="display: inline-block; width: 20px; height: 20px; background: #4A90BF;"></span> <span style="display: inline-block; width: 20px; height: 20px; background: #2E6A8E;"></span> <span style="display: inline-block; width: 20px; height: 20px; background: #1A4461;"></span></td>
 </tr>
 <tr>
-<td><code>greens</code></td>
+<td><code>forest</code></td>
 <td><code>[&quot;#ACE7AE&quot;, &quot;#8FD694&quot;, &quot;#69C16D&quot;, &quot;#549F57&quot;, &quot;#3A7D3E&quot;]</code></td>
 <td><span style="display: inline-block; width: 20px; height: 20px; background: #ACE7AE;"></span> <span style="display: inline-block; width: 20px; height: 20px; background: #8FD694;"></span> <span style="display: inline-block; width: 20px; height: 20px; background: #69C16D;"></span> <span style="display: inline-block; width: 20px; height: 20px; background: #549F57;"></span> <span style="display: inline-block; width: 20px; height: 20px; background: #3A7D3E;"></span></td>
 </tr>
@@ -280,7 +280,7 @@
 </tr>
 </tbody></table>
 <ul>
-<li><strong>Default</strong>: If no theme is specified, the <code>blues</code> theme will be applied.</li>
+<li><strong>Default</strong>: If no theme is specified, the <code>ocean</code> theme will be applied.</li>
 </ul>
 <h3 id="args-1-Hide-Footer"><a href="#args-1-Hide-Footer" class="headerlink" title="args[1]: Hide Footer"></a><code>args[1]</code>: Hide Footer</h3><p>Controls the visibility of the footer.</p>
 <ul>
@@ -292,7 +292,7 @@
 <li>If the provided year is not in the data range or is unspecified, the latest year in the data will be used.</li>
 </ul>
 <h2 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h2><p>Below are examples demonstrating how to use the <code>heatmap</code> tag with different configurations.</p>
-<h3 id="Default-Configuration"><a href="#Default-Configuration" class="headerlink" title="Default Configuration"></a>Default Configuration</h3><p>Uses the <code>blues</code> theme, displays the footer, and shows the latest year.</p>
+<h3 id="Default-Configuration"><a href="#Default-Configuration" class="headerlink" title="Default Configuration"></a>Default Configuration</h3><p>Uses the <code>ocean</code> theme, displays the footer, and shows the latest year.</p>
 <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% heatmap %&#125;&#123;% endheatmap %&#125;</span><br></pre></td></tr></table></figure>
 
 <p><strong>Output:</strong>  </p>
@@ -416,8 +416,8 @@
         </div>
     
 
-<h3 id="Custom-Theme-Hidden-Footer-Specific-Year"><a href="#Custom-Theme-Hidden-Footer-Specific-Year" class="headerlink" title="Custom Theme, Hidden Footer, Specific Year"></a>Custom Theme, Hidden Footer, Specific Year</h3><p>Uses the <code>greens</code> theme, hides the footer, and sets the initial year to 2024.</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% heatmap greens no-footer 2024 %&#125;&#123;% endheatmap %&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Custom-Theme-Hidden-Footer-Specific-Year"><a href="#Custom-Theme-Hidden-Footer-Specific-Year" class="headerlink" title="Custom Theme, Hidden Footer, Specific Year"></a>Custom Theme, Hidden Footer, Specific Year</h3><p>Uses the <code>forest</code> theme, hides the footer, and sets the initial year to 2024.</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% heatmap forest no-footer 2024 %&#125;&#123;% endheatmap %&#125;</span><br></pre></td></tr></table></figure>
 
 <p><strong>Output:</strong>  </p>
 
@@ -904,7 +904,7 @@
         </div>
     
 
-<h3 id="Undefined-Theme"><a href="#Undefined-Theme" class="headerlink" title="Undefined Theme"></a>Undefined Theme</h3><p>If an undefined theme is specified, the default <code>blues</code> theme will be applied.</p>
+<h3 id="Undefined-Theme"><a href="#Undefined-Theme" class="headerlink" title="Undefined Theme"></a>Undefined Theme</h3><p>If an undefined theme is specified, the default <code>ocean</code> theme will be applied.</p>
 <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% heatmap unknown no-footer 2023 %&#125;&#123;% endheatmap %&#125;</span><br></pre></td></tr></table></figure>
 
 <p><strong>Output:</strong>  </p>
