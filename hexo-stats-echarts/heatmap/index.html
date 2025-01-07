@@ -20,26 +20,26 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"blog.eripsyu.fun","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.22.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"default"},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"algolia":{"appID":"2BILQUWIOA","apiKey":"f5aabb895c10440c28e6c77090f511eb","indexName":"github_page_erispyu","hits":{"per_page":10}}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="HeatmapTagArgsargs[0]: Color ThemeThe first argument specifies the color theme for the heatmap. Below is a list of available color themes along with theircorresponding hex color codes:  blues: [&quot;">
+    <meta name="description" content="HeatmapTagThe HeatmapTag allows you to display the number of articles on your site in a visually appealing calendar view. Itleverages the power of Apache ECharts to create interactive and customizable">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Stats">
-<meta property="og:url" content="https://blog.eripsyu.fun/stats/index.html">
+<meta property="og:title" content="Heatmap">
+<meta property="og:url" content="https://blog.eripsyu.fun/hexo-stats-echarts/heatmap/index.html">
 <meta property="og:site_name" content="Erispyu&#39;s Blog">
-<meta property="og:description" content="HeatmapTagArgsargs[0]: Color ThemeThe first argument specifies the color theme for the heatmap. Below is a list of available color themes along with theircorresponding hex color codes:  blues: [&quot;">
+<meta property="og:description" content="HeatmapTagThe HeatmapTag allows you to display the number of articles on your site in a visually appealing calendar view. Itleverages the power of Apache ECharts to create interactive and customizable">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2025-01-07T16:54:08.000Z">
-<meta property="article:modified_time" content="2025-01-07T17:25:40.780Z">
+<meta property="article:modified_time" content="2025-01-07T17:41:36.026Z">
 <meta property="article:author" content="Erispyu">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://blog.eripsyu.fun/stats/">
+<link rel="canonical" href="https://blog.eripsyu.fun/hexo-stats-echarts/heatmap/">
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"en","comments":true,"permalink":"https://blog.eripsyu.fun/stats/index.html","path":"stats/index.html","title":"Stats"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"en","comments":true,"permalink":"https://blog.eripsyu.fun/hexo-stats-echarts/heatmap/index.html","path":"hexo-stats-echarts/heatmap/index.html","title":"Heatmap"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Stats | Erispyu's Blog
+<title>Heatmap | Erispyu's Blog
 </title>
   
 
@@ -88,7 +88,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li><li class="menu-item menu-item-stats"><a href="/stats/" rel="section"><i class="fa fa-chart-simple fa-fw"></i>Stats</a></li><li class="menu-item menu-item-reading-progress"><a href="/reading-progress/" rel="section"><i class="fa fa-book-open fa-fw"></i>Reading Progress</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li><li class="menu-item menu-item-hexo-stats-echarts"><a href="/stats/" rel="section"><i class="fa fa fa-rocket fa-fw"></i>hexo-stats-echarts</a></li><li class="menu-item menu-item-reading-progress"><a href="/reading-progress/" rel="section"><i class="fa fa-book-open fa-fw"></i>Reading Progress</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
@@ -204,10 +204,14 @@
     
     <div class="post-block" lang="en"><header class="post-header">
 
-<h1 class="post-title" itemprop="name headline">Stats
+<h1 class="post-title" itemprop="name headline">Heatmap
 </h1>
 
 <div class="post-meta-container">
+  <ul class="breadcrumb">
+            <li><a href="/hexo-stats-echarts/">HEXO-STATS-ECHARTS</a></li>
+          <li>HEATMAP</li>
+  </ul>
 </div>
 
 </header>
@@ -216,7 +220,8 @@
       
       
       <div class="post-body">
-          <h1 id="HeatmapTag"><a href="#HeatmapTag" class="headerlink" title="HeatmapTag"></a>HeatmapTag</h1><h2 id="Args"><a href="#Args" class="headerlink" title="Args"></a>Args</h2><h3 id="args-0-Color-Theme"><a href="#args-0-Color-Theme" class="headerlink" title="args[0]: Color Theme"></a><code>args[0]</code>: Color Theme</h3><p>The first argument specifies the color theme for the heatmap. Below is a list of available color themes along with their<br>corresponding hex color codes:</p>
+          <h1 id="HeatmapTag"><a href="#HeatmapTag" class="headerlink" title="HeatmapTag"></a>HeatmapTag</h1><p>The <code>HeatmapTag</code> allows you to display the number of articles on your site in a visually appealing calendar view. It<br>leverages the power of Apache ECharts to create interactive and customizable heatmaps.</p>
+<h2 id="Args"><a href="#Args" class="headerlink" title="Args"></a>Args</h2><h3 id="args-0-Color-Theme"><a href="#args-0-Color-Theme" class="headerlink" title="args[0]: Color Theme"></a><code>args[0]</code>: Color Theme</h3><p>The first argument specifies the color theme for the heatmap. Below is a list of available color themes along with their<br>corresponding hex color codes:</p>
 <ul>
 <li><strong>blues</strong>: <code>[&quot;#A6D8E8&quot;, &quot;#6FB3D2&quot;, &quot;#4A90BF&quot;, &quot;#2E6A8E&quot;, &quot;#1A4461&quot;]</code></li>
 <li><strong>greens</strong>: <code>[&quot;#ACE7AE&quot;, &quot;#8FD694&quot;, &quot;#69C16D&quot;, &quot;#549F57&quot;, &quot;#3A7D3E&quot;]</code></li>
@@ -1214,6 +1219,10 @@
       
       
     </div>
+  <ul class="breadcrumb">
+            <li><a href="/hexo-stats-echarts/">HEXO-STATS-ECHARTS</a></li>
+          <li>HEATMAP</li>
+  </ul>
 
     
     
