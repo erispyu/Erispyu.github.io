@@ -29,7 +29,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://cdn.weread.qq.com/weread/cover/42/YueWen_26211947/t7_YueWen_26211947.jpg">
 <meta property="article:published_time" content="2024-02-03T16:00:00.000Z">
-<meta property="article:modified_time" content="2025-01-07T09:24:15.843Z">
+<meta property="article:modified_time" content="2025-01-07T09:33:20.773Z">
 <meta property="article:author" content="Erispyu">
 <meta property="article:tag" content="2024">
 <meta property="article:tag" content="读过">
@@ -250,7 +250,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2025-01-07 17:24:15" itemprop="dateModified" datetime="2025-01-07T17:24:15+08:00">2025-01-07</time>
+      <time title="Modified: 2025-01-07 17:33:20" itemprop="dateModified" datetime="2025-01-07T17:33:20+08:00">2025-01-07</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -291,8 +291,8 @@
     
     
     <div class="post-body" itemprop="articleBody"><p><div class="note info"></p>
-<h2 id="算法（第4版）"><a href="#算法（第4版）" class="headerlink" title="算法（第4版）"></a>算法（第4版）</h2><ul>
-<li><img src="https://cdn.weread.qq.com/weread/cover/42/YueWen_26211947/t7_YueWen_26211947.jpg" alt=" 算法（第4版）|200"></li>
+<h2 id="算法（第4版）"><a href="#算法（第4版）" class="headerlink" title="算法（第4版）"></a>算法（第4版）</h2><p><img src="https://cdn.weread.qq.com/weread/cover/42/YueWen_26211947/t7_YueWen_26211947.jpg" alt=" 算法（第4版）|200"></p>
+<ul>
 <li><strong>作者</strong>: Robert Sedgewick  Kevin Wayne</li>
 <li><strong>简介</strong>: 本书作为算法领域经典的参考书，全面介绍了关于算法和数据结构的必备知识，并特别针对排序、搜索、图处理和字符串处理进行了论述。第4版具体给出了每位程序员应知应会的50个算法，提供了实际代码，而且这些Java 代码实现采用了模块化的编程风格，读者可以方便地加以改造。本书配套网站提供了书中内容的摘要及更多的代码实现、测试数据、练习、教学课件等资源。本书适合用作大学教材或从业者的参考书。配套网站algs4.cs.princeton.edu提供了本书内容摘要以及相关代码、测试数据、编程练习、教学课件等资源。</li>
 <li><strong>出版时间</strong>: 2012-10-10</li>
@@ -338,12 +338,7 @@
 <ul>
 <li>⏱ 2024-02-01 16:33:35 ^19836794-7OEKRJL6r<br></div></li>
 </ul>
-<p><div class="note success"><p><br>📌 数据结构二叉堆能够很好地实现优先队列的基本操作。在二叉堆的数组中，每个元素都要保证大于等于另两个特定位置的元素。相应地，这些位置的元素又至少要大于等于数组中的另两个元素，以此类推。如果我们将所有元素画成一棵二叉树，将每个较大元素和两个较小的元素用边连接就可以很容易看出这种结构。<br>💭 所以优先队列是一种数据结构的接口，特征是要提供删除最大（或最小）元素、插入新元素的方法。</p></p>
-<blockquote>
-<ul>
-<li>而堆是一种具体的数据结构，基于二叉树实现，是优先队列的一个典型实例。堆要求二叉树的每个节点都大于等于（或小于等于）他的两个子节点。</li>
-</ul>
-</blockquote>
+<p><div class="note success"><p><br>📌 数据结构二叉堆能够很好地实现优先队列的基本操作。在二叉堆的数组中，每个元素都要保证大于等于另两个特定位置的元素。相应地，这些位置的元素又至少要大于等于数组中的另两个元素，以此类推。如果我们将所有元素画成一棵二叉树，将每个较大元素和两个较小的元素用边连接就可以很容易看出这种结构。<br>💭 所以优先队列是一种数据结构的接口，特征是要提供删除最大（或最小）元素、插入新元素的方法。<br>而堆是一种具体的数据结构，基于二叉树实现，是优先队列的一个典型实例。堆要求二叉树的每个节点都大于等于（或小于等于）他的两个子节点。</p></p>
 <ul>
 <li>⏱ 2024-02-01 16:50:53 ^19836794-7OEM01jgH<br></div></li>
 </ul>
@@ -366,11 +361,7 @@
 </ul>
 </blockquote>
 <p><div class="note success"><p><br>📌 在一个堆中，位置k的结点的父结点的位置为[k&#x2F;2]，而它的两个子结点的位置则分别为2k和2k+1。<br>💭 这里的表示需要数组的下标从1开始，而不是0。</p></p>
-<blockquote>
-<ul>
-<li>另，父节点的下标严谨来说应该是向下取整，⎣k&#x2F;2⎦。</li>
-</ul>
-</blockquote>
+<p>另，父节点的下标严谨来说应该是向下取整，⎣k&#x2F;2⎦。</p>
 <ul>
 <li>⏱ 2024-02-01 17:08:17 ^19836794-7OEN8CGoT<br></div></li>
 </ul>
@@ -472,8 +463,8 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/posts/b924f79d/" rel="prev" title="TheEconomist.2024.02.03 [Fri, 02 Feb 2024]">
-                  <i class="fa fa-angle-left"></i> TheEconomist.2024.02.03 [Fri, 02 Feb 2024]
+                <a href="/posts/a53509a3/" rel="prev" title="古代汉语常识">
+                  <i class="fa fa-angle-left"></i> 古代汉语常识
                 </a>
             </div>
             <div class="post-nav-item">
@@ -831,7 +822,7 @@
                         },
                         series: [{
                             type: 'tree',
-                            data: [{"name":"Categories","children":[{"name":"Python","children":[],"count":1,"path":"Python"},{"name":"English","children":[],"count":1,"path":"English"},{"name":"BookNotes","children":[{"name":"公众号","children":[],"count":15,"path":"BookNotes/公众号"},{"name":"人物传记","children":[],"count":4,"path":"BookNotes/人物传记"},{"name":"政治军事","children":[],"count":8,"path":"BookNotes/政治军事"},{"name":"历史","children":[],"count":26,"path":"BookNotes/历史"},{"name":"期刊杂志","children":[],"count":1,"path":"BookNotes/期刊杂志"},{"name":"导入书籍","children":[],"count":14,"path":"BookNotes/导入书籍"},{"name":"个人成长","children":[],"count":1,"path":"BookNotes/个人成长"},{"name":"教育学习","children":[],"count":2,"path":"BookNotes/教育学习"},{"name":"社会文化","children":[],"count":4,"path":"BookNotes/社会文化"},{"name":"科学技术","children":[],"count":4,"path":"BookNotes/科学技术"},{"name":"文学","children":[],"count":45,"path":"BookNotes/文学"},{"name":"经济理财","children":[],"count":5,"path":"BookNotes/经济理财"},{"name":"生活百科","children":[],"count":1,"path":"BookNotes/生活百科"},{"name":"精品小说","children":[],"count":8,"path":"BookNotes/精品小说"},{"name":"计算机","children":[],"count":9,"path":"BookNotes/计算机"}],"count":147,"path":"BookNotes"}],"count":0,"path":""}],
+                            data: [{"name":"Categories","children":[{"name":"Python","children":[],"count":1,"path":"Python"},{"name":"English","children":[],"count":1,"path":"English"},{"name":"BookNotes","children":[{"name":"个人成长","children":[],"count":1,"path":"BookNotes/个人成长"},{"name":"人物传记","children":[],"count":4,"path":"BookNotes/人物传记"},{"name":"政治军事","children":[],"count":8,"path":"BookNotes/政治军事"},{"name":"公众号","children":[],"count":15,"path":"BookNotes/公众号"},{"name":"历史","children":[],"count":26,"path":"BookNotes/历史"},{"name":"教育学习","children":[],"count":2,"path":"BookNotes/教育学习"},{"name":"期刊杂志","children":[],"count":1,"path":"BookNotes/期刊杂志"},{"name":"文学","children":[],"count":45,"path":"BookNotes/文学"},{"name":"导入书籍","children":[],"count":14,"path":"BookNotes/导入书籍"},{"name":"生活百科","children":[],"count":1,"path":"BookNotes/生活百科"},{"name":"社会文化","children":[],"count":4,"path":"BookNotes/社会文化"},{"name":"经济理财","children":[],"count":5,"path":"BookNotes/经济理财"},{"name":"精品小说","children":[],"count":8,"path":"BookNotes/精品小说"},{"name":"计算机","children":[],"count":9,"path":"BookNotes/计算机"},{"name":"科学技术","children":[],"count":4,"path":"BookNotes/科学技术"}],"count":147,"path":"BookNotes"}],"count":0,"path":""}],
                             initialTreeDepth: -1,
                             top: '5%',
                             bottom: '10%',
