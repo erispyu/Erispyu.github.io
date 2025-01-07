@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head><!-- hexo injector head_begin start --><script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script><!-- hexo injector head_begin end -->
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
@@ -20,15 +20,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"blog.eripsyu.fun","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.22.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"default"},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"algolia":{"appID":"2BILQUWIOA","apiKey":"f5aabb895c10440c28e6c77090f511eb","indexName":"github_page_erispyu","hits":{"per_page":10}}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="This page is powered by hexo-graph">
+    <meta name="description" content="HeatmapTag ArgsColor ThemesThe first argument in the heatmapTag is the color theme. Here are the available color themes for the heatmap:  greens: [&quot;#ACE7AE&quot;, &quot;#8FD694&quot;, &quot;#69C1">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Stats">
 <meta property="og:url" content="https://blog.eripsyu.fun/stats/index.html">
 <meta property="og:site_name" content="Erispyu&#39;s Blog">
-<meta property="og:description" content="This page is powered by hexo-graph">
+<meta property="og:description" content="HeatmapTag ArgsColor ThemesThe first argument in the heatmapTag is the color theme. Here are the available color themes for the heatmap:  greens: [&quot;#ACE7AE&quot;, &quot;#8FD694&quot;, &quot;#69C1">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2025-01-03T07:58:44.000Z">
-<meta property="article:modified_time" content="2025-01-03T08:32:27.208Z">
+<meta property="article:modified_time" content="2025-01-07T16:27:47.264Z">
 <meta property="article:author" content="Erispyu">
 <meta name="twitter:card" content="summary">
 
@@ -126,7 +126,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -139,6 +139,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#HeatmapTag-Args"><span class="nav-text">HeatmapTag Args</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Color-Themes"><span class="nav-text">Color Themes</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Footer"><span class="nav-text">Footer</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Example-Usage"><span class="nav-text">Example Usage</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Using-the-greens-Theme"><span class="nav-text">Using the greens Theme</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Using-the-blues-Theme"><span class="nav-text">Using the blues Theme</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Using-the-sunset-Theme"><span class="nav-text">Using the sunset Theme</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Using-the-earthy-Theme"><span class="nav-text">Using the earthy Theme</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Using-the-pastel-Theme-Hide-Footer"><span class="nav-text">Using the pastel Theme (Hide Footer)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Using-the-golden-Theme-Hide-Footer"><span class="nav-text">Using the golden Theme (Hide Footer)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Using-the-berry-Theme-Hide-Footer"><span class="nav-text">Using the berry Theme (Hide Footer)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#No-Theme-Specified-Uses-Default-blues-Theme"><span class="nav-text">No Theme Specified (Uses Default blues Theme)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Undefined-Theme-Uses-Default-blues-Theme-Hide-Footer"><span class="nav-text">Undefined Theme (Uses Default blues Theme, Hide Footer)</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -196,24 +197,6 @@
     </div>
 
     <div class="main-inner page posts-expand">
-    <ul class="sub-menu menu">
-      
-  <li class="menu-item menu-item-blog-heatmap"><a href="/stats/blog-heatmap/" rel="section"><i class="fa-solid fa-braille fa-fw"></i>Blog Heatmap</a></li>
-
-
-      
-  <li class="menu-item menu-item-monthly-line-chart"><a href="/stats/monthly-line-chart/" rel="section"><i class="fa fa-chart-line fa-fw"></i>Monthly Line Chart</a></li>
-
-
-      
-  <li class="menu-item menu-item-tags-pie-chart"><a href="/stats/tags-pie-chart/" rel="section"><i class="fa fa-chart-pie fa-fw"></i>Tags Pie Chart</a></li>
-
-
-      
-  <li class="menu-item menu-item-categories-tree-chart"><a href="/stats/categories-tree-chart/" rel="section"><i class="fa fa-folder-tree fa-fw"></i>Categories Tree Chart</a></li>
-
-
-    </ul>
 
 
     
@@ -233,7 +216,1092 @@
       
       
       <div class="post-body">
-          <p>This page is powered by <a target="_blank" rel="noopener" href="https://github.com/codepzj/hexo-graph">hexo-graph</a></p>
+          <h2 id="HeatmapTag-Args"><a href="#HeatmapTag-Args" class="headerlink" title="HeatmapTag Args"></a>HeatmapTag Args</h2><h3 id="Color-Themes"><a href="#Color-Themes" class="headerlink" title="Color Themes"></a>Color Themes</h3><p>The first argument in the <code>heatmapTag</code> is the color theme.</p>
+<p>Here are the available color themes for the heatmap:</p>
+<ul>
+<li><strong>greens</strong>: <code>[&quot;#ACE7AE&quot;, &quot;#8FD694&quot;, &quot;#69C16D&quot;, &quot;#549F57&quot;, &quot;#3A7D3E&quot;]</code></li>
+<li><strong>blues</strong>: <code>[&quot;#A6D8E8&quot;, &quot;#6FB3D2&quot;, &quot;#4A90BF&quot;, &quot;#2E6A8E&quot;, &quot;#1A4461&quot;]</code></li>
+<li><strong>sunset</strong>: <code>[&quot;#FFD1A6&quot;, &quot;#FFA07A&quot;, &quot;#FF6F52&quot;, &quot;#D94A3D&quot;, &quot;#A62B2B&quot;]</code></li>
+<li><strong>earthy</strong>: <code>[&quot;#E3C8A8&quot;, &quot;#C4A076&quot;, &quot;#A57C52&quot;, &quot;#7A5A3A&quot;, &quot;#4E3A28&quot;]</code></li>
+<li><strong>pastel</strong>: <code>[&quot;#F5D5E6&quot;, &quot;#E8B8D0&quot;, &quot;#D18FB8&quot;, &quot;#A86A8E&quot;, &quot;#7A4A61&quot;]</code></li>
+<li><strong>golden</strong>: <code>[&quot;#FFEBB5&quot;, &quot;#FFD966&quot;, &quot;#FFB74D&quot;, &quot;#D18F4A&quot;, &quot;#A66B2B&quot;]</code></li>
+<li><strong>berry</strong>: <code>[&quot;#F4C2D7&quot;, &quot;#E88BB3&quot;, &quot;#D94A7A&quot;, &quot;#A62B5C&quot;, &quot;#7A1F3D&quot;]</code></li>
+</ul>
+<p>If no theme is specified or the theme is undefined, the <strong>blues</strong> theme will be used by default.</p>
+<h3 id="Footer"><a href="#Footer" class="headerlink" title="Footer"></a>Footer</h3><p>The second argument is a boolean to control whether the footer is displayed. By default, the footer is <strong>visible</strong> (<br><code>false</code>). Set it to <code>true</code> to hide the footer.</p>
+<hr>
+<h2 id="Example-Usage"><a href="#Example-Usage" class="headerlink" title="Example Usage"></a>Example Usage</h2><h3 id="Using-the-greens-Theme"><a href="#Using-the-greens-Theme" class="headerlink" title="Using the greens Theme"></a>Using the <code>greens</code> Theme</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% heatmap greens %&#125;&#123;% endheatmap %&#125;</span><br></pre></td></tr></table></figure>
+
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const heatmapChartDom = document.getElementById('heatmapChart-0');
+                if(heatmapChartDom){
+                    const heatmapChart = echarts.init(heatmapChartDom, 'light');
+                    const cellSize = [18, 18];
+
+                    const groupedData = {"2022":[["2022-09-09",1],["2022-09-10",1]],"2023":[["2023-08-01",1],["2023-10-26",2],["2023-10-27",1],["2023-10-28",1],["2023-11-06",1],["2023-11-07",1],["2023-11-13",1],["2023-11-16",1],["2023-11-23",2],["2023-11-26",1],["2023-11-29",1],["2023-11-30",1],["2023-12-01",4],["2023-12-02",2],["2023-12-03",2],["2023-12-04",1],["2023-12-10",1],["2023-12-11",1],["2023-12-15",1],["2023-12-17",2],["2023-12-19",1],["2023-12-27",1],["2023-12-28",1],["2023-12-29",1]],"2024":[["2024-01-03",1],["2024-01-04",1],["2024-01-08",2],["2024-01-09",1],["2024-01-10",4],["2024-01-11",1],["2024-01-13",1],["2024-01-17",3],["2024-01-25",1],["2024-01-27",2],["2024-01-28",2],["2024-01-29",2],["2024-02-02",2],["2024-02-04",1],["2024-02-13",1],["2024-02-20",2],["2024-02-25",1],["2024-03-02",2],["2024-03-05",1],["2024-03-12",1],["2024-03-14",2],["2024-03-22",2],["2024-04-11",1],["2024-05-05",1],["2024-05-06",1],["2024-05-08",1],["2024-06-01",1],["2024-07-16",1],["2024-07-29",1],["2024-07-31",1],["2024-08-02",1],["2024-08-04",1],["2024-08-06",1],["2024-08-27",1],["2024-09-06",1],["2024-09-10",1],["2024-09-11",1],["2024-10-07",1],["2024-10-28",1],["2024-11-21",1],["2024-11-23",1],["2024-11-24",1],["2024-11-26",1],["2024-11-28",2],["2024-11-29",1],["2024-11-30",1],["2024-12-04",2],["2024-12-06",1],["2024-12-08",1],["2024-12-12",1],["2024-12-15",1],["2024-12-16",2],["2024-12-17",2],["2024-12-18",2],["2024-12-19",2],["2024-12-20",3],["2024-12-22",1],["2024-12-24",1],["2024-12-25",1],["2024-12-26",6],["2024-12-27",2],["2024-12-30",4]],"2025":[["2025-01-01",6],["2025-01-02",2],["2025-01-03",8],["2025-01-04",1],["2025-01-05",1],["2025-01-06",3],["2025-01-07",1]]}
+                    const years = Object.keys(groupedData).reverse();
+                    const initYear = years[0]
+                    
+                    heatmapChart.setOption({
+                        grid: {},
+                        tooltip: { 
+                            position: 'top', 
+                            formatter: params => `${params.value[0]}: ${params.value[1]} Articles` 
+                        },
+                        calendar: { 
+                            top: '10%',
+                            left: 'left', 
+                            right: '8%',
+                            range: initYear,
+                            cellSize: cellSize, 
+                            splitLine: { lineStyle: { color: '#E0E0E0', width: 1 } }, 
+                            itemStyle: { borderWidth: 1, borderColor: '#E0E0E0' }, 
+                            dayLabel: { show: false },
+                            monthLabel: { show: true },
+                            yearLabel: { show: false },
+                        },
+                        visualMap: { 
+                            show: true,
+                            right: '8%',
+                            bottom: '5%',
+                            type: 'piecewise',
+                            orient: 'horizontal',
+                            text: ['More', 'Less'],
+                            min: 0,
+                            max: Math.max(...groupedData[initYear].map(item => item[1])),
+                            inRange: { color: ["#ACE7AE","#8FD694","#69C16D","#549F57","#3A7D3E"] },
+                        },
+                        legend: {
+                            type: 'scroll',
+                            icon: 'none',
+                            data: years,
+                            orient: 'vertical',
+                            top: '5%',
+                            right: 'right',
+                            itemWidth: 20,
+                            itemHeight: 20,
+                            itemGap: 10,
+                            pageIconSize: 10,
+                            pageTextStyle: { fontSize: 14 },
+                            selectedMode: 'single',
+                        },
+                        series: years.map(year => ({
+                            type: 'heatmap',
+                            coordinateSystem: 'calendar',
+                            data: groupedData[year],
+                            name: year,
+                            emphasis: {
+                                disabled: true,
+                            },
+                            silent: year !== initYear,
+                        })),
+                    });
+                    
+                    heatmapChart.dispatchAction({
+                        type: 'legendSelect',
+                        name: initYear,
+                    });
+                    
+                    heatmapChart.on('legendselectchanged', function(params) {
+                        console.log('heatmaptag|legendselectchanged:', params);
+                        const selectedYear = Object.keys(params.selected).find(key => params.selected[key]);
+                        if (selectedYear && groupedData[selectedYear]) {
+                            heatmapChart.setOption({
+                                calendar: {
+                                    range: selectedYear,
+                                },
+                                visualMap: {
+                                    max: Math.max(...groupedData[selectedYear].map(item => item[1])),
+                                },
+                                series: years.map(year => ({
+                                    type: 'heatmap',
+                                    coordinateSystem: 'calendar',
+                                    data: groupedData[year],
+                                    name: year,
+                                    emphasis: {
+                                        disabled: true,
+                                    },
+                                    silent: year !== selectedYear,
+                                })),
+                            });
+                        }
+                    });
+                    
+                    heatmapChart.on('click', function (params) {
+                        if (params.componentType === 'series') {
+                            const [year, month] = params.value[0].split('-');
+                            window.location.href = '/archives/' + year + '/' + month;
+                        }
+                    });
+                }
+            });
+        </script>
+        <div style="width: 100%;">
+            <!-- Heatmap Chart -->
+            <div id="heatmapChart-0" style="width: 100%; height: 200px; overflow-x: auto; overflow-y: hidden;"></div>
+            
+            <!-- Footer (Conditional) -->
+            
+            <div style="text-align: center; font-size: 12px; color: #666; margin-top: 10px;">
+                Powered by <a href="https://github.com/erispyu/hexo-stats-echarts" style="color: inherit; text-decoration: none;" target="_blank">hexo-stats-echarts</a>
+            </div>
+        
+        </div>
+    
+
+<h3 id="Using-the-blues-Theme"><a href="#Using-the-blues-Theme" class="headerlink" title="Using the blues Theme"></a>Using the <code>blues</code> Theme</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% heatmap blues %&#125;&#123;% endheatmap %&#125;</span><br></pre></td></tr></table></figure>
+
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const heatmapChartDom = document.getElementById('heatmapChart-1');
+                if(heatmapChartDom){
+                    const heatmapChart = echarts.init(heatmapChartDom, 'light');
+                    const cellSize = [18, 18];
+
+                    const groupedData = {"2022":[["2022-09-09",1],["2022-09-10",1]],"2023":[["2023-08-01",1],["2023-10-26",2],["2023-10-27",1],["2023-10-28",1],["2023-11-06",1],["2023-11-07",1],["2023-11-13",1],["2023-11-16",1],["2023-11-23",2],["2023-11-26",1],["2023-11-29",1],["2023-11-30",1],["2023-12-01",4],["2023-12-02",2],["2023-12-03",2],["2023-12-04",1],["2023-12-10",1],["2023-12-11",1],["2023-12-15",1],["2023-12-17",2],["2023-12-19",1],["2023-12-27",1],["2023-12-28",1],["2023-12-29",1]],"2024":[["2024-01-03",1],["2024-01-04",1],["2024-01-08",2],["2024-01-09",1],["2024-01-10",4],["2024-01-11",1],["2024-01-13",1],["2024-01-17",3],["2024-01-25",1],["2024-01-27",2],["2024-01-28",2],["2024-01-29",2],["2024-02-02",2],["2024-02-04",1],["2024-02-13",1],["2024-02-20",2],["2024-02-25",1],["2024-03-02",2],["2024-03-05",1],["2024-03-12",1],["2024-03-14",2],["2024-03-22",2],["2024-04-11",1],["2024-05-05",1],["2024-05-06",1],["2024-05-08",1],["2024-06-01",1],["2024-07-16",1],["2024-07-29",1],["2024-07-31",1],["2024-08-02",1],["2024-08-04",1],["2024-08-06",1],["2024-08-27",1],["2024-09-06",1],["2024-09-10",1],["2024-09-11",1],["2024-10-07",1],["2024-10-28",1],["2024-11-21",1],["2024-11-23",1],["2024-11-24",1],["2024-11-26",1],["2024-11-28",2],["2024-11-29",1],["2024-11-30",1],["2024-12-04",2],["2024-12-06",1],["2024-12-08",1],["2024-12-12",1],["2024-12-15",1],["2024-12-16",2],["2024-12-17",2],["2024-12-18",2],["2024-12-19",2],["2024-12-20",3],["2024-12-22",1],["2024-12-24",1],["2024-12-25",1],["2024-12-26",6],["2024-12-27",2],["2024-12-30",4]],"2025":[["2025-01-01",6],["2025-01-02",2],["2025-01-03",8],["2025-01-04",1],["2025-01-05",1],["2025-01-06",3],["2025-01-07",1]]}
+                    const years = Object.keys(groupedData).reverse();
+                    const initYear = years[0]
+                    
+                    heatmapChart.setOption({
+                        grid: {},
+                        tooltip: { 
+                            position: 'top', 
+                            formatter: params => `${params.value[0]}: ${params.value[1]} Articles` 
+                        },
+                        calendar: { 
+                            top: '10%',
+                            left: 'left', 
+                            right: '8%',
+                            range: initYear,
+                            cellSize: cellSize, 
+                            splitLine: { lineStyle: { color: '#E0E0E0', width: 1 } }, 
+                            itemStyle: { borderWidth: 1, borderColor: '#E0E0E0' }, 
+                            dayLabel: { show: false },
+                            monthLabel: { show: true },
+                            yearLabel: { show: false },
+                        },
+                        visualMap: { 
+                            show: true,
+                            right: '8%',
+                            bottom: '5%',
+                            type: 'piecewise',
+                            orient: 'horizontal',
+                            text: ['More', 'Less'],
+                            min: 0,
+                            max: Math.max(...groupedData[initYear].map(item => item[1])),
+                            inRange: { color: ["#A6D8E8","#6FB3D2","#4A90BF","#2E6A8E","#1A4461"] },
+                        },
+                        legend: {
+                            type: 'scroll',
+                            icon: 'none',
+                            data: years,
+                            orient: 'vertical',
+                            top: '5%',
+                            right: 'right',
+                            itemWidth: 20,
+                            itemHeight: 20,
+                            itemGap: 10,
+                            pageIconSize: 10,
+                            pageTextStyle: { fontSize: 14 },
+                            selectedMode: 'single',
+                        },
+                        series: years.map(year => ({
+                            type: 'heatmap',
+                            coordinateSystem: 'calendar',
+                            data: groupedData[year],
+                            name: year,
+                            emphasis: {
+                                disabled: true,
+                            },
+                            silent: year !== initYear,
+                        })),
+                    });
+                    
+                    heatmapChart.dispatchAction({
+                        type: 'legendSelect',
+                        name: initYear,
+                    });
+                    
+                    heatmapChart.on('legendselectchanged', function(params) {
+                        console.log('heatmaptag|legendselectchanged:', params);
+                        const selectedYear = Object.keys(params.selected).find(key => params.selected[key]);
+                        if (selectedYear && groupedData[selectedYear]) {
+                            heatmapChart.setOption({
+                                calendar: {
+                                    range: selectedYear,
+                                },
+                                visualMap: {
+                                    max: Math.max(...groupedData[selectedYear].map(item => item[1])),
+                                },
+                                series: years.map(year => ({
+                                    type: 'heatmap',
+                                    coordinateSystem: 'calendar',
+                                    data: groupedData[year],
+                                    name: year,
+                                    emphasis: {
+                                        disabled: true,
+                                    },
+                                    silent: year !== selectedYear,
+                                })),
+                            });
+                        }
+                    });
+                    
+                    heatmapChart.on('click', function (params) {
+                        if (params.componentType === 'series') {
+                            const [year, month] = params.value[0].split('-');
+                            window.location.href = '/archives/' + year + '/' + month;
+                        }
+                    });
+                }
+            });
+        </script>
+        <div style="width: 100%;">
+            <!-- Heatmap Chart -->
+            <div id="heatmapChart-1" style="width: 100%; height: 200px; overflow-x: auto; overflow-y: hidden;"></div>
+            
+            <!-- Footer (Conditional) -->
+            
+            <div style="text-align: center; font-size: 12px; color: #666; margin-top: 10px;">
+                Powered by <a href="https://github.com/erispyu/hexo-stats-echarts" style="color: inherit; text-decoration: none;" target="_blank">hexo-stats-echarts</a>
+            </div>
+        
+        </div>
+    
+
+<h3 id="Using-the-sunset-Theme"><a href="#Using-the-sunset-Theme" class="headerlink" title="Using the sunset Theme"></a>Using the <code>sunset</code> Theme</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% heatmap sunset %&#125;&#123;% endheatmap %&#125;</span><br></pre></td></tr></table></figure>
+
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const heatmapChartDom = document.getElementById('heatmapChart-2');
+                if(heatmapChartDom){
+                    const heatmapChart = echarts.init(heatmapChartDom, 'light');
+                    const cellSize = [18, 18];
+
+                    const groupedData = {"2022":[["2022-09-09",1],["2022-09-10",1]],"2023":[["2023-08-01",1],["2023-10-26",2],["2023-10-27",1],["2023-10-28",1],["2023-11-06",1],["2023-11-07",1],["2023-11-13",1],["2023-11-16",1],["2023-11-23",2],["2023-11-26",1],["2023-11-29",1],["2023-11-30",1],["2023-12-01",4],["2023-12-02",2],["2023-12-03",2],["2023-12-04",1],["2023-12-10",1],["2023-12-11",1],["2023-12-15",1],["2023-12-17",2],["2023-12-19",1],["2023-12-27",1],["2023-12-28",1],["2023-12-29",1]],"2024":[["2024-01-03",1],["2024-01-04",1],["2024-01-08",2],["2024-01-09",1],["2024-01-10",4],["2024-01-11",1],["2024-01-13",1],["2024-01-17",3],["2024-01-25",1],["2024-01-27",2],["2024-01-28",2],["2024-01-29",2],["2024-02-02",2],["2024-02-04",1],["2024-02-13",1],["2024-02-20",2],["2024-02-25",1],["2024-03-02",2],["2024-03-05",1],["2024-03-12",1],["2024-03-14",2],["2024-03-22",2],["2024-04-11",1],["2024-05-05",1],["2024-05-06",1],["2024-05-08",1],["2024-06-01",1],["2024-07-16",1],["2024-07-29",1],["2024-07-31",1],["2024-08-02",1],["2024-08-04",1],["2024-08-06",1],["2024-08-27",1],["2024-09-06",1],["2024-09-10",1],["2024-09-11",1],["2024-10-07",1],["2024-10-28",1],["2024-11-21",1],["2024-11-23",1],["2024-11-24",1],["2024-11-26",1],["2024-11-28",2],["2024-11-29",1],["2024-11-30",1],["2024-12-04",2],["2024-12-06",1],["2024-12-08",1],["2024-12-12",1],["2024-12-15",1],["2024-12-16",2],["2024-12-17",2],["2024-12-18",2],["2024-12-19",2],["2024-12-20",3],["2024-12-22",1],["2024-12-24",1],["2024-12-25",1],["2024-12-26",6],["2024-12-27",2],["2024-12-30",4]],"2025":[["2025-01-01",6],["2025-01-02",2],["2025-01-03",8],["2025-01-04",1],["2025-01-05",1],["2025-01-06",3],["2025-01-07",1]]}
+                    const years = Object.keys(groupedData).reverse();
+                    const initYear = years[0]
+                    
+                    heatmapChart.setOption({
+                        grid: {},
+                        tooltip: { 
+                            position: 'top', 
+                            formatter: params => `${params.value[0]}: ${params.value[1]} Articles` 
+                        },
+                        calendar: { 
+                            top: '10%',
+                            left: 'left', 
+                            right: '8%',
+                            range: initYear,
+                            cellSize: cellSize, 
+                            splitLine: { lineStyle: { color: '#E0E0E0', width: 1 } }, 
+                            itemStyle: { borderWidth: 1, borderColor: '#E0E0E0' }, 
+                            dayLabel: { show: false },
+                            monthLabel: { show: true },
+                            yearLabel: { show: false },
+                        },
+                        visualMap: { 
+                            show: true,
+                            right: '8%',
+                            bottom: '5%',
+                            type: 'piecewise',
+                            orient: 'horizontal',
+                            text: ['More', 'Less'],
+                            min: 0,
+                            max: Math.max(...groupedData[initYear].map(item => item[1])),
+                            inRange: { color: ["#FFD1A6","#FFA07A","#FF6F52","#D94A3D","#A62B2B"] },
+                        },
+                        legend: {
+                            type: 'scroll',
+                            icon: 'none',
+                            data: years,
+                            orient: 'vertical',
+                            top: '5%',
+                            right: 'right',
+                            itemWidth: 20,
+                            itemHeight: 20,
+                            itemGap: 10,
+                            pageIconSize: 10,
+                            pageTextStyle: { fontSize: 14 },
+                            selectedMode: 'single',
+                        },
+                        series: years.map(year => ({
+                            type: 'heatmap',
+                            coordinateSystem: 'calendar',
+                            data: groupedData[year],
+                            name: year,
+                            emphasis: {
+                                disabled: true,
+                            },
+                            silent: year !== initYear,
+                        })),
+                    });
+                    
+                    heatmapChart.dispatchAction({
+                        type: 'legendSelect',
+                        name: initYear,
+                    });
+                    
+                    heatmapChart.on('legendselectchanged', function(params) {
+                        console.log('heatmaptag|legendselectchanged:', params);
+                        const selectedYear = Object.keys(params.selected).find(key => params.selected[key]);
+                        if (selectedYear && groupedData[selectedYear]) {
+                            heatmapChart.setOption({
+                                calendar: {
+                                    range: selectedYear,
+                                },
+                                visualMap: {
+                                    max: Math.max(...groupedData[selectedYear].map(item => item[1])),
+                                },
+                                series: years.map(year => ({
+                                    type: 'heatmap',
+                                    coordinateSystem: 'calendar',
+                                    data: groupedData[year],
+                                    name: year,
+                                    emphasis: {
+                                        disabled: true,
+                                    },
+                                    silent: year !== selectedYear,
+                                })),
+                            });
+                        }
+                    });
+                    
+                    heatmapChart.on('click', function (params) {
+                        if (params.componentType === 'series') {
+                            const [year, month] = params.value[0].split('-');
+                            window.location.href = '/archives/' + year + '/' + month;
+                        }
+                    });
+                }
+            });
+        </script>
+        <div style="width: 100%;">
+            <!-- Heatmap Chart -->
+            <div id="heatmapChart-2" style="width: 100%; height: 200px; overflow-x: auto; overflow-y: hidden;"></div>
+            
+            <!-- Footer (Conditional) -->
+            
+            <div style="text-align: center; font-size: 12px; color: #666; margin-top: 10px;">
+                Powered by <a href="https://github.com/erispyu/hexo-stats-echarts" style="color: inherit; text-decoration: none;" target="_blank">hexo-stats-echarts</a>
+            </div>
+        
+        </div>
+    
+
+<h3 id="Using-the-earthy-Theme"><a href="#Using-the-earthy-Theme" class="headerlink" title="Using the earthy Theme"></a>Using the <code>earthy</code> Theme</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% heatmap earthy %&#125;&#123;% endheatmap %&#125;</span><br></pre></td></tr></table></figure>
+
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const heatmapChartDom = document.getElementById('heatmapChart-3');
+                if(heatmapChartDom){
+                    const heatmapChart = echarts.init(heatmapChartDom, 'light');
+                    const cellSize = [18, 18];
+
+                    const groupedData = {"2022":[["2022-09-09",1],["2022-09-10",1]],"2023":[["2023-08-01",1],["2023-10-26",2],["2023-10-27",1],["2023-10-28",1],["2023-11-06",1],["2023-11-07",1],["2023-11-13",1],["2023-11-16",1],["2023-11-23",2],["2023-11-26",1],["2023-11-29",1],["2023-11-30",1],["2023-12-01",4],["2023-12-02",2],["2023-12-03",2],["2023-12-04",1],["2023-12-10",1],["2023-12-11",1],["2023-12-15",1],["2023-12-17",2],["2023-12-19",1],["2023-12-27",1],["2023-12-28",1],["2023-12-29",1]],"2024":[["2024-01-03",1],["2024-01-04",1],["2024-01-08",2],["2024-01-09",1],["2024-01-10",4],["2024-01-11",1],["2024-01-13",1],["2024-01-17",3],["2024-01-25",1],["2024-01-27",2],["2024-01-28",2],["2024-01-29",2],["2024-02-02",2],["2024-02-04",1],["2024-02-13",1],["2024-02-20",2],["2024-02-25",1],["2024-03-02",2],["2024-03-05",1],["2024-03-12",1],["2024-03-14",2],["2024-03-22",2],["2024-04-11",1],["2024-05-05",1],["2024-05-06",1],["2024-05-08",1],["2024-06-01",1],["2024-07-16",1],["2024-07-29",1],["2024-07-31",1],["2024-08-02",1],["2024-08-04",1],["2024-08-06",1],["2024-08-27",1],["2024-09-06",1],["2024-09-10",1],["2024-09-11",1],["2024-10-07",1],["2024-10-28",1],["2024-11-21",1],["2024-11-23",1],["2024-11-24",1],["2024-11-26",1],["2024-11-28",2],["2024-11-29",1],["2024-11-30",1],["2024-12-04",2],["2024-12-06",1],["2024-12-08",1],["2024-12-12",1],["2024-12-15",1],["2024-12-16",2],["2024-12-17",2],["2024-12-18",2],["2024-12-19",2],["2024-12-20",3],["2024-12-22",1],["2024-12-24",1],["2024-12-25",1],["2024-12-26",6],["2024-12-27",2],["2024-12-30",4]],"2025":[["2025-01-01",6],["2025-01-02",2],["2025-01-03",8],["2025-01-04",1],["2025-01-05",1],["2025-01-06",3],["2025-01-07",1]]}
+                    const years = Object.keys(groupedData).reverse();
+                    const initYear = years[0]
+                    
+                    heatmapChart.setOption({
+                        grid: {},
+                        tooltip: { 
+                            position: 'top', 
+                            formatter: params => `${params.value[0]}: ${params.value[1]} Articles` 
+                        },
+                        calendar: { 
+                            top: '10%',
+                            left: 'left', 
+                            right: '8%',
+                            range: initYear,
+                            cellSize: cellSize, 
+                            splitLine: { lineStyle: { color: '#E0E0E0', width: 1 } }, 
+                            itemStyle: { borderWidth: 1, borderColor: '#E0E0E0' }, 
+                            dayLabel: { show: false },
+                            monthLabel: { show: true },
+                            yearLabel: { show: false },
+                        },
+                        visualMap: { 
+                            show: true,
+                            right: '8%',
+                            bottom: '5%',
+                            type: 'piecewise',
+                            orient: 'horizontal',
+                            text: ['More', 'Less'],
+                            min: 0,
+                            max: Math.max(...groupedData[initYear].map(item => item[1])),
+                            inRange: { color: ["#E3C8A8","#C4A076","#A57C52","#7A5A3A","#4E3A28"] },
+                        },
+                        legend: {
+                            type: 'scroll',
+                            icon: 'none',
+                            data: years,
+                            orient: 'vertical',
+                            top: '5%',
+                            right: 'right',
+                            itemWidth: 20,
+                            itemHeight: 20,
+                            itemGap: 10,
+                            pageIconSize: 10,
+                            pageTextStyle: { fontSize: 14 },
+                            selectedMode: 'single',
+                        },
+                        series: years.map(year => ({
+                            type: 'heatmap',
+                            coordinateSystem: 'calendar',
+                            data: groupedData[year],
+                            name: year,
+                            emphasis: {
+                                disabled: true,
+                            },
+                            silent: year !== initYear,
+                        })),
+                    });
+                    
+                    heatmapChart.dispatchAction({
+                        type: 'legendSelect',
+                        name: initYear,
+                    });
+                    
+                    heatmapChart.on('legendselectchanged', function(params) {
+                        console.log('heatmaptag|legendselectchanged:', params);
+                        const selectedYear = Object.keys(params.selected).find(key => params.selected[key]);
+                        if (selectedYear && groupedData[selectedYear]) {
+                            heatmapChart.setOption({
+                                calendar: {
+                                    range: selectedYear,
+                                },
+                                visualMap: {
+                                    max: Math.max(...groupedData[selectedYear].map(item => item[1])),
+                                },
+                                series: years.map(year => ({
+                                    type: 'heatmap',
+                                    coordinateSystem: 'calendar',
+                                    data: groupedData[year],
+                                    name: year,
+                                    emphasis: {
+                                        disabled: true,
+                                    },
+                                    silent: year !== selectedYear,
+                                })),
+                            });
+                        }
+                    });
+                    
+                    heatmapChart.on('click', function (params) {
+                        if (params.componentType === 'series') {
+                            const [year, month] = params.value[0].split('-');
+                            window.location.href = '/archives/' + year + '/' + month;
+                        }
+                    });
+                }
+            });
+        </script>
+        <div style="width: 100%;">
+            <!-- Heatmap Chart -->
+            <div id="heatmapChart-3" style="width: 100%; height: 200px; overflow-x: auto; overflow-y: hidden;"></div>
+            
+            <!-- Footer (Conditional) -->
+            
+            <div style="text-align: center; font-size: 12px; color: #666; margin-top: 10px;">
+                Powered by <a href="https://github.com/erispyu/hexo-stats-echarts" style="color: inherit; text-decoration: none;" target="_blank">hexo-stats-echarts</a>
+            </div>
+        
+        </div>
+    
+
+<h3 id="Using-the-pastel-Theme-Hide-Footer"><a href="#Using-the-pastel-Theme-Hide-Footer" class="headerlink" title="Using the pastel Theme (Hide Footer)"></a>Using the <code>pastel</code> Theme (Hide Footer)</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% heatmap pastel true %&#125;&#123;% endheatmap %&#125;</span><br></pre></td></tr></table></figure>
+
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const heatmapChartDom = document.getElementById('heatmapChart-4');
+                if(heatmapChartDom){
+                    const heatmapChart = echarts.init(heatmapChartDom, 'light');
+                    const cellSize = [18, 18];
+
+                    const groupedData = {"2022":[["2022-09-09",1],["2022-09-10",1]],"2023":[["2023-08-01",1],["2023-10-26",2],["2023-10-27",1],["2023-10-28",1],["2023-11-06",1],["2023-11-07",1],["2023-11-13",1],["2023-11-16",1],["2023-11-23",2],["2023-11-26",1],["2023-11-29",1],["2023-11-30",1],["2023-12-01",4],["2023-12-02",2],["2023-12-03",2],["2023-12-04",1],["2023-12-10",1],["2023-12-11",1],["2023-12-15",1],["2023-12-17",2],["2023-12-19",1],["2023-12-27",1],["2023-12-28",1],["2023-12-29",1]],"2024":[["2024-01-03",1],["2024-01-04",1],["2024-01-08",2],["2024-01-09",1],["2024-01-10",4],["2024-01-11",1],["2024-01-13",1],["2024-01-17",3],["2024-01-25",1],["2024-01-27",2],["2024-01-28",2],["2024-01-29",2],["2024-02-02",2],["2024-02-04",1],["2024-02-13",1],["2024-02-20",2],["2024-02-25",1],["2024-03-02",2],["2024-03-05",1],["2024-03-12",1],["2024-03-14",2],["2024-03-22",2],["2024-04-11",1],["2024-05-05",1],["2024-05-06",1],["2024-05-08",1],["2024-06-01",1],["2024-07-16",1],["2024-07-29",1],["2024-07-31",1],["2024-08-02",1],["2024-08-04",1],["2024-08-06",1],["2024-08-27",1],["2024-09-06",1],["2024-09-10",1],["2024-09-11",1],["2024-10-07",1],["2024-10-28",1],["2024-11-21",1],["2024-11-23",1],["2024-11-24",1],["2024-11-26",1],["2024-11-28",2],["2024-11-29",1],["2024-11-30",1],["2024-12-04",2],["2024-12-06",1],["2024-12-08",1],["2024-12-12",1],["2024-12-15",1],["2024-12-16",2],["2024-12-17",2],["2024-12-18",2],["2024-12-19",2],["2024-12-20",3],["2024-12-22",1],["2024-12-24",1],["2024-12-25",1],["2024-12-26",6],["2024-12-27",2],["2024-12-30",4]],"2025":[["2025-01-01",6],["2025-01-02",2],["2025-01-03",8],["2025-01-04",1],["2025-01-05",1],["2025-01-06",3],["2025-01-07",1]]}
+                    const years = Object.keys(groupedData).reverse();
+                    const initYear = years[0]
+                    
+                    heatmapChart.setOption({
+                        grid: {},
+                        tooltip: { 
+                            position: 'top', 
+                            formatter: params => `${params.value[0]}: ${params.value[1]} Articles` 
+                        },
+                        calendar: { 
+                            top: '10%',
+                            left: 'left', 
+                            right: '8%',
+                            range: initYear,
+                            cellSize: cellSize, 
+                            splitLine: { lineStyle: { color: '#E0E0E0', width: 1 } }, 
+                            itemStyle: { borderWidth: 1, borderColor: '#E0E0E0' }, 
+                            dayLabel: { show: false },
+                            monthLabel: { show: true },
+                            yearLabel: { show: false },
+                        },
+                        visualMap: { 
+                            show: true,
+                            right: '8%',
+                            bottom: '5%',
+                            type: 'piecewise',
+                            orient: 'horizontal',
+                            text: ['More', 'Less'],
+                            min: 0,
+                            max: Math.max(...groupedData[initYear].map(item => item[1])),
+                            inRange: { color: ["#F5D5E6","#E8B8D0","#D18FB8","#A86A8E","#7A4A61"] },
+                        },
+                        legend: {
+                            type: 'scroll',
+                            icon: 'none',
+                            data: years,
+                            orient: 'vertical',
+                            top: '5%',
+                            right: 'right',
+                            itemWidth: 20,
+                            itemHeight: 20,
+                            itemGap: 10,
+                            pageIconSize: 10,
+                            pageTextStyle: { fontSize: 14 },
+                            selectedMode: 'single',
+                        },
+                        series: years.map(year => ({
+                            type: 'heatmap',
+                            coordinateSystem: 'calendar',
+                            data: groupedData[year],
+                            name: year,
+                            emphasis: {
+                                disabled: true,
+                            },
+                            silent: year !== initYear,
+                        })),
+                    });
+                    
+                    heatmapChart.dispatchAction({
+                        type: 'legendSelect',
+                        name: initYear,
+                    });
+                    
+                    heatmapChart.on('legendselectchanged', function(params) {
+                        console.log('heatmaptag|legendselectchanged:', params);
+                        const selectedYear = Object.keys(params.selected).find(key => params.selected[key]);
+                        if (selectedYear && groupedData[selectedYear]) {
+                            heatmapChart.setOption({
+                                calendar: {
+                                    range: selectedYear,
+                                },
+                                visualMap: {
+                                    max: Math.max(...groupedData[selectedYear].map(item => item[1])),
+                                },
+                                series: years.map(year => ({
+                                    type: 'heatmap',
+                                    coordinateSystem: 'calendar',
+                                    data: groupedData[year],
+                                    name: year,
+                                    emphasis: {
+                                        disabled: true,
+                                    },
+                                    silent: year !== selectedYear,
+                                })),
+                            });
+                        }
+                    });
+                    
+                    heatmapChart.on('click', function (params) {
+                        if (params.componentType === 'series') {
+                            const [year, month] = params.value[0].split('-');
+                            window.location.href = '/archives/' + year + '/' + month;
+                        }
+                    });
+                }
+            });
+        </script>
+        <div style="width: 100%;">
+            <!-- Heatmap Chart -->
+            <div id="heatmapChart-4" style="width: 100%; height: 200px; overflow-x: auto; overflow-y: hidden;"></div>
+            
+            <!-- Footer (Conditional) -->
+            
+        </div>
+    
+
+<h3 id="Using-the-golden-Theme-Hide-Footer"><a href="#Using-the-golden-Theme-Hide-Footer" class="headerlink" title="Using the golden Theme (Hide Footer)"></a>Using the <code>golden</code> Theme (Hide Footer)</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% heatmap golden true %&#125;&#123;% endheatmap %&#125;</span><br></pre></td></tr></table></figure>
+
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const heatmapChartDom = document.getElementById('heatmapChart-5');
+                if(heatmapChartDom){
+                    const heatmapChart = echarts.init(heatmapChartDom, 'light');
+                    const cellSize = [18, 18];
+
+                    const groupedData = {"2022":[["2022-09-09",1],["2022-09-10",1]],"2023":[["2023-08-01",1],["2023-10-26",2],["2023-10-27",1],["2023-10-28",1],["2023-11-06",1],["2023-11-07",1],["2023-11-13",1],["2023-11-16",1],["2023-11-23",2],["2023-11-26",1],["2023-11-29",1],["2023-11-30",1],["2023-12-01",4],["2023-12-02",2],["2023-12-03",2],["2023-12-04",1],["2023-12-10",1],["2023-12-11",1],["2023-12-15",1],["2023-12-17",2],["2023-12-19",1],["2023-12-27",1],["2023-12-28",1],["2023-12-29",1]],"2024":[["2024-01-03",1],["2024-01-04",1],["2024-01-08",2],["2024-01-09",1],["2024-01-10",4],["2024-01-11",1],["2024-01-13",1],["2024-01-17",3],["2024-01-25",1],["2024-01-27",2],["2024-01-28",2],["2024-01-29",2],["2024-02-02",2],["2024-02-04",1],["2024-02-13",1],["2024-02-20",2],["2024-02-25",1],["2024-03-02",2],["2024-03-05",1],["2024-03-12",1],["2024-03-14",2],["2024-03-22",2],["2024-04-11",1],["2024-05-05",1],["2024-05-06",1],["2024-05-08",1],["2024-06-01",1],["2024-07-16",1],["2024-07-29",1],["2024-07-31",1],["2024-08-02",1],["2024-08-04",1],["2024-08-06",1],["2024-08-27",1],["2024-09-06",1],["2024-09-10",1],["2024-09-11",1],["2024-10-07",1],["2024-10-28",1],["2024-11-21",1],["2024-11-23",1],["2024-11-24",1],["2024-11-26",1],["2024-11-28",2],["2024-11-29",1],["2024-11-30",1],["2024-12-04",2],["2024-12-06",1],["2024-12-08",1],["2024-12-12",1],["2024-12-15",1],["2024-12-16",2],["2024-12-17",2],["2024-12-18",2],["2024-12-19",2],["2024-12-20",3],["2024-12-22",1],["2024-12-24",1],["2024-12-25",1],["2024-12-26",6],["2024-12-27",2],["2024-12-30",4]],"2025":[["2025-01-01",6],["2025-01-02",2],["2025-01-03",8],["2025-01-04",1],["2025-01-05",1],["2025-01-06",3],["2025-01-07",1]]}
+                    const years = Object.keys(groupedData).reverse();
+                    const initYear = years[0]
+                    
+                    heatmapChart.setOption({
+                        grid: {},
+                        tooltip: { 
+                            position: 'top', 
+                            formatter: params => `${params.value[0]}: ${params.value[1]} Articles` 
+                        },
+                        calendar: { 
+                            top: '10%',
+                            left: 'left', 
+                            right: '8%',
+                            range: initYear,
+                            cellSize: cellSize, 
+                            splitLine: { lineStyle: { color: '#E0E0E0', width: 1 } }, 
+                            itemStyle: { borderWidth: 1, borderColor: '#E0E0E0' }, 
+                            dayLabel: { show: false },
+                            monthLabel: { show: true },
+                            yearLabel: { show: false },
+                        },
+                        visualMap: { 
+                            show: true,
+                            right: '8%',
+                            bottom: '5%',
+                            type: 'piecewise',
+                            orient: 'horizontal',
+                            text: ['More', 'Less'],
+                            min: 0,
+                            max: Math.max(...groupedData[initYear].map(item => item[1])),
+                            inRange: { color: ["#FFEBB5","#FFD966","#FFB74D","#D18F4A","#A66B2B"] },
+                        },
+                        legend: {
+                            type: 'scroll',
+                            icon: 'none',
+                            data: years,
+                            orient: 'vertical',
+                            top: '5%',
+                            right: 'right',
+                            itemWidth: 20,
+                            itemHeight: 20,
+                            itemGap: 10,
+                            pageIconSize: 10,
+                            pageTextStyle: { fontSize: 14 },
+                            selectedMode: 'single',
+                        },
+                        series: years.map(year => ({
+                            type: 'heatmap',
+                            coordinateSystem: 'calendar',
+                            data: groupedData[year],
+                            name: year,
+                            emphasis: {
+                                disabled: true,
+                            },
+                            silent: year !== initYear,
+                        })),
+                    });
+                    
+                    heatmapChart.dispatchAction({
+                        type: 'legendSelect',
+                        name: initYear,
+                    });
+                    
+                    heatmapChart.on('legendselectchanged', function(params) {
+                        console.log('heatmaptag|legendselectchanged:', params);
+                        const selectedYear = Object.keys(params.selected).find(key => params.selected[key]);
+                        if (selectedYear && groupedData[selectedYear]) {
+                            heatmapChart.setOption({
+                                calendar: {
+                                    range: selectedYear,
+                                },
+                                visualMap: {
+                                    max: Math.max(...groupedData[selectedYear].map(item => item[1])),
+                                },
+                                series: years.map(year => ({
+                                    type: 'heatmap',
+                                    coordinateSystem: 'calendar',
+                                    data: groupedData[year],
+                                    name: year,
+                                    emphasis: {
+                                        disabled: true,
+                                    },
+                                    silent: year !== selectedYear,
+                                })),
+                            });
+                        }
+                    });
+                    
+                    heatmapChart.on('click', function (params) {
+                        if (params.componentType === 'series') {
+                            const [year, month] = params.value[0].split('-');
+                            window.location.href = '/archives/' + year + '/' + month;
+                        }
+                    });
+                }
+            });
+        </script>
+        <div style="width: 100%;">
+            <!-- Heatmap Chart -->
+            <div id="heatmapChart-5" style="width: 100%; height: 200px; overflow-x: auto; overflow-y: hidden;"></div>
+            
+            <!-- Footer (Conditional) -->
+            
+        </div>
+    
+
+<h3 id="Using-the-berry-Theme-Hide-Footer"><a href="#Using-the-berry-Theme-Hide-Footer" class="headerlink" title="Using the berry Theme (Hide Footer)"></a>Using the <code>berry</code> Theme (Hide Footer)</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% heatmap berry true %&#125;&#123;% endheatmap %&#125;</span><br></pre></td></tr></table></figure>
+
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const heatmapChartDom = document.getElementById('heatmapChart-6');
+                if(heatmapChartDom){
+                    const heatmapChart = echarts.init(heatmapChartDom, 'light');
+                    const cellSize = [18, 18];
+
+                    const groupedData = {"2022":[["2022-09-09",1],["2022-09-10",1]],"2023":[["2023-08-01",1],["2023-10-26",2],["2023-10-27",1],["2023-10-28",1],["2023-11-06",1],["2023-11-07",1],["2023-11-13",1],["2023-11-16",1],["2023-11-23",2],["2023-11-26",1],["2023-11-29",1],["2023-11-30",1],["2023-12-01",4],["2023-12-02",2],["2023-12-03",2],["2023-12-04",1],["2023-12-10",1],["2023-12-11",1],["2023-12-15",1],["2023-12-17",2],["2023-12-19",1],["2023-12-27",1],["2023-12-28",1],["2023-12-29",1]],"2024":[["2024-01-03",1],["2024-01-04",1],["2024-01-08",2],["2024-01-09",1],["2024-01-10",4],["2024-01-11",1],["2024-01-13",1],["2024-01-17",3],["2024-01-25",1],["2024-01-27",2],["2024-01-28",2],["2024-01-29",2],["2024-02-02",2],["2024-02-04",1],["2024-02-13",1],["2024-02-20",2],["2024-02-25",1],["2024-03-02",2],["2024-03-05",1],["2024-03-12",1],["2024-03-14",2],["2024-03-22",2],["2024-04-11",1],["2024-05-05",1],["2024-05-06",1],["2024-05-08",1],["2024-06-01",1],["2024-07-16",1],["2024-07-29",1],["2024-07-31",1],["2024-08-02",1],["2024-08-04",1],["2024-08-06",1],["2024-08-27",1],["2024-09-06",1],["2024-09-10",1],["2024-09-11",1],["2024-10-07",1],["2024-10-28",1],["2024-11-21",1],["2024-11-23",1],["2024-11-24",1],["2024-11-26",1],["2024-11-28",2],["2024-11-29",1],["2024-11-30",1],["2024-12-04",2],["2024-12-06",1],["2024-12-08",1],["2024-12-12",1],["2024-12-15",1],["2024-12-16",2],["2024-12-17",2],["2024-12-18",2],["2024-12-19",2],["2024-12-20",3],["2024-12-22",1],["2024-12-24",1],["2024-12-25",1],["2024-12-26",6],["2024-12-27",2],["2024-12-30",4]],"2025":[["2025-01-01",6],["2025-01-02",2],["2025-01-03",8],["2025-01-04",1],["2025-01-05",1],["2025-01-06",3],["2025-01-07",1]]}
+                    const years = Object.keys(groupedData).reverse();
+                    const initYear = years[0]
+                    
+                    heatmapChart.setOption({
+                        grid: {},
+                        tooltip: { 
+                            position: 'top', 
+                            formatter: params => `${params.value[0]}: ${params.value[1]} Articles` 
+                        },
+                        calendar: { 
+                            top: '10%',
+                            left: 'left', 
+                            right: '8%',
+                            range: initYear,
+                            cellSize: cellSize, 
+                            splitLine: { lineStyle: { color: '#E0E0E0', width: 1 } }, 
+                            itemStyle: { borderWidth: 1, borderColor: '#E0E0E0' }, 
+                            dayLabel: { show: false },
+                            monthLabel: { show: true },
+                            yearLabel: { show: false },
+                        },
+                        visualMap: { 
+                            show: true,
+                            right: '8%',
+                            bottom: '5%',
+                            type: 'piecewise',
+                            orient: 'horizontal',
+                            text: ['More', 'Less'],
+                            min: 0,
+                            max: Math.max(...groupedData[initYear].map(item => item[1])),
+                            inRange: { color: ["#F4C2D7","#E88BB3","#D94A7A","#A62B5C","#7A1F3D"] },
+                        },
+                        legend: {
+                            type: 'scroll',
+                            icon: 'none',
+                            data: years,
+                            orient: 'vertical',
+                            top: '5%',
+                            right: 'right',
+                            itemWidth: 20,
+                            itemHeight: 20,
+                            itemGap: 10,
+                            pageIconSize: 10,
+                            pageTextStyle: { fontSize: 14 },
+                            selectedMode: 'single',
+                        },
+                        series: years.map(year => ({
+                            type: 'heatmap',
+                            coordinateSystem: 'calendar',
+                            data: groupedData[year],
+                            name: year,
+                            emphasis: {
+                                disabled: true,
+                            },
+                            silent: year !== initYear,
+                        })),
+                    });
+                    
+                    heatmapChart.dispatchAction({
+                        type: 'legendSelect',
+                        name: initYear,
+                    });
+                    
+                    heatmapChart.on('legendselectchanged', function(params) {
+                        console.log('heatmaptag|legendselectchanged:', params);
+                        const selectedYear = Object.keys(params.selected).find(key => params.selected[key]);
+                        if (selectedYear && groupedData[selectedYear]) {
+                            heatmapChart.setOption({
+                                calendar: {
+                                    range: selectedYear,
+                                },
+                                visualMap: {
+                                    max: Math.max(...groupedData[selectedYear].map(item => item[1])),
+                                },
+                                series: years.map(year => ({
+                                    type: 'heatmap',
+                                    coordinateSystem: 'calendar',
+                                    data: groupedData[year],
+                                    name: year,
+                                    emphasis: {
+                                        disabled: true,
+                                    },
+                                    silent: year !== selectedYear,
+                                })),
+                            });
+                        }
+                    });
+                    
+                    heatmapChart.on('click', function (params) {
+                        if (params.componentType === 'series') {
+                            const [year, month] = params.value[0].split('-');
+                            window.location.href = '/archives/' + year + '/' + month;
+                        }
+                    });
+                }
+            });
+        </script>
+        <div style="width: 100%;">
+            <!-- Heatmap Chart -->
+            <div id="heatmapChart-6" style="width: 100%; height: 200px; overflow-x: auto; overflow-y: hidden;"></div>
+            
+            <!-- Footer (Conditional) -->
+            
+        </div>
+    
+
+<h3 id="No-Theme-Specified-Uses-Default-blues-Theme"><a href="#No-Theme-Specified-Uses-Default-blues-Theme" class="headerlink" title="No Theme Specified (Uses Default blues Theme)"></a>No Theme Specified (Uses Default <code>blues</code> Theme)</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% heatmap %&#125;&#123;% endheatmap %&#125;</span><br></pre></td></tr></table></figure>
+
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const heatmapChartDom = document.getElementById('heatmapChart-7');
+                if(heatmapChartDom){
+                    const heatmapChart = echarts.init(heatmapChartDom, 'light');
+                    const cellSize = [18, 18];
+
+                    const groupedData = {"2022":[["2022-09-09",1],["2022-09-10",1]],"2023":[["2023-08-01",1],["2023-10-26",2],["2023-10-27",1],["2023-10-28",1],["2023-11-06",1],["2023-11-07",1],["2023-11-13",1],["2023-11-16",1],["2023-11-23",2],["2023-11-26",1],["2023-11-29",1],["2023-11-30",1],["2023-12-01",4],["2023-12-02",2],["2023-12-03",2],["2023-12-04",1],["2023-12-10",1],["2023-12-11",1],["2023-12-15",1],["2023-12-17",2],["2023-12-19",1],["2023-12-27",1],["2023-12-28",1],["2023-12-29",1]],"2024":[["2024-01-03",1],["2024-01-04",1],["2024-01-08",2],["2024-01-09",1],["2024-01-10",4],["2024-01-11",1],["2024-01-13",1],["2024-01-17",3],["2024-01-25",1],["2024-01-27",2],["2024-01-28",2],["2024-01-29",2],["2024-02-02",2],["2024-02-04",1],["2024-02-13",1],["2024-02-20",2],["2024-02-25",1],["2024-03-02",2],["2024-03-05",1],["2024-03-12",1],["2024-03-14",2],["2024-03-22",2],["2024-04-11",1],["2024-05-05",1],["2024-05-06",1],["2024-05-08",1],["2024-06-01",1],["2024-07-16",1],["2024-07-29",1],["2024-07-31",1],["2024-08-02",1],["2024-08-04",1],["2024-08-06",1],["2024-08-27",1],["2024-09-06",1],["2024-09-10",1],["2024-09-11",1],["2024-10-07",1],["2024-10-28",1],["2024-11-21",1],["2024-11-23",1],["2024-11-24",1],["2024-11-26",1],["2024-11-28",2],["2024-11-29",1],["2024-11-30",1],["2024-12-04",2],["2024-12-06",1],["2024-12-08",1],["2024-12-12",1],["2024-12-15",1],["2024-12-16",2],["2024-12-17",2],["2024-12-18",2],["2024-12-19",2],["2024-12-20",3],["2024-12-22",1],["2024-12-24",1],["2024-12-25",1],["2024-12-26",6],["2024-12-27",2],["2024-12-30",4]],"2025":[["2025-01-01",6],["2025-01-02",2],["2025-01-03",8],["2025-01-04",1],["2025-01-05",1],["2025-01-06",3],["2025-01-07",1]]}
+                    const years = Object.keys(groupedData).reverse();
+                    const initYear = years[0]
+                    
+                    heatmapChart.setOption({
+                        grid: {},
+                        tooltip: { 
+                            position: 'top', 
+                            formatter: params => `${params.value[0]}: ${params.value[1]} Articles` 
+                        },
+                        calendar: { 
+                            top: '10%',
+                            left: 'left', 
+                            right: '8%',
+                            range: initYear,
+                            cellSize: cellSize, 
+                            splitLine: { lineStyle: { color: '#E0E0E0', width: 1 } }, 
+                            itemStyle: { borderWidth: 1, borderColor: '#E0E0E0' }, 
+                            dayLabel: { show: false },
+                            monthLabel: { show: true },
+                            yearLabel: { show: false },
+                        },
+                        visualMap: { 
+                            show: true,
+                            right: '8%',
+                            bottom: '5%',
+                            type: 'piecewise',
+                            orient: 'horizontal',
+                            text: ['More', 'Less'],
+                            min: 0,
+                            max: Math.max(...groupedData[initYear].map(item => item[1])),
+                            inRange: { color: ["#A6D8E8","#6FB3D2","#4A90BF","#2E6A8E","#1A4461"] },
+                        },
+                        legend: {
+                            type: 'scroll',
+                            icon: 'none',
+                            data: years,
+                            orient: 'vertical',
+                            top: '5%',
+                            right: 'right',
+                            itemWidth: 20,
+                            itemHeight: 20,
+                            itemGap: 10,
+                            pageIconSize: 10,
+                            pageTextStyle: { fontSize: 14 },
+                            selectedMode: 'single',
+                        },
+                        series: years.map(year => ({
+                            type: 'heatmap',
+                            coordinateSystem: 'calendar',
+                            data: groupedData[year],
+                            name: year,
+                            emphasis: {
+                                disabled: true,
+                            },
+                            silent: year !== initYear,
+                        })),
+                    });
+                    
+                    heatmapChart.dispatchAction({
+                        type: 'legendSelect',
+                        name: initYear,
+                    });
+                    
+                    heatmapChart.on('legendselectchanged', function(params) {
+                        console.log('heatmaptag|legendselectchanged:', params);
+                        const selectedYear = Object.keys(params.selected).find(key => params.selected[key]);
+                        if (selectedYear && groupedData[selectedYear]) {
+                            heatmapChart.setOption({
+                                calendar: {
+                                    range: selectedYear,
+                                },
+                                visualMap: {
+                                    max: Math.max(...groupedData[selectedYear].map(item => item[1])),
+                                },
+                                series: years.map(year => ({
+                                    type: 'heatmap',
+                                    coordinateSystem: 'calendar',
+                                    data: groupedData[year],
+                                    name: year,
+                                    emphasis: {
+                                        disabled: true,
+                                    },
+                                    silent: year !== selectedYear,
+                                })),
+                            });
+                        }
+                    });
+                    
+                    heatmapChart.on('click', function (params) {
+                        if (params.componentType === 'series') {
+                            const [year, month] = params.value[0].split('-');
+                            window.location.href = '/archives/' + year + '/' + month;
+                        }
+                    });
+                }
+            });
+        </script>
+        <div style="width: 100%;">
+            <!-- Heatmap Chart -->
+            <div id="heatmapChart-7" style="width: 100%; height: 200px; overflow-x: auto; overflow-y: hidden;"></div>
+            
+            <!-- Footer (Conditional) -->
+            
+            <div style="text-align: center; font-size: 12px; color: #666; margin-top: 10px;">
+                Powered by <a href="https://github.com/erispyu/hexo-stats-echarts" style="color: inherit; text-decoration: none;" target="_blank">hexo-stats-echarts</a>
+            </div>
+        
+        </div>
+    
+
+<h3 id="Undefined-Theme-Uses-Default-blues-Theme-Hide-Footer"><a href="#Undefined-Theme-Uses-Default-blues-Theme-Hide-Footer" class="headerlink" title="Undefined Theme (Uses Default blues Theme, Hide Footer)"></a>Undefined Theme (Uses Default <code>blues</code> Theme, Hide Footer)</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% heatmap unknown true %&#125;&#123;% endheatmap %&#125;</span><br></pre></td></tr></table></figure>
+
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const heatmapChartDom = document.getElementById('heatmapChart-8');
+                if(heatmapChartDom){
+                    const heatmapChart = echarts.init(heatmapChartDom, 'light');
+                    const cellSize = [18, 18];
+
+                    const groupedData = {"2022":[["2022-09-09",1],["2022-09-10",1]],"2023":[["2023-08-01",1],["2023-10-26",2],["2023-10-27",1],["2023-10-28",1],["2023-11-06",1],["2023-11-07",1],["2023-11-13",1],["2023-11-16",1],["2023-11-23",2],["2023-11-26",1],["2023-11-29",1],["2023-11-30",1],["2023-12-01",4],["2023-12-02",2],["2023-12-03",2],["2023-12-04",1],["2023-12-10",1],["2023-12-11",1],["2023-12-15",1],["2023-12-17",2],["2023-12-19",1],["2023-12-27",1],["2023-12-28",1],["2023-12-29",1]],"2024":[["2024-01-03",1],["2024-01-04",1],["2024-01-08",2],["2024-01-09",1],["2024-01-10",4],["2024-01-11",1],["2024-01-13",1],["2024-01-17",3],["2024-01-25",1],["2024-01-27",2],["2024-01-28",2],["2024-01-29",2],["2024-02-02",2],["2024-02-04",1],["2024-02-13",1],["2024-02-20",2],["2024-02-25",1],["2024-03-02",2],["2024-03-05",1],["2024-03-12",1],["2024-03-14",2],["2024-03-22",2],["2024-04-11",1],["2024-05-05",1],["2024-05-06",1],["2024-05-08",1],["2024-06-01",1],["2024-07-16",1],["2024-07-29",1],["2024-07-31",1],["2024-08-02",1],["2024-08-04",1],["2024-08-06",1],["2024-08-27",1],["2024-09-06",1],["2024-09-10",1],["2024-09-11",1],["2024-10-07",1],["2024-10-28",1],["2024-11-21",1],["2024-11-23",1],["2024-11-24",1],["2024-11-26",1],["2024-11-28",2],["2024-11-29",1],["2024-11-30",1],["2024-12-04",2],["2024-12-06",1],["2024-12-08",1],["2024-12-12",1],["2024-12-15",1],["2024-12-16",2],["2024-12-17",2],["2024-12-18",2],["2024-12-19",2],["2024-12-20",3],["2024-12-22",1],["2024-12-24",1],["2024-12-25",1],["2024-12-26",6],["2024-12-27",2],["2024-12-30",4]],"2025":[["2025-01-01",6],["2025-01-02",2],["2025-01-03",8],["2025-01-04",1],["2025-01-05",1],["2025-01-06",3],["2025-01-07",1]]}
+                    const years = Object.keys(groupedData).reverse();
+                    const initYear = years[0]
+                    
+                    heatmapChart.setOption({
+                        grid: {},
+                        tooltip: { 
+                            position: 'top', 
+                            formatter: params => `${params.value[0]}: ${params.value[1]} Articles` 
+                        },
+                        calendar: { 
+                            top: '10%',
+                            left: 'left', 
+                            right: '8%',
+                            range: initYear,
+                            cellSize: cellSize, 
+                            splitLine: { lineStyle: { color: '#E0E0E0', width: 1 } }, 
+                            itemStyle: { borderWidth: 1, borderColor: '#E0E0E0' }, 
+                            dayLabel: { show: false },
+                            monthLabel: { show: true },
+                            yearLabel: { show: false },
+                        },
+                        visualMap: { 
+                            show: true,
+                            right: '8%',
+                            bottom: '5%',
+                            type: 'piecewise',
+                            orient: 'horizontal',
+                            text: ['More', 'Less'],
+                            min: 0,
+                            max: Math.max(...groupedData[initYear].map(item => item[1])),
+                            inRange: { color: ["#A6D8E8","#6FB3D2","#4A90BF","#2E6A8E","#1A4461"] },
+                        },
+                        legend: {
+                            type: 'scroll',
+                            icon: 'none',
+                            data: years,
+                            orient: 'vertical',
+                            top: '5%',
+                            right: 'right',
+                            itemWidth: 20,
+                            itemHeight: 20,
+                            itemGap: 10,
+                            pageIconSize: 10,
+                            pageTextStyle: { fontSize: 14 },
+                            selectedMode: 'single',
+                        },
+                        series: years.map(year => ({
+                            type: 'heatmap',
+                            coordinateSystem: 'calendar',
+                            data: groupedData[year],
+                            name: year,
+                            emphasis: {
+                                disabled: true,
+                            },
+                            silent: year !== initYear,
+                        })),
+                    });
+                    
+                    heatmapChart.dispatchAction({
+                        type: 'legendSelect',
+                        name: initYear,
+                    });
+                    
+                    heatmapChart.on('legendselectchanged', function(params) {
+                        console.log('heatmaptag|legendselectchanged:', params);
+                        const selectedYear = Object.keys(params.selected).find(key => params.selected[key]);
+                        if (selectedYear && groupedData[selectedYear]) {
+                            heatmapChart.setOption({
+                                calendar: {
+                                    range: selectedYear,
+                                },
+                                visualMap: {
+                                    max: Math.max(...groupedData[selectedYear].map(item => item[1])),
+                                },
+                                series: years.map(year => ({
+                                    type: 'heatmap',
+                                    coordinateSystem: 'calendar',
+                                    data: groupedData[year],
+                                    name: year,
+                                    emphasis: {
+                                        disabled: true,
+                                    },
+                                    silent: year !== selectedYear,
+                                })),
+                            });
+                        }
+                    });
+                    
+                    heatmapChart.on('click', function (params) {
+                        if (params.componentType === 'series') {
+                            const [year, month] = params.value[0].split('-');
+                            window.location.href = '/archives/' + year + '/' + month;
+                        }
+                    });
+                }
+            });
+        </script>
+        <div style="width: 100%;">
+            <!-- Heatmap Chart -->
+            <div id="heatmapChart-8" style="width: 100%; height: 200px; overflow-x: auto; overflow-y: hidden;"></div>
+            
+            <!-- Footer (Conditional) -->
+            
+        </div>
+    
 
       </div>
       
@@ -314,323 +1382,5 @@
 
 
 
-<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
-        
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                const heatmapChartDom = document.getElementById('heatmapChart');
-                if(heatmapChartDom){
-                    const heatmapChart = echarts.init(heatmapChartDom, 'light');
-                    const cellSize = [18, 18];
-                    
-                    const groupByYear = (data) => {
-                        const result = {};
-                        data.forEach(([date, value]) => {
-                            const [year] = date.split('-').map(Number);
-                            if (!result[year]) {
-                                result[year] = [];
-                            }
-                            result[year].push([date, value]);
-                        });
-                        return result;
-                    };
-                    
-                    const groupedData = groupByYear([["2022-09-09",1],["2022-09-10",1],["2023-08-01",1],["2023-10-26",2],["2023-10-27",1],["2023-10-28",1],["2023-11-06",1],["2023-11-07",1],["2023-11-13",1],["2023-11-16",1],["2023-11-23",2],["2023-11-26",1],["2023-11-29",1],["2023-11-30",1],["2023-12-01",4],["2023-12-02",2],["2023-12-03",2],["2023-12-04",1],["2023-12-10",1],["2023-12-11",1],["2023-12-15",1],["2023-12-17",2],["2023-12-19",1],["2023-12-27",1],["2023-12-28",1],["2023-12-29",1],["2024-01-03",1],["2024-01-04",1],["2024-01-08",2],["2024-01-09",1],["2024-01-10",4],["2024-01-11",1],["2024-01-13",1],["2024-01-17",3],["2024-01-25",1],["2024-01-27",2],["2024-01-28",2],["2024-01-29",2],["2024-02-02",2],["2024-02-04",1],["2024-02-13",1],["2024-02-20",2],["2024-02-25",1],["2024-03-02",2],["2024-03-05",1],["2024-03-12",1],["2024-03-14",2],["2024-03-22",2],["2024-04-11",1],["2024-05-05",1],["2024-05-06",1],["2024-05-08",1],["2024-06-01",1],["2024-07-16",1],["2024-07-29",1],["2024-07-31",1],["2024-08-02",1],["2024-08-04",1],["2024-08-06",1],["2024-08-27",1],["2024-09-06",1],["2024-09-10",1],["2024-09-11",1],["2024-10-07",1],["2024-10-28",1],["2024-11-21",1],["2024-11-23",1],["2024-11-24",1],["2024-11-26",1],["2024-11-28",2],["2024-11-29",1],["2024-11-30",1],["2024-12-04",2],["2024-12-06",1],["2024-12-08",1],["2024-12-12",1],["2024-12-15",1],["2024-12-16",2],["2024-12-17",2],["2024-12-18",2],["2024-12-19",2],["2024-12-20",3],["2024-12-22",1],["2024-12-24",1],["2024-12-25",1],["2024-12-26",6],["2024-12-27",2],["2024-12-30",4],["2025-01-01",6],["2025-01-02",2],["2025-01-03",8],["2025-01-04",1],["2025-01-05",1],["2025-01-06",3],["2025-01-07",1]]);
-                    const years = Object.keys(groupedData).reverse();
-                    
-                    var initYear = parseInt(heatmapChartDom.getAttribute('year')) || new Date().getFullYear();
-                    const minYear = years[years.length - 1];
-                    const maxYear = years[0];
-                    if (initYear < minYear || initYear > maxYear) {
-                        initYear = maxYear;
-                    }
-                    console.log('[hexo-graph]generateHeatmapChart|initYear:', initYear, 'minYear:', minYear, 'maxYear:', maxYear);
-                    
-                    heatmapChart.setOption({
-                        grid: {},
-                        tooltip: { 
-                            position: 'top', 
-                            formatter: params => `${params.value[0]}: ${params.value[1]} Articles` 
-                        },
-                        calendar: { 
-                            top: '10%',
-                            left: 'left', 
-                            right: '8%',
-                            range: initYear,
-                            cellSize: cellSize, 
-                            splitLine: { lineStyle: { color: '#E0E0E0', width: 1 } }, 
-                            itemStyle: { borderWidth: 1, borderColor: '#E0E0E0' }, 
-                            dayLabel: { show: false },
-                            monthLabel: { show: true },
-                            yearLabel: { show: false },
-                        },
-                        visualMap: { 
-                            show: true,
-                            right: '8%',
-                            bottom: '5%',
-                            type: 'piecewise',
-                            orient: 'horizontal',
-                            text: ['More', 'Less'],
-                            min: 0,
-                            max: Math.max(...groupedData[initYear].map(item => item[1])),
-                            inRange: { color: ["#ACE7AE","#69C16D","#549F57"] }
-                        },
-                        legend: {
-                            type: 'scroll',
-                            icon: 'none',
-                            data: years,
-                            orient: 'vertical',
-                            top: '5%',
-                            right: 'right',
-                            itemWidth: 20,
-                            itemHeight: 20,
-                            itemGap: 10,
-                            pageIconSize: 10,
-                            pageTextStyle: { fontSize: 14 },
-                            selectedMode: 'single',
-                        },
-                        series: years.map(year => ({
-                            type: 'heatmap',
-                            coordinateSystem: 'calendar',
-                            data: groupedData[year],
-                            name: year,
-                            emphasis: {
-                                disabled: true,
-                            },
-                            silent: year !== initYear,
-                        })),
-                    });
-                    
-                    // init selected year
-                    heatmapChart.dispatchAction({
-                        type: 'legendSelect',
-                        name: initYear,
-                    });
-                    
-                    heatmapChart.on('legendselectchanged', function(params) {
-                        console.log('[hexo-graph]generateHeatmapChart|legendselectchanged:', params);
-                        const selectedYear = Object.keys(params.selected).find(key => params.selected[key]);
-                        if (selectedYear && groupedData[selectedYear]) {
-                            heatmapChart.setOption({
-                                calendar: {
-                                    range: selectedYear,
-                                },
-                                visualMap: {
-                                    max: Math.max(...groupedData[selectedYear].map(item => item[1])),
-                                },
-                                series: years.map(year => ({
-                                    type: 'heatmap',
-                                    coordinateSystem: 'calendar',
-                                    data: groupedData[year],
-                                    name: year,
-                                    emphasis: {
-                                        disabled: true,
-                                    },
-                                    silent: year !== selectedYear,
-                                })),
-                            });
-                        }
-                    });
-                    
-                    heatmapChart.on('click', function (params) {
-                        if (params.componentType === 'series') {
-                            const [year, month] = params.value[0].split('-');
-                            window.location.href = '/archives/' + year + '/' + month;
-                        }
-                    });
-                }
-            });
-        </script>
-    
-        
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                const monthlyChartDom = document.getElementById('monthlyChart');
-                if(monthlyChartDom){
-                    const monthlyChart = echarts.init(monthlyChartDom, 'light');
-                    monthlyChart.setOption({
-                        xAxis: { 
-                            type: 'category', 
-                            data: ["2022-09","2023-08","2023-10","2023-11","2023-12","2024-01","2024-02","2024-03","2024-04","2024-05","2024-06","2024-07","2024-08","2024-09","2024-10","2024-11","2024-12","2025-01"], 
-                            axisLabel: { fontSize: 14, fontWeight: 'bold', fontFamily: 'Microsoft YaHei, SimSun, serif' }
-                        },
-                        yAxis: { type: 'value', splitLine: { lineStyle: { type: 'dashed', color: '#ccc' } } },
-                        series: [{
-                            name: 'Articles',
-                            type: 'line',
-                            data: [2,1,4,9,18,21,7,8,1,3,1,3,4,3,2,8,32,22],
-                            smooth: true,
-                            lineStyle: { color: '#5470C6', width: 2 },
-                            itemStyle: { color: '#5470C6' },
-                            areaStyle: { color: 'rgba(84, 112, 198, 0.4)' },
-                            symbolSize: 10,
-                            label: {
-                                show: true,
-                                position: 'top',
-                                formatter: params => params.value,
-                                fontSize: 14,
-                                color: '#000',
-                                fontWeight: 'bold',
-                                fontFamily: 'Microsoft YaHei, SimSun, serif'
-                            }
-                        }]
-                    });
-
-                    monthlyChart.on('click', function (params) {
-                        const [year, month] = params.name.split('-');
-                        window.location.href = '/archives/' + year + '/' + month;
-                    });
-                }
-            })
-        </script>
-    
-        
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                const tagsChartDom = document.getElementById('tagsChart');
-                if(tagsChartDom){
-                    const tagsChart = echarts.init(tagsChartDom, 'light');
-                    tagsChart.setOption({
-                        tooltip: { trigger: 'item', formatter: '{b}: {c} ({d}%)' },
-                        series: [{
-                            type: 'pie',
-                            radius: '60%',
-                            data: [{"name":"2024","value":95},{"name":"在读","value":46},{"name":"2023","value":29},{"name":"2025","value":23},{"name":"读完","value":23},{"name":"公众号","value":15},{"name":"读过","value":12},{"name":"文学-文学鉴赏","value":12}],
-                            label: {
-                                position: 'outside',
-                                formatter: '{b} {c} ({d}%)',
-                                fontSize: 14,
-                                fontWeight: 'bold',
-                                fontFamily: 'Microsoft YaHei, SimSun, serif'
-                            },
-                            color: ["#5470C6","#91CC75","#FAC858","#EE6666","#73C0DE","#3BA272","#FC8452","#9A60B4"],
-                            labelLine: { show: true }
-                        }],
-                        legend: {
-                            bottom: '0',
-                            left: 'center',
-                            data: [{"name":"2024","value":95},{"name":"在读","value":46},{"name":"2023","value":29},{"name":"2025","value":23},{"name":"读完","value":23},{"name":"公众号","value":15},{"name":"读过","value":12},{"name":"文学-文学鉴赏","value":12}].map(tag => tag.name),
-                            textStyle: { fontSize: 14, fontWeight: 'bold', fontFamily: 'Microsoft YaHei, SimSun, serif' }
-                        }
-                    });
-
-                    tagsChart.on('click', function (params) {
-                        window.location.href = '/tags/' + params.name;
-                    });
-                }
-            })
-        </script>
-    
-        
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                const categoriesChartDom = document.getElementById('categoriesChart');
-                if(categoriesChartDom){
-                    const categoriesChart = echarts.init(categoriesChartDom, 'light');
-                    categoriesChart.setOption({
-                        xAxis: { type: 'value', splitLine: { lineStyle: { type: 'dashed', color: '#ccc' } } },
-                        yAxis: { 
-                            type: 'category', 
-                            data: [{"name":"BookNotes","value":147},{"name":"文学","value":45},{"name":"历史","value":26},{"name":"公众号","value":15},{"name":"导入书籍","value":14}].map(category => category.name).reverse(), 
-                            axisLabel: { fontSize: 14, fontWeight: 'bold', fontFamily: 'Microsoft YaHei, SimSun, serif' }
-                        },
-                        series: [{
-                            name: 'Category Count',
-                            type: 'bar',
-                            data: [{"name":"BookNotes","value":147},{"name":"文学","value":45},{"name":"历史","value":26},{"name":"公众号","value":15},{"name":"导入书籍","value":14}].map(category => category.value).reverse(),
-                            label: {
-                                show: true,
-                                position: 'right',
-                                formatter: params => params.value,
-                                fontSize: 14,
-                                color: '#000',
-                                fontWeight: 'bold',
-                                fontFamily: 'Microsoft YaHei, SimSun, serif'
-                            },
-                            itemStyle: {
-                                color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [
-                                    { offset: 0, color: '#91CC75' },
-                                    { offset: 1, color: '#73C0DE' }
-                                ])
-                            }
-                        }]
-                    });
-
-                    categoriesChart.on('click', function (params) {
-                        window.location.href = '/categories/' + params.name;
-                    });
-                }
-            });
-        </script>
-    
-        
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                const categoriesTreeChartDom = document.getElementById('categoriesTreeChart');
-                if(categoriesTreeChartDom){
-                    const treeChart = echarts.init(categoriesTreeChartDom, 'light');
-                    treeChart.setOption({
-                        title: {
-                            text: '操作提示：单击展开分类，双击进入具体分类页面',
-                            textStyle: {
-                                fontSize: 12,
-                                color: '#999',
-                                fontWeight: 'normal'
-                            },
-                            bottom: 0,
-                            left: 'center'
-                        },
-                        tooltip: {
-                            trigger: 'item',
-                            triggerOn: 'mousemove'
-                        },
-                        series: [{
-                            type: 'tree',
-                            data: [{"name":"Categories","children":[{"name":"Python","children":[],"count":1,"path":"Python"},{"name":"English","children":[],"count":1,"path":"English"},{"name":"BookNotes","children":[{"name":"个人成长","children":[],"count":1,"path":"BookNotes/个人成长"},{"name":"人物传记","children":[],"count":4,"path":"BookNotes/人物传记"},{"name":"公众号","children":[],"count":15,"path":"BookNotes/公众号"},{"name":"历史","children":[],"count":26,"path":"BookNotes/历史"},{"name":"政治军事","children":[],"count":8,"path":"BookNotes/政治军事"},{"name":"教育学习","children":[],"count":2,"path":"BookNotes/教育学习"},{"name":"文学","children":[],"count":45,"path":"BookNotes/文学"},{"name":"期刊杂志","children":[],"count":1,"path":"BookNotes/期刊杂志"},{"name":"导入书籍","children":[],"count":14,"path":"BookNotes/导入书籍"},{"name":"生活百科","children":[],"count":1,"path":"BookNotes/生活百科"},{"name":"科学技术","children":[],"count":4,"path":"BookNotes/科学技术"},{"name":"社会文化","children":[],"count":4,"path":"BookNotes/社会文化"},{"name":"精品小说","children":[],"count":8,"path":"BookNotes/精品小说"},{"name":"经济理财","children":[],"count":5,"path":"BookNotes/经济理财"},{"name":"计算机","children":[],"count":9,"path":"BookNotes/计算机"}],"count":147,"path":"BookNotes"}],"count":0,"path":""}],
-                            initialTreeDepth: -1,
-                            top: '5%',
-                            bottom: '10%',
-                            left: '0%',
-                            right: '0%',
-                            symbolSize: 15,
-                            layout: 'orthogonal',
-                            orient: 'TB',
-                            itemStyle: {
-                                color: '#91CC75',
-                                borderColor: '#73C0DE'
-                            },
-                            label: {
-                                position: 'bottom',
-                                verticalAlign: 'middle',
-                                align: 'center',
-                                fontSize: 14,
-                                distance: 28,
-                                formatter: function(params) {
-                                    return params.data.name + (params.data.count ? ' (' + params.data.count + ')' : '');
-                                }
-                            },
-                            leaves: {
-                                label: {
-                                    position: 'top',
-                                    verticalAlign: 'middle',
-                                    align: 'center'
-                                }
-                            },
-                            emphasis: {
-                                focus: 'descendant'
-                            },
-                            expandAndCollapse: true
-                        }]
-                    });
-
-                    treeChart.on('dblclick', function (params) {
-                        if (params.data && params.data.path) {
-                            window.location.href = '/categories/' + params.data.path;
-                        }
-                    });
-                }
-            });
-        </script>
-    
-    </body>
+</body>
 </html>
