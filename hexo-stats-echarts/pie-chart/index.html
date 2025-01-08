@@ -260,16 +260,19 @@
                 };
 
                 pieChart.setOption(chartOptions);
-
-                pieChart.on('click', function (params) {
+                
+                const handleClick = function (params) {
                     window.location.href = '/tags/' + encodeURIComponent(params.name);
-                });
+                };
+
+                pieChart.on('click', handleClick);
 
                 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
                     pieChart.dispose();
                     pieChart = echarts.init(pieChartDom, event.matches ? 'dark' : 'light');
                     chartOptions.backgroundColor = event.matches ? '#333' : 'transparent';
                     pieChart.setOption(chartOptions);
+                    pieChart.on('click', handleClick);
                 });
             });
         </script>
@@ -312,16 +315,19 @@
                 };
 
                 pieChart.setOption(chartOptions);
-
-                pieChart.on('click', function (params) {
+                
+                const handleClick = function (params) {
                     window.location.href = '/archives/' + encodeURIComponent(params.name);
-                });
+                };
+
+                pieChart.on('click', handleClick);
 
                 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
                     pieChart.dispose();
                     pieChart = echarts.init(pieChartDom, event.matches ? 'dark' : 'light');
                     chartOptions.backgroundColor = event.matches ? '#333' : 'transparent';
                     pieChart.setOption(chartOptions);
+                    pieChart.on('click', handleClick);
                 });
             });
         </script>
