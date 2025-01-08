@@ -28,7 +28,7 @@
 <meta property="og:description" content="HeatmapThe Heatmap tag allows you to display the number of articles on your site in a visually appealing calendar view. It creates interactive and customizable heatmaps to showcase your site’s activit">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2025-01-07T16:54:08.000Z">
-<meta property="article:modified_time" content="2025-01-08T02:33:59.859Z">
+<meta property="article:modified_time" content="2025-01-08T02:42:05.427Z">
 <meta property="article:author" content="Erispyu">
 <meta name="twitter:card" content="summary">
 
@@ -299,7 +299,7 @@
 </ul>
 <h2 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h2><p>Below are examples demonstrating how to use the <code>heatmap</code> tag with different configurations.</p>
 <h3 id="Default-Configuration-Ocean-Theme-Display-Footer-Latest-Year"><a href="#Default-Configuration-Ocean-Theme-Display-Footer-Latest-Year" class="headerlink" title="Default Configuration, Ocean Theme, Display Footer, Latest Year"></a>Default Configuration, Ocean Theme, Display Footer, Latest Year</h3><p>Uses the <code>oceanic</code> theme, displays the footer, and shows the latest year.</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% heatmap %&#125;&#123;% endheatmap %&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% heatmapchart %&#125;&#123;% endheatmapchart %&#125;</span><br></pre></td></tr></table></figure>
 
 <p><strong>Output:</strong>  </p>
 
@@ -423,7 +423,7 @@
     
 
 <h3 id="Forest-Theme-Hidden-Footer-Specific-Year"><a href="#Forest-Theme-Hidden-Footer-Specific-Year" class="headerlink" title="Forest Theme, Hidden Footer, Specific Year"></a>Forest Theme, Hidden Footer, Specific Year</h3><p>Uses the <code>forest</code> theme, hides the footer, and sets the initial year to 2024.</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% heatmap forest no-footer 2024 %&#125;&#123;% endheatmap %&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% heatmapchart forest no-footer 2024 %&#125;&#123;% endheatmapchart %&#125;</span><br></pre></td></tr></table></figure>
 
 <p><strong>Output:</strong>  </p>
 
@@ -543,7 +543,7 @@
     
 
 <h3 id="Sunset-Theme-Visible-Footer-Specific-Year"><a href="#Sunset-Theme-Visible-Footer-Specific-Year" class="headerlink" title="Sunset Theme, Visible Footer, Specific Year"></a>Sunset Theme, Visible Footer, Specific Year</h3><p>Uses the <code>sunset</code> theme, keeps the footer visible, and sets the initial year to 2023.</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% heatmap sunset display-footer 2023 %&#125;&#123;% endheatmap %&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% heatmapchart sunset display-footer 2023 %&#125;&#123;% endheatmapchart %&#125;</span><br></pre></td></tr></table></figure>
 
 <p><strong>Output:</strong>  </p>
 
@@ -667,7 +667,7 @@
     
 
 <h3 id="Charcoal-Theme-Invalid-Initial-Year"><a href="#Charcoal-Theme-Invalid-Initial-Year" class="headerlink" title="Charcoal Theme, Invalid Initial Year"></a>Charcoal Theme, Invalid Initial Year</h3><p>If the provided <code>initYear</code> is not in the data range, the latest year in the data will be used.</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% heatmap charcoal display-footer 1628 %&#125;&#123;% endheatmap %&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% heatmapchart charcoal display-footer 1628 %&#125;&#123;% endheatmapchart %&#125;</span><br></pre></td></tr></table></figure>
 
 <p><strong>Output:</strong>  </p>
 
@@ -791,7 +791,7 @@
     
 
 <h3 id="Undefined-Theme-Ocean-Theme-by-Default"><a href="#Undefined-Theme-Ocean-Theme-by-Default" class="headerlink" title="Undefined Theme, Ocean Theme by Default"></a>Undefined Theme, Ocean Theme by Default</h3><p>If an undefined theme is specified, the default <code>oceanic</code> theme will be applied.</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% heatmap unknown %&#125;&#123;% endheatmap %&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% heatmapchart unknown %&#125;&#123;% endheatmapchart %&#125;</span><br></pre></td></tr></table></figure>
 
 <p><strong>Output:</strong>  </p>
 
