@@ -234,7 +234,7 @@
             document.addEventListener('DOMContentLoaded', function() {
                 const pieChartDom = document.getElementById('pieChart-5');
                 if (pieChartDom) {
-                    const pieChart = echarts.init(pieChartDom, 'light');
+                    const pieChart = echarts.init(pieChartDom);
 
                     pieChart.setOption({
                         legend: {
@@ -246,7 +246,7 @@
                                 right: 'center',
                                 name: 'Nightingale Chart',
                                 type: 'pie',
-                                radius: [50, 250],
+                                // radius: [50, 250],
                                 center: ['50%', '50%'],
                                 roseType: 'false',
                                 itemStyle: {
