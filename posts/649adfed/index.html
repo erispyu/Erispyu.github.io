@@ -363,8 +363,10 @@
 <li><strong>防止伪造</strong>：数字签名确保摘要的真实性，防止信息被篡改。</li>
 <li><strong>效率优化</strong>：直接加密大量数据效率低下，而对摘要进行签名既能保证完整性，又能提高效率。</li>
 </ol>
-<h3 id="2-3-CA数字证书"><a href="#2-3-CA数字证书" class="headerlink" title="2.3 CA数字证书"></a>2.3 CA数字证书</h3><div class="note info"><p><strong>问题背景</strong>：<br>若客户端获取的公钥不可信，可能导致信息泄露。</p>
-<p><strong>解决方案</strong>：<br>CA中心为每个使用公开密钥的用户发放一个数字证书，数字证书的作用是证明证书中列出的用户合法拥有证书中列出的公开密钥。CA机构的数字签名使得攻击者不能伪造和篡改证书。</p>
+<h3 id="2-3-CA数字证书"><a href="#2-3-CA数字证书" class="headerlink" title="2.3 CA数字证书"></a>2.3 CA数字证书</h3><div class="note warning"><p><strong>问题背景</strong>：<br>若客户端获取的公钥不可信，可能导致信息泄露。</p>
+</div>
+
+<div class="note success"><p><strong>解决方案</strong>：<br>CA中心为每个使用公开密钥的用户发放一个数字证书，数字证书的作用是证明证书中列出的用户合法拥有证书中列出的公开密钥。CA机构的数字签名使得攻击者不能伪造和篡改证书。</p>
 </div>
 
 <h4 id="2-3-1-数字证书颁发流程"><a href="#2-3-1-数字证书颁发流程" class="headerlink" title="2.3.1 数字证书颁发流程"></a>2.3.1 数字证书颁发流程</h4><ol>
