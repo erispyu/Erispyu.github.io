@@ -20,12 +20,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"blog.eripsyu.fun","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.22.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"default"},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"algolia":{"appID":"2BILQUWIOA","apiKey":"f5aabb895c10440c28e6c77090f511eb","indexName":"github_page_erispyu","hits":{"per_page":10}}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="1. Prerequisite install Python 2.7 install MySQL 5.x  2. Install Django 1.6.11 Official website: https:&#x2F;&#x2F;www.djangoproject.com&#x2F;download&#x2F; Use command line: pip install Django&#x3D;&#x3D;1.6.11">
+    <meta name="description" content="1. Prerequisite install Python 2.7 install MySQL 5.x  2. Install Django 1.6.11 Official website: https:&#x2F;&#x2F;www.djangoproject.com&#x2F;download&#x2F; Use command line:  pip install Django&#x3D;&#x3D;1.6.11">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Environment Setup For Django@1.6.11 + Python@2.7 + MySQL@5.x">
 <meta property="og:url" content="https://blog.eripsyu.fun/posts/53a09fb8/index.html">
 <meta property="og:site_name" content="Erispyu&#39;s Blog">
-<meta property="og:description" content="1. Prerequisite install Python 2.7 install MySQL 5.x  2. Install Django 1.6.11 Official website: https:&#x2F;&#x2F;www.djangoproject.com&#x2F;download&#x2F; Use command line: pip install Django&#x3D;&#x3D;1.6.11">
+<meta property="og:description" content="1. Prerequisite install Python 2.7 install MySQL 5.x  2. Install Django 1.6.11 Official website: https:&#x2F;&#x2F;www.djangoproject.com&#x2F;download&#x2F; Use command line:  pip install Django&#x3D;&#x3D;1.6.11">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-09-09T09:51:40.000Z">
 <meta property="article:modified_time" content="2022-09-09T09:51:40.000Z">
@@ -141,7 +141,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Prerequisite"><span class="nav-text">1. Prerequisite</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Install-Django-1-6-11"><span class="nav-text">2. Install Django 1.6.11</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-Create-a-Django-project"><span class="nav-text">3. Create a Django project</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-Install-the-PyMySQL-package"><span class="nav-text">4.  Install the PyMySQL package</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-Set-up-the-setting-py-file"><span class="nav-text">5. Set up the setting.py file</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-Use-your-own-models-to-create-MySQL-tables"><span class="nav-text">6. Use your own models to create MySQL tables</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-Generate-models-from-existing-tables"><span class="nav-text">7. Generate models from existing tables</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-Bind-to-gunicorn"><span class="nav-text">8. Bind to gunicorn</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Prerequisite"><span class="nav-text">1. Prerequisite</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Install-Django-1-6-11"><span class="nav-text">2. Install Django 1.6.11</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-Create-a-Django-project"><span class="nav-text">3. Create a Django project</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-Install-the-PyMySQL-package"><span class="nav-text">4. Install the PyMySQL package</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-Set-up-the-setting-py-file"><span class="nav-text">5. Set up the setting.py file</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-Use-your-own-models-to-create-MySQL-tables"><span class="nav-text">6. Use your own models to create MySQL tables</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-Generate-models-from-existing-tables"><span class="nav-text">7. Generate models from existing tables</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-Bind-to-gunicorn"><span class="nav-text">8. Bind to gunicorn</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -154,18 +154,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">149</span>
+          <span class="site-state-item-count">150</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">18</span>
+        <span class="site-state-item-count">20</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">239</span>
+        <span class="site-state-item-count">245</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -291,7 +291,11 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
+          <a href="/categories/Computer-Science/" itemprop="url" rel="index"><span itemprop="name">Computer Science</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Computer-Science/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
         </span>
     </span>
 
@@ -339,34 +343,78 @@
 </ol>
 <h2 id="2-Install-Django-1-6-11"><a href="#2-Install-Django-1-6-11" class="headerlink" title="2. Install Django 1.6.11"></a>2. Install Django 1.6.11</h2><ol>
 <li>Official website: <a target="_blank" rel="noopener" href="https://www.djangoproject.com/download/">https://www.djangoproject.com/download/</a></li>
-<li>Use command line: <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install Django==1.6.11</span><br></pre></td></tr></table></figure>
-<span id="more"></span></li>
-<li>Verify what you have installed:<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python -c <span class="string">&quot;import django; print(django.get_version())&quot;</span></span><br></pre></td></tr></table></figure></li>
-<li>To see where Django was installed:<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python -c <span class="string">&quot;import sys; sys.path = sys.path[1:]; import django; print(django.__path__)&quot;</span></span><br></pre></td></tr></table></figure></li>
+<li>Use command line:</li>
 </ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install Django==1.6.11</span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<ol start="3">
+<li>Verify what you have installed:</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python -c <span class="string">&quot;import django; print(django.get_version())&quot;</span></span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>To see where Django was installed:</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python -c <span class="string">&quot;import sys; sys.path = sys.path[1:]; import django; print(django.__path__)&quot;</span></span><br></pre></td></tr></table></figure>
+
 <h2 id="3-Create-a-Django-project"><a href="#3-Create-a-Django-project" class="headerlink" title="3. Create a Django project"></a>3. Create a Django project</h2><ol>
-<li>Create with command line:<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">django-admin.py startproject mysite</span><br></pre></td></tr></table></figure>
-Here <code>mysite</code> is an example of the project’s name.</li>
-<li>Directory tree:<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">mysite/</span><br><span class="line">manage.py</span><br><span class="line">mysite/</span><br><span class="line">    __init__.py</span><br><span class="line">    settings.py</span><br><span class="line">    urls.py</span><br><span class="line">    wsgi.py</span><br></pre></td></tr></table></figure></li>
+<li>Create with command line:</li>
 </ol>
-<h2 id="4-Install-the-PyMySQL-package"><a href="#4-Install-the-PyMySQL-package" class="headerlink" title="4.  Install the PyMySQL package"></a>4.  Install the PyMySQL package</h2><ol>
-<li>Use command line:<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pip install PyMySQL</span><br></pre></td></tr></table></figure></li>
-<li>Paste the following code to the <code>__init__.py</code> file, which was left empty after project creation, just to let Python know that this is a Python package:<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pymysql</span><br><span class="line"></span><br><span class="line">pymysql.install_as_MySQLdb()</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">django-admin.py startproject mysite</span><br></pre></td></tr></table></figure>
+
+<p>Here <code>mysite</code> is an example of the project’s name.</p>
+<ol start="2">
+<li>Directory tree:</li>
 </ol>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">mysite/</span><br><span class="line">manage.py</span><br><span class="line">mysite/</span><br><span class="line">    __init__.py</span><br><span class="line">    settings.py</span><br><span class="line">    urls.py</span><br><span class="line">    wsgi.py</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-Install-the-PyMySQL-package"><a href="#4-Install-the-PyMySQL-package" class="headerlink" title="4. Install the PyMySQL package"></a>4. Install the PyMySQL package</h2><ol>
+<li>Use command line:</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pip install PyMySQL</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>Paste the following code to the <code>__init__.py</code> file, which was left empty after project creation, just to let Python know that this is a Python package:</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pymysql</span><br><span class="line"></span><br><span class="line">pymysql.install_as_MySQLdb()</span><br></pre></td></tr></table></figure>
+
 <h2 id="5-Set-up-the-setting-py-file"><a href="#5-Set-up-the-setting-py-file" class="headerlink" title="5. Set up the setting.py file"></a>5. Set up the <code>setting.py</code> file</h2><ol>
-<li>Change the <code>DATABASES</code> part into the following:<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">DATABASES = &#123;</span><br><span class="line">    <span class="string">&#x27;default&#x27;</span>: &#123;</span><br><span class="line">        <span class="string">&#x27;ENGINE&#x27;</span>: <span class="string">&#x27;django.db.backends.mysql&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;NAME&#x27;</span>: <span class="string">&#x27;mysite_db&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;HOST&#x27;</span>: <span class="string">&#x27;127.0.0.1&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;PORT&#x27;</span>: <span class="string">&#x27;3306&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;USER&#x27;</span>: <span class="string">&#x27;root&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;PASSWORD&#x27;</span>: <span class="string">&#x27;yourpassword&#x27;</span>,</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>Verify with:<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">python manage.py syncdb</span><br></pre></td></tr></table></figure>
-The output should be something like:<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">Creating tables ...</span><br><span class="line">Creating table django_admin_log</span><br><span class="line">Creating table auth_permission</span><br><span class="line">Creating table auth_group_permissions</span><br><span class="line">Creating table auth_group</span><br><span class="line">Creating table auth_user_groups</span><br><span class="line">Creating table auth_user_user_permissions</span><br><span class="line">Creating table auth_user</span><br><span class="line">Creating table django_content_type</span><br><span class="line">Creating table django_session</span><br><span class="line"></span><br><span class="line">You just installed Django&#x27;s auth system, which means you don&#x27;t have any superusers defined.</span><br><span class="line">Would you like to create one now? (yes/no): yes</span><br><span class="line">Username (leave blank to use &#x27;XXX&#x27;): admin</span><br><span class="line">Email address: admin</span><br><span class="line">Error: Enter a valid email address.</span><br><span class="line">Email address: XXX@company.com</span><br><span class="line">Password: </span><br><span class="line">Password (again): </span><br><span class="line">Superuser created successfully.</span><br><span class="line">Installing custom SQL ...</span><br><span class="line">Installing indexes ...</span><br><span class="line">Installed 0 object(s) from 0 fixture(s)</span><br></pre></td></tr></table></figure>
-The <code>syncdb</code> command looks at the INSTALLED_APPS setting and creates any necessary database tables according to the database settings in your <code>mysite/settings.py</code> file.<br>You’ll see a message for each database table it creates, and you’ll get a prompt asking you if you’d like to create a superuser account for the authentication system. Go ahead and do that.</li>
+<li>Change the <code>DATABASES</code> part into the following:</li>
 </ol>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">DATABASES = &#123;</span><br><span class="line">    <span class="string">&#x27;default&#x27;</span>: &#123;</span><br><span class="line">        <span class="string">&#x27;ENGINE&#x27;</span>: <span class="string">&#x27;django.db.backends.mysql&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;NAME&#x27;</span>: <span class="string">&#x27;mysite_db&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;HOST&#x27;</span>: <span class="string">&#x27;127.0.0.1&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;PORT&#x27;</span>: <span class="string">&#x27;3306&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;USER&#x27;</span>: <span class="string">&#x27;root&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;PASSWORD&#x27;</span>: <span class="string">&#x27;yourpassword&#x27;</span>,</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>Verify with:</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">python manage.py syncdb</span><br></pre></td></tr></table></figure>
+
+<p>The output should be something like:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">Creating tables ...</span><br><span class="line">Creating table django_admin_log</span><br><span class="line">Creating table auth_permission</span><br><span class="line">Creating table auth_group_permissions</span><br><span class="line">Creating table auth_group</span><br><span class="line">Creating table auth_user_groups</span><br><span class="line">Creating table auth_user_user_permissions</span><br><span class="line">Creating table auth_user</span><br><span class="line">Creating table django_content_type</span><br><span class="line">Creating table django_session</span><br><span class="line"></span><br><span class="line">You just installed Django&#x27;s auth system, which means you don&#x27;t have any superusers defined.</span><br><span class="line">Would you like to create one now? (yes/no): yes</span><br><span class="line">Username (leave blank to use &#x27;XXX&#x27;): admin</span><br><span class="line">Email address: admin</span><br><span class="line">Error: Enter a valid email address.</span><br><span class="line">Email address: XXX@company.com</span><br><span class="line">Password: </span><br><span class="line">Password (again): </span><br><span class="line">Superuser created successfully.</span><br><span class="line">Installing custom SQL ...</span><br><span class="line">Installing indexes ...</span><br><span class="line">Installed 0 object(s) from 0 fixture(s)</span><br></pre></td></tr></table></figure>
+
+<p>The <code>syncdb</code> command looks at the INSTALLED_APPS setting and creates any necessary database tables according to the database settings in your <code>mysite/settings.py</code> file.<br>You’ll see a message for each database table it creates, and you’ll get a prompt asking you if you’d like to create a superuser account for the authentication system. Go ahead and do that.</p>
 <h2 id="6-Use-your-own-models-to-create-MySQL-tables"><a href="#6-Use-your-own-models-to-create-MySQL-tables" class="headerlink" title="6. Use your own models to create MySQL tables"></a>6. Use your own models to create MySQL tables</h2><ol>
-<li>Notice that Django cannot create a database for you, but tables only, so we need to create a DB directly in MySQL first.<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">mysql -u root -p</span><br><span class="line">password:</span><br><span class="line">CREATE DATABASE mysite_db;</span><br><span class="line">USE mysite_db;</span><br></pre></td></tr></table></figure></li>
-<li>Create an app with Django:<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">python manage.py startapp myapp</span><br></pre></td></tr></table></figure>
-This command would create a directory <code>myapp</code> under the root container, at the same level with <code>manage.py</code>:<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">myapp/</span><br><span class="line">    __init__.py</span><br><span class="line">    admin.py</span><br><span class="line">    models.py</span><br><span class="line">    tests.py</span><br><span class="line">    views.py</span><br></pre></td></tr></table></figure></li>
-<li>Django would create a MySQL table for each designed model&#x2F;object. Following is the Sample model code can be pasted into the <code>models.py</code> file:<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Poll</span>(models.Model):</span><br><span class="line">    question = models.CharField(max_length=<span class="number">200</span>)</span><br><span class="line">    pub_date = models.DateTimeField(<span class="string">&#x27;date published&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__unicode__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">return</span> self.question</span><br></pre></td></tr></table></figure></li>
+<li>Notice that Django cannot create a database for you, but tables only, so we need to create a DB directly in MySQL first.</li>
 </ol>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">mysql -u root -p</span><br><span class="line">password:</span><br><span class="line">CREATE DATABASE mysite_db;</span><br><span class="line">USE mysite_db;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>Create an app with Django:</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">python manage.py startapp myapp</span><br></pre></td></tr></table></figure>
+
+<p>This command would create a directory <code>myapp</code> under the root container, at the same level with <code>manage.py</code>:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">myapp/</span><br><span class="line">    __init__.py</span><br><span class="line">    admin.py</span><br><span class="line">    models.py</span><br><span class="line">    tests.py</span><br><span class="line">    views.py</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>Django would create a MySQL table for each designed model&#x2F;object. Following is the Sample model code can be pasted into the <code>models.py</code> file:</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Poll</span>(models.Model):</span><br><span class="line">    question = models.CharField(max_length=<span class="number">200</span>)</span><br><span class="line">    pub_date = models.DateTimeField(<span class="string">&#x27;date published&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__unicode__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">return</span> self.question</span><br></pre></td></tr></table></figure>
+
 <h2 id="7-Generate-models-from-existing-tables"><a href="#7-Generate-models-from-existing-tables" class="headerlink" title="7. Generate models from existing tables"></a>7. Generate models from existing tables</h2><p>With command <code>inspectdb</code> to see how Django parse the MySQL tables:</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">python manage.py inspectdb</span><br></pre></td></tr></table></figure>
+
 <p>If pending with <code>&gt; models.py</code>, we can get some auto-generated models in the <code>models.py</code> file.</p>
 <h2 id="8-Bind-to-gunicorn"><a href="#8-Bind-to-gunicorn" class="headerlink" title="8. Bind to gunicorn"></a>8. Bind to gunicorn</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pip install gunicorn</span><br><span class="line">gunicorn --bind 0.0.0.0:8000 mysite.wsgi</span><br></pre></td></tr></table></figure>
 
@@ -404,6 +452,9 @@ This command would create a directory <code>myapp</code> under the root containe
 
           <div class="post-nav">
             <div class="post-nav-item">
+                <a href="/posts/84ab38c0/" rel="prev" title="对称加密和非对称加密">
+                  <i class="fa fa-angle-left"></i> 对称加密和非对称加密
+                </a>
             </div>
             <div class="post-nav-item">
                 <a href="/posts/5ebed7a/" rel="next" title="King Charles III's Inaugural Address">
@@ -444,13 +495,13 @@ This command would create a directory <code>myapp</code> under the root containe
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="Word count total">458k</span>
+    <span title="Word count total">462k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">6:56</span>
+    <span title="Reading time total">7:01</span>
   </span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
