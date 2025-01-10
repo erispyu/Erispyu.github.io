@@ -1,0 +1,232 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><!-- hexo injector head_begin start --><script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script><!-- hexo injector head_begin end --><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Erispyu's Blog</title><meta name="author" content="Erispyu"><meta name="copyright" content="Erispyu"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
+<meta property="og:title" content="Erispyu&#39;s Blog">
+<meta property="og:url" content="https://blog.erispyu.fun/page/10/index.html">
+<meta property="og:site_name" content="Erispyu&#39;s Blog">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://blog.erispyu.fun/img/zelda_link_sleep.jpg">
+<meta property="article:author" content="Erispyu">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://blog.erispyu.fun/img/zelda_link_sleep.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://blog.erispyu.fun/page/10/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+          
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', () => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Erispyu\'s Blog',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  isShuoshuo: false
+}</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/zelda_link_sleep.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">154</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">259</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">6</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><span class="site-page group"><span> About</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="fa-fw fa fa-user"></i><span> Profile</span></a></li><li><a class="site-page child" href="/sitemap.xml"><i class="fa-fw fa fa-sitemap"></i><span> Sitemap</span></a></li><li><a class="site-page child" href="/baidusitemap.xml"><i class="fa-fw fa fa-sitemap"></i><span> Baidu Sitemap</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><span> Plugins</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/hexo-stats-echarts/"><i class="fa-fw fa-solid fa-flask"></i><span> hexo-stats-echarts</span></a></li><li><a class="site-page child" href="/hexo-stats-echarts/heatmap-chart/"><i class="fa-fw fa-solid fa-braille"></i><span> Heatmap Chart</span></a></li><li><a class="site-page child" href="/hexo-stats-echarts/pie-chart/"><i class="fa-fw fa fa-chart-pie"></i><span> Pie Chart</span></a></li><li><a class="site-page child" href="/hexo-stats-echarts/radar-chart/"><i class="fa-fw fa-solid fa-hexagon-nodes"></i><span> Radar Chart</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-list"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/reading/"><i class="fa-fw fa fa-book-open"></i><span> Reading</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(/img/zelda_bow.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Erispyu's Blog</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><span class="site-page group"><span> About</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="fa-fw fa fa-user"></i><span> Profile</span></a></li><li><a class="site-page child" href="/sitemap.xml"><i class="fa-fw fa fa-sitemap"></i><span> Sitemap</span></a></li><li><a class="site-page child" href="/baidusitemap.xml"><i class="fa-fw fa fa-sitemap"></i><span> Baidu Sitemap</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><span> Plugins</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/hexo-stats-echarts/"><i class="fa-fw fa-solid fa-flask"></i><span> hexo-stats-echarts</span></a></li><li><a class="site-page child" href="/hexo-stats-echarts/heatmap-chart/"><i class="fa-fw fa-solid fa-braille"></i><span> Heatmap Chart</span></a></li><li><a class="site-page child" href="/hexo-stats-echarts/pie-chart/"><i class="fa-fw fa fa-chart-pie"></i><span> Pie Chart</span></a></li><li><a class="site-page child" href="/hexo-stats-echarts/radar-chart/"><i class="fa-fw fa-solid fa-hexagon-nodes"></i><span> Radar Chart</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-list"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/reading/"><i class="fa-fw fa fa-book-open"></i><span> Reading</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">Erispyu's Blog</h1><div id="site_social_icons"><a class="social-icon" href="https://github.com/erispyu" target="_blank" title="GitHub"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:erispyu@gmail.com" target="_blank" title="E-Mail"><i class="fa fa-envelope" style="color: #4a7dbe;"></i></a><a class="social-icon" href="https://www.goodreads.com/user/show/156410162-erispyu" target="_blank" title="Goodreads"><i class="fa fa-book-reader"></i></a><a class="social-icon" href="https://www.douban.com/people/erispyu00/" target="_blank" title="Douban"><i class="fa fa-film"></i></a><a class="social-icon" href="https://www.travellings.cn/go.html" target="_blank" title="Travellings"><i class="fa-solid fa-train"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="post_cover left"><a href="/posts/9a22be2e/" title="世说新语"><img class="post-bg" src="https://cdn.weread.qq.com/weread/cover/18/YueWen_31580155/t7_YueWen_31580155.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="世说新语"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/9a22be2e/" title="世说新语">世说新语</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-03-01T16:00:00.000Z" title="Created 2024-03-02 00:00:00">2024-03-02</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/BookNotes/">BookNotes</a></span></div><div class="content"> 世说新语  作者: 刘义庆著 【朝】刘孝标注 徐传武校点 简介: 《世说新语》是一部主要记述魏晋人物言谈轶事的笔记小说，由南朝刘宋宗室临川王刘义庆组织一批文人编写的。全书原八卷，刘峻注本分为十卷，今传本皆作三卷，分为德行、言语、政事、文学、方正、雅量等三十六门，共一千多则，记述自汉末到刘宋时名士贵族的遗闻轶事，主要为有关人物评论、清谈玄言和机智应对的故事，是研究魏晋历史、人物、文学、语言的极好史料。这次整理，选取光绪十七年王先谦思贤讲舍所刻本为底本，校本则用宋本、唐写本、沈校本等为主，并征引了李慈铭、李详、程炎震、余嘉锡、徐震堮等学者的校语。书后附人名释名和龚斌的《人名索引》，以便读者阅读。 出版时间: 2013-10-15 ISBN: 9787532569465 分类: 文学-古典文学 出版社: 上海古籍出版社 字数: 215503 在线阅读: 微信读书 划线数量: 7 想法数量: 4    笔记前言📌 刘义庆是宋武帝刘裕之弟长沙王刘道怜的儿子，后来过继给叔父临川王刘道规，所以袭封临川王。💭 那和“元嘉草草”的刘义隆是堂兄弟呀。  ⏱ 2023-12-02...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/7ff0b1c1/" title="Developing Apps with GPT-4 and ChatGPT"><img class="post-bg" src="https://res.weread.qq.com/wrepub/CB_CxH6h96gdCBZ6iz6gn7FY9EM_parsecover" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Developing Apps with GPT-4 and ChatGPT"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/7ff0b1c1/" title="Developing Apps with GPT-4 and ChatGPT">Developing Apps with GPT-4 and ChatGPT</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-03-01T16:00:00.000Z" title="Created 2024-03-02 00:00:00">2024-03-02</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/BookNotes/">BookNotes</a></span></div><div class="content"> Developing Apps with GPT-4 and ChatGPT  作者: Olivier Caelen 简介:  出版时间:  ISBN:  分类:  出版社: O’Reilly Media 字数: 0 在线阅读: 微信读书 划线数量: 2 想法数量: 0    笔记Preface 📌 Within a mere five days of its release, ChatGPT reached an impressive one million users, sending shock waves throughout the tech industry and beyond.  ⏱ 2024-03-02 18:53:25 ^1-781-931    📌 Supplemental material (code examples, exercises, etc.) is available for download at https://oreil.ly/DevAppsGPT_GitHub.  ⏱ 2024-03-02 18:55:17...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/e7cc3baf/" title="三联生活周刊"><img class="post-bg" src="http://wx.qlogo.cn/mmhead/Q3auHgzwzM7pldgOabHbYP4CjRhBr7bAIoV3G6rTgNDm4vlj4WbLhA/0" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="三联生活周刊"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/e7cc3baf/" title="三联生活周刊">三联生活周刊</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-02-24T16:00:00.000Z" title="Created 2024-02-25 00:00:00">2024-02-25</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/BookNotes/">BookNotes</a></span></div><div class="content"> 三联生活周刊  作者: 公众号 简介: 一本杂志和他倡导的生活。 出版时间:  ISBN:  分类:  出版社:  字数: 0 在线阅读: 微信读书 划线数量: 2 想法数量: 0    笔记未知章节 📌 他们那一代人像是活在历史中，又穿梭到现实里，个人命运与时代脉搏如此紧密相连，有些人引领了时代，有些则被淹没。  ⏱ 2024-02-25 16:32:48 ^-334-388    📌 不过瓶颈很快出现。李凡习惯了打工时的单打独斗，每个项目他都会亲力亲为，商务、接待、拍片、剪片、交作业，他一个人从头盯到尾。个人能力的“一招鲜”在给别人打工或者经营一家小工作室时还吃得开，但想要在事业上有所进阶，触碰更高层次就很难行得通了。  ⏱ 2024-02-08 09:54:36 ^-977-1096   </div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/436fa0b7/" title="TheEconomist.2024.02.17 [Fri, 16 Feb 2024]"><img class="post-bg" src="https://res.weread.qq.com/wrepub/CB_3XzBnzBnhARS6mM6l57UaGlZ_parsecover" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="TheEconomist.2024.02.17 [Fri, 16 Feb 2024]"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/436fa0b7/" title="TheEconomist.2024.02.17 [Fri, 16 Feb 2024]">TheEconomist.2024.02.17 [Fri, 16 Feb 2024]</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-02-19T16:00:00.000Z" title="Created 2024-02-20 00:00:00">2024-02-20</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/BookNotes/">BookNotes</a></span></div><div class="content"> TheEconomist.2024.02.17 [Fri, 16 Feb 2024]  作者: calibre 简介:  出版时间:  ISBN:  分类:  出版社: calibre 字数: 0 在线阅读: 微信读书 划线数量: 0 想法数量: 1    笔记Xi Jinping’s paranoia is making China isolated and insular📌 paranoia💭 &#x2F;ˌpærəˈnɔɪə&#x2F;n. 【心】妄想狂,偏执狂n. 多疑症  ⏱ 2024-02-20 22:11:45 ^19836794-7P80TsJQf  </div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/62098322/" title="高性能MySQL（第4版）"><img class="post-bg" src="https://cdn.weread.qq.com/weread/cover/5/cpPlatform_tpeiJyaZriAkSeauDycVY8/t7_cpPlatform_tpeiJyaZriAkSeauDycVY8.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="高性能MySQL（第4版）"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/62098322/" title="高性能MySQL（第4版）">高性能MySQL（第4版）</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-02-19T16:00:00.000Z" title="Created 2024-02-20 00:00:00">2024-02-20</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/BookNotes/">BookNotes</a></span></div><div class="content"> 高性能MySQL（第4版）  作者: Silvia Botros   Jeremy Tinley 简介: 《高性能 MySQL》一直是 MySQL 领域的经典之作，影响了一代又一代的 DBA 和技术人员，从第3 版出版到第 4 版出版过去了近十年，MySQL 也从 5.5 版本更新到了 8.0 版本。第 4 版中增加了大量对 MySQL 5.7 和 8.0 版本新特性的介绍，删除了一些在新版本中已经废弃或者不再常用的功能，还增加了对云数据库的介绍，减少了在官方文档中已有的基础使用和配置相关的内容。这些年，MySQL 经过在大量大规模互联网场景中的应用验证，使得本书在继续关注高性能之外，还用了较多的篇幅来介绍如何实现 MySQL 的大规模可扩展应用和合规性问题，这是相比第 3 版最大的不同，也是本书封面上所写的“经过大规模运维验证的策略”的体现。本书适合数据库管理员（DBA）阅读，也适合系统运维和开发人员参考学习。不管你是数据库新手还是专家，相信都能从本书中有所收获。 出版时间: 2022-09-01 ISBN: 9787121442575 分类: 计算机-数据库 出版社:...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/4cb9231d/" title="The Go Programming Language"><img class="post-bg" src="https://res.weread.qq.com/wrepub/CB_AFPBZzBWM9ES6lg6keET89xk_parsecover" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="The Go Programming Language"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/4cb9231d/" title="The Go Programming Language">The Go Programming Language</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-02-12T16:00:00.000Z" title="Created 2024-02-13 00:00:00">2024-02-13</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/BookNotes/">BookNotes</a></span></div><div class="content"> The Go Programming Language  作者: Brian W. Kernighan 简介:  出版时间:  ISBN:  分类:  出版社: Addison-Wesley Professional 字数: 0 在线阅读: 微信读书 划线数量: 48 想法数量: 32    笔记The Origins of Go📌 beget💭 beget | BrE bɪˈɡɛt, AmE bəˈɡɛt |transitive verb present participle begetting past tense begot | bɪˈɡɒt | or archaic begat | bɪˈɡæt | ; past participle begotten | bɪˈɡɒtn |① archaic (father) 成为…之父▸ they hoped that the king might beget an heir by his new queen他们希望国王新娶的王后可以为他生一位继承人② literary (bring about) 引起▸ violence...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/604939d8/" title="算法（第4版）"><img class="post-bg" src="https://cdn.weread.qq.com/weread/cover/42/YueWen_26211947/t7_YueWen_26211947.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="算法（第4版）"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/604939d8/" title="算法（第4版）">算法（第4版）</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-02-03T16:00:00.000Z" title="Created 2024-02-04 00:00:00">2024-02-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/BookNotes/">BookNotes</a></span></div><div class="content"> 算法（第4版）  作者: Robert Sedgewick  Kevin Wayne 简介: 本书作为算法领域经典的参考书，全面介绍了关于算法和数据结构的必备知识，并特别针对排序、搜索、图处理和字符串处理进行了论述。第4版具体给出了每位程序员应知应会的50个算法，提供了实际代码，而且这些Java 代码实现采用了模块化的编程风格，读者可以方便地加以改造。本书配套网站提供了书中内容的摘要及更多的代码实现、测试数据、练习、教学课件等资源。本书适合用作大学教材或从业者的参考书。配套网站algs4.cs.princeton.edu提供了本书内容摘要以及相关代码、测试数据、编程练习、教学课件等资源。 出版时间: 2012-10-10 ISBN: 9787115293800 分类: 计算机-编程设计 出版社: 人民邮电出版社 字数: 618193 在线阅读: 微信读书 划线数量: 19 想法数量: 4    笔记2.4 优先队列📌...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/a53509a3/" title="古代汉语常识"><img class="post-bg" src="https://cdn.weread.qq.com/weread/cover/38/YueWen_34868128/t7_YueWen_34868128.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="古代汉语常识"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/a53509a3/" title="古代汉语常识">古代汉语常识</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-02-01T16:00:00.000Z" title="Created 2024-02-02 00:00:00">2024-02-02</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/BookNotes/">BookNotes</a></span></div><div class="content"> 古代汉语常识  作者: 王力 简介: 这是一本简明扼要、深入浅出地介绍古代汉语常识的书。是让广大中小学阶段的青少年感兴趣、看得懂、看进去的图书。古代汉语源远流长，有关资料又浩如烟海，需要从中选取最主要、最有用的知识告诉给读者，特别是一些初学者，基于以上考虑，我们组织相关学者，从著名语言学家王力先生有关古代汉语的相关论述中，精心选择出十四篇这些方面的文章，经过适当地加工和重组而成。包括文字学、音韵学、词汇学、语法学、训诂学、修辞学以及与学习古代汉语密切相关的天文、历法等方面的内容。既适合于初学者自学，也可供中小学生、大学生阅读和教师们参考。即使是一些专业研究工作者，也能从中获取一些有益的启示。 出版时间: 2020-09-01 ISBN: 9787101146868 分类: 文学-语言文字 出版社: 中华书局 字数: 118191 在线阅读: 微信读书 划线数量: 1 想法数量: 0    笔记十一、为什么学习古代汉语要学点天文学 📌...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/b924f79d/" title="TheEconomist.2024.02.03 [Fri, 02 Feb 2024]"><img class="post-bg" src="https://res.weread.qq.com/wrepub/CB_Ck329X28P1FM6m46kf31mDP2_parsecover" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="TheEconomist.2024.02.03 [Fri, 02 Feb 2024]"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/b924f79d/" title="TheEconomist.2024.02.03 [Fri, 02 Feb 2024]">TheEconomist.2024.02.03 [Fri, 02 Feb 2024]</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-02-01T16:00:00.000Z" title="Created 2024-02-02 00:00:00">2024-02-02</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/BookNotes/">BookNotes</a></span></div><div class="content"> TheEconomist.2024.02.03 [Fri, 02 Feb 2024]  作者: calibre 简介:  出版时间:  ISBN:  分类:  出版社: calibre 字数: 0 在线阅读: 微信读书 划线数量: 0 想法数量: 1    笔记The end of the social network📌 brash💭 brash | BrE braʃ, AmE bræʃ |adjective① (overbearingly or cheekily self-assertive) 自以为是的② (garish) 俗艳的  ⏱ 2024-02-02 12:50:42 ^19836794-7OG2zWjFb  </div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/df3c8ff9/" title="老钱日日谈"><img class="post-bg" src="http://wx.qlogo.cn/mmhead/Q3auHgzwzM406ex2bM2VaUIb9ibh6pGCTibs18uhY38Us2HXicfOyeyUg/0" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="老钱日日谈"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/df3c8ff9/" title="老钱日日谈">老钱日日谈</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-01-28T16:00:00.000Z" title="Created 2024-01-29 00:00:00">2024-01-29</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/BookNotes/">BookNotes</a></span></div><div class="content"> 老钱日日谈  作者: 公众号 简介: 解闷而已，长久陪伴，偶尔启发。 出版时间:  ISBN:  分类:  出版社:  字数: 0 在线阅读: 微信读书 划线数量: 3 想法数量: 0    笔记未知章节 📌 当世界进入存量时期，当市场进入底部时间，人性会展示出他的另一面：   你可别摔了，摔了不但没人扶，大家会上去一人踩你一脚。  ⏱ 2024-01-29 10:27:54 ^-262-321    📌 牛市一年的发行量≈10~12年的熊市发行量。  ⏱ 2024-01-29 10:30:42 ^-1038-1060    📌 绝大部分公募和私募，本质上卖的都是贝塔！  ⏱ 2024-01-29 10:30:59 ^-1334-1354   </div></div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/9/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/#content-inner">9</a><span class="page-number current">10</span><a class="page-number" href="/page/11/#content-inner">11</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/#content-inner">16</a><a class="extend next" rel="next" href="/page/11/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/zelda_link_sleep.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Erispyu</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">154</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">259</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">6</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/erispyu"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/erispyu" target="_blank" title="GitHub"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:erispyu@gmail.com" target="_blank" title="E-Mail"><i class="fa fa-envelope" style="color: #4a7dbe;"></i></a><a class="social-icon" href="https://www.goodreads.com/user/show/156410162-erispyu" target="_blank" title="Goodreads"><i class="fa fa-book-reader"></i></a><a class="social-icon" href="https://www.douban.com/people/erispyu00/" target="_blank" title="Douban"><i class="fa fa-film"></i></a><a class="social-icon" href="https://www.travellings.cn/go.html" target="_blank" title="Travellings"><i class="fa-solid fa-train"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">Stay Hungry, Stay Foolish</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/e729026e/" title="清粥小菜">清粥小菜</a><time datetime="2025-01-09T11:46:48.000Z" title="Created 2025-01-09 19:46:48">2025-01-09</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/649adfed/" title="对称加密与非对称加密详解">对称加密与非对称加密详解</a><time datetime="2025-01-09T06:27:09.000Z" title="Created 2025-01-09 14:27:09">2025-01-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/7683439c/" title="汪曾祺全集（全12册）"><img src="https://cdn.weread.qq.com/weread/cover/4/yuewen_29499625/t7_yuewen_294996251676539569.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="汪曾祺全集（全12册）"/></a><div class="content"><a class="title" href="/posts/7683439c/" title="汪曾祺全集（全12册）">汪曾祺全集（全12册）</a><time datetime="2025-01-08T16:00:00.000Z" title="Created 2025-01-09 00:00:00">2025-01-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/97eceaba/" title="LLMQuant"><img src="http://wx.qlogo.cn/mmhead/2pm5Nb2cMaMYRvdQxlITjyxuzACyMDicszlVibD6yeyQbSEm8FhYgMk3ib4icDNUU0fp7ehJ6C5O8Ng/0" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="LLMQuant"/></a><div class="content"><a class="title" href="/posts/97eceaba/" title="LLMQuant">LLMQuant</a><time datetime="2025-01-07T16:00:00.000Z" title="Created 2025-01-08 00:00:00">2025-01-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/2b030a18/" title="政事堂2019"><img src="http://wx.qlogo.cn/mmhead/Q3auHgzwzM5Bp39F4nxFK6e8yMJ6Ju5SneIotBH1RptRJ8VBq8IZ4Q/0" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="政事堂2019"/></a><div class="content"><a class="title" href="/posts/2b030a18/" title="政事堂2019">政事堂2019</a><time datetime="2025-01-07T16:00:00.000Z" title="Created 2025-01-08 00:00:00">2025-01-08</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>Categories</span>
+            
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/BookNotes/"><span class="card-category-list-name">BookNotes</span><span class="card-category-list-count">150</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Computer-Science/"><span class="card-category-list-name">Computer Science</span><span class="card-category-list-count">2</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Computer-Science/Encryption/"><span class="card-category-list-name">Encryption</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Computer-Science/Python/"><span class="card-category-list-name">Python</span><span class="card-category-list-count">1</span></a></li></ul></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/English/"><span class="card-category-list-name">English</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E9%9A%8F%E7%AC%94/"><span class="card-category-list-name">随笔</span><span class="card-category-list-count">1</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA-%E7%90%86%E8%AE%BA%E7%9F%A5%E8%AF%86/" style="font-size: 1.1em; color: #999">计算机-理论知识</a> <a href="/tags/%E5%8F%B8%E9%A6%AC%E5%85%89%E8%83%A1%E4%B8%89%E7%9C%81/" style="font-size: 1.1em; color: #999">司馬光胡三省</a> <a href="/tags/%E7%A7%91%E5%AD%A6%E6%8A%80%E6%9C%AF-%E7%A7%91%E5%AD%A6%E7%A7%91%E6%99%AE/" style="font-size: 1.1em; color: #999">科学技术-科学科普</a> <a href="/tags/%E4%B8%8A%E6%B5%B7%E4%B8%89%E8%81%94%E4%B9%A6%E5%BA%97/" style="font-size: 1.3em; color: #99a1ac">上海三联书店</a> <a href="/tags/%E4%B8%AD%E5%8D%8E%E4%B9%A6%E5%B1%80/" style="font-size: 1.1em; color: #999">中华书局</a> <a href="/tags/%E4%B8%AD%E5%8D%8E%E4%B9%A6%E5%B1%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/" style="font-size: 1.4em; color: #99a5b6">中华书局有限公司</a> <a href="/tags/%E5%90%95%E9%9D%99/" style="font-size: 1.1em; color: #999">吕静</a> <a href="/tags/%E5%8E%86%E5%8F%B2-%E5%8E%86%E5%8F%B2%E5%B0%8F%E8%AF%B4/" style="font-size: 1.1em; color: #999">历史-历史小说</a> <a href="/tags/%E5%8E%86%E5%8F%B2-%E5%8E%86%E5%8F%B2%E8%AF%BB%E7%89%A9/" style="font-size: 1.2em; color: #999da3">历史-历史读物</a> <a href="/tags/%E7%BB%8F%E6%B5%8E%E7%90%86%E8%B4%A2-%E8%B4%A2%E7%BB%8F/" style="font-size: 1.1em; color: #999">经济理财-财经</a> <a href="/tags/%E5%86%AF%E6%A2%A6%E9%BE%99%E7%BC%96/" style="font-size: 1.1em; color: #999">冯梦龙编</a> <a href="/tags/%E6%B2%88%E6%97%A2%E6%B5%8E/" style="font-size: 1.1em; color: #999">沈既济</a> <a href="/tags/%E4%BA%BA%E7%89%A9%E4%BC%A0%E8%AE%B0-%E4%BC%A0%E8%AE%B0%E7%BB%BC%E5%90%88/" style="font-size: 1.1em; color: #999">人物传记-传记综合</a> <a href="/tags/%E5%87%8C%E6%BF%9B%E5%88%9D/" style="font-size: 1.1em; color: #999">凌濛初</a> <a href="/tags/%E7%90%86%E6%9F%A5%E5%BE%B7%C2%B7%E9%81%93%E9%87%91%E6%96%AF/" style="font-size: 1.1em; color: #999">理查德·道金斯</a> <a href="/tags/Kovid-Goyal/" style="font-size: 1.2em; color: #999da3">Kovid Goyal</a> <a href="/tags/%E4%B8%AD%E5%9B%BD%E7%A4%BE%E4%BC%9A%E7%A7%91%E5%AD%A6%E5%87%BA%E7%89%88%E7%A4%BE/" style="font-size: 1.1em; color: #999">中国社会科学出版社</a> <a href="/tags/%E6%9D%8E%E7%A1%95/" style="font-size: 1.1em; color: #999">李硕</a> <a href="/tags/%E5%B0%B9%E5%B0%8F%E6%9E%97%E6%A0%A1%E6%B3%A8/" style="font-size: 1.1em; color: #999">尹小林校注</a> <a href="/tags/%E4%B8%AD%E4%BF%A1%E5%87%BA%E7%89%88%E9%9B%86%E5%9B%A2/" style="font-size: 1.5em; color: #99a9bf">中信出版集团</a> <a href="/tags/%E6%B5%B7%E6%BC%84/" style="font-size: 1.1em; color: #999">海漄</a> <a href="/tags/%E5%86%AF%E6%A2%A6%E9%BE%99/" style="font-size: 1.2em; color: #999da3">冯梦龙</a> <a href="/tags/%E6%9C%B1%E5%85%89%E6%BD%9C/" style="font-size: 1.1em; color: #999">朱光潜</a> <a href="/tags/Princeton-University-Press/" style="font-size: 1.1em; color: #999">Princeton University Press</a> <a href="/tags/%E6%96%B0%E6%98%9F%E5%87%BA%E7%89%88%E7%A4%BE/" style="font-size: 1.1em; color: #999">新星出版社</a> <a href="/tags/%E5%9F%83%E9%87%8C%E5%85%8B%C2%B7%E4%B9%94%E6%A0%B9%E6%A3%AE/" style="font-size: 1.1em; color: #999">埃里克·乔根森</a> <a href="/tags/%E7%A4%BE%E4%BC%9A%E6%96%87%E5%8C%96-%E7%A4%BE%E7%A7%91/" style="font-size: 1.3em; color: #99a1ac">社会文化-社科</a> <a href="/tags/Walter-Isaacson/" style="font-size: 1.1em; color: #999">Walter Isaacson</a> <a href="/tags/%E5%A4%A9%E5%9C%B0%E5%87%BA%E7%89%88%E7%A4%BE/" style="font-size: 1.1em; color: #999">天地出版社</a> <a href="/tags/%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%E5%87%BA%E7%89%88%E7%A4%BE/" style="font-size: 1.2em; color: #999da3">清华大学出版社</a> <a href="/tags/%E5%A4%96%E8%AF%AD%E6%95%99%E5%AD%A6%E4%B8%8E%E7%A0%94%E7%A9%B6%E5%87%BA%E7%89%88%E7%A4%BE/" style="font-size: 1.1em; color: #999">外语教学与研究出版社</a> <a href="/tags/%E6%B1%9F%E8%8B%8F%E5%87%A4%E5%87%B0%E6%96%87%E8%89%BA%E5%87%BA%E7%89%88%E7%A4%BE/" style="font-size: 1.1em; color: #999">江苏凤凰文艺出版社</a> <a href="/tags/%E6%96%87%E5%AD%A6-%E7%BA%AA%E5%AE%9E%E6%96%87%E5%AD%A6/" style="font-size: 1.3em; color: #99a1ac">文学-纪实文学</a> <a href="/tags/Django/" style="font-size: 1.1em; color: #999">Django</a> <a href="/tags/%E9%A9%AC%E6%B1%89%E9%BA%9F%E8%91%97/" style="font-size: 1.1em; color: #999">马汉麟著</a> <a href="/tags/%E7%8E%8B%E7%91%9E/" style="font-size: 1.1em; color: #999">王瑞</a> <a href="/tags/%E7%A4%BE%E4%BC%9A%E7%A7%91%E5%AD%A6%E6%96%87%E7%8C%AE%E5%87%BA%E7%89%88%E7%A4%BE/" style="font-size: 1.2em; color: #999da3">社会科学文献出版社</a> <a href="/tags/%E9%A1%B9%E9%A3%99/" style="font-size: 1.1em; color: #999">项飙</a> <a href="/tags/Encryption/" style="font-size: 1.1em; color: #999">Encryption</a> <a href="/tags/%E5%B8%83%E8%8E%B1%E6%81%A9%C2%B7W-%E6%9F%AF%E5%B0%BC%E6%B1%89/" style="font-size: 1.1em; color: #999">布莱恩·W. 柯尼汉</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>Archives</span>
+      <a class="card-more-btn" href="/archives/" title="View More"><i class="fas fa-angle-right"></i></a>
+    </div>
+    <ul class="card-archive-list">
+  
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2025/01/">
+          <span class="card-archive-list-date">January 2025</span>
+          <span class="card-archive-list-count">28</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2024/12/">
+          <span class="card-archive-list-date">December 2024</span>
+          <span class="card-archive-list-count">32</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2024/11/">
+          <span class="card-archive-list-date">November 2024</span>
+          <span class="card-archive-list-count">8</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2024/10/">
+          <span class="card-archive-list-date">October 2024</span>
+          <span class="card-archive-list-count">1</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2024/09/">
+          <span class="card-archive-list-date">September 2024</span>
+          <span class="card-archive-list-count">3</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2024/08/">
+          <span class="card-archive-list-date">August 2024</span>
+          <span class="card-archive-list-count">4</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2024/07/">
+          <span class="card-archive-list-date">July 2024</span>
+          <span class="card-archive-list-count">3</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2024/06/">
+          <span class="card-archive-list-date">June 2024</span>
+          <span class="card-archive-list-count">1</span>
+        </a>
+      </li>
+    </ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Website Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article Count :</div><div class="item-count">154</div></div><div class="webinfo-item"><div class="item-name">Unique Visitors :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Page Views :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Update :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-01-10T09:10:24.692Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By Erispyu</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

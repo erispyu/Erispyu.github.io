@@ -1,32 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head><!-- hexo injector head_begin start --><script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script><!-- hexo injector head_begin end -->
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
-
-<link rel="stylesheet" href="/css/main.css">
-
-
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
-
-<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.erispyu.fun","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.22.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"default"},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"algolia":{"appID":"2BILQUWIOA","apiKey":"f5aabb895c10440c28e6c77090f511eb","indexName":"github_page_erispyu","hits":{"per_page":10}}}</script><script src="/js/config.js"></script>
-
-    <meta name="description" content="1. Prerequisite install Python 2.7 install MySQL 5.x  2. Install Django 1.6.11 Official website: https:&#x2F;&#x2F;www.djangoproject.com&#x2F;download&#x2F; Use command line:  pip install Django&#x3D;&#x3D;1.6.11">
+<!DOCTYPE html><html lang="en" data-theme="light"><head><!-- hexo injector head_begin start --><script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script><!-- hexo injector head_begin end --><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Environment Setup For Django@1.6.11 + Python@2.7 + MySQL@5.x | Erispyu's Blog</title><meta name="author" content="Erispyu"><meta name="copyright" content="Erispyu"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="1. Prerequisite install Python 2.7 install MySQL 5.x  2. Install Django 1.6.11 Official website: https:&#x2F;&#x2F;www.djangoproject.com&#x2F;download&#x2F; Use command line:  pip install Django&#x3D;&#x3D;1.6.11">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Environment Setup For Django@1.6.11 + Python@2.7 + MySQL@5.x">
 <meta property="og:url" content="https://blog.erispyu.fun/posts/53a09fb8/index.html">
 <meta property="og:site_name" content="Erispyu&#39;s Blog">
 <meta property="og:description" content="1. Prerequisite install Python 2.7 install MySQL 5.x  2. Install Django 1.6.11 Official website: https:&#x2F;&#x2F;www.djangoproject.com&#x2F;download&#x2F; Use command line:  pip install Django&#x3D;&#x3D;1.6.11">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://blog.erispyu.fun/img/zelda_link_sleep.jpg">
 <meta property="article:published_time" content="2022-09-09T09:51:40.000Z">
 <meta property="article:modified_time" content="2022-09-09T09:51:40.000Z">
 <meta property="article:author" content="Erispyu">
@@ -34,320 +13,160 @@
 <meta property="article:tag" content="Django">
 <meta property="article:tag" content="MySQL">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://blog.erispyu.fun/img/zelda_link_sleep.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://blog.erispyu.fun/posts/53a09fb8/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
 
-
-<link rel="canonical" href="https://blog.erispyu.fun/posts/53a09fb8/">
-
-
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://blog.erispyu.fun/posts/53a09fb8/","path":"posts/53a09fb8/","title":"Environment Setup For Django@1.6.11 + Python@2.7 + MySQL@5.x"}</script>
-
-<script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Environment Setup For Django@1.6.11 + Python@2.7 + MySQL@5.x | Erispyu's Blog</title>
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
   
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QCC01KVZ4X"></script>
-  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-QCC01KVZ4X","only_pageview":false,"measure_protocol_api_secret":null}</script>
-  <script src="/js/third-party/analytics/google-analytics.js"></script>
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
 
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
 
-
-
-
-
-
-
-  <noscript>
-    <link rel="stylesheet" href="/css/noscript.css">
-  </noscript>
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
-  <div class="headband"></div>
-
-  <main class="main">
-    <div class="column">
-      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar" role="button">
-        <span class="toggle-line"></span>
-        <span class="toggle-line"></span>
-        <span class="toggle-line"></span>
-    </div>
-  </div>
-
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <i class="logo-line"></i>
-      <p class="site-title">Erispyu's Blog</p>
-      <i class="logo-line"></i>
-    </a>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger" aria-label="Search" role="button">
-        <i class="fa fa-search fa-fw fa-lg"></i>
-    </div>
-  </div>
-</div>
-
-
-
-<nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-plugins"><a href="/hexo-stats-echarts/" rel="section"><i class="fa-solid fa-flask fa-fw"></i>Plugins</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-list fa-fw"></i>Categories</a></li><li class="menu-item menu-item-timeline"><a href="/timeline/" rel="section"><i class="fa-solid fa-hourglass-half fa-fw"></i>Timeline</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li><li class="menu-item menu-item-reading"><a href="/reading/" rel="section"><i class="fa fa-book-open fa-fw"></i>Reading</a></li>
-      <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
-        </a>
-      </li>
-  </ul>
-</nav>
-
-
-
-  <div class="search-pop-overlay">
-    <div class="popup search-popup">
-      <div class="search-header">
-        <span class="search-icon">
-          <i class="fa fa-search"></i>
-        </span>
-        <div class="search-input-container">
-          <input autocomplete="off" autocapitalize="off" maxlength="80"
-                placeholder="Searching..." spellcheck="false"
-                type="search" class="search-input">
-        </div>
-        <span class="popup-btn-close" role="button">
-          <i class="fa fa-times-circle"></i>
-        </span>
-      </div>
-      <div class="search-result-container">
-        <div class="search-result-icon">
-          <i class="fab fa-algolia fa-5x"></i>
-        </div>
-      </div>
-    </div>
-  </div>
-
-</header>
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+          
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', () => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
         
-  
-  <aside class="sidebar">
-
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
-      <ul class="sidebar-nav">
-        <li class="sidebar-nav-toc">
-          Table of Contents
-        </li>
-        <li class="sidebar-nav-overview">
-          Overview
-        </li>
-      </ul>
-
-      <div class="sidebar-panel-container">
-        <!--noindex-->
-        <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Prerequisite"><span class="nav-text">1. Prerequisite</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Install-Django-1-6-11"><span class="nav-text">2. Install Django 1.6.11</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-Create-a-Django-project"><span class="nav-text">3. Create a Django project</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-Install-the-PyMySQL-package"><span class="nav-text">4. Install the PyMySQL package</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-Set-up-the-setting-py-file"><span class="nav-text">5. Set up the setting.py file</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-Use-your-own-models-to-create-MySQL-tables"><span class="nav-text">6. Use your own models to create MySQL tables</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-Generate-models-from-existing-tables"><span class="nav-text">7. Generate models from existing tables</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-Bind-to-gunicorn"><span class="nav-text">8. Bind to gunicorn</span></a></li></ol></div>
-        </div>
-        <!--/noindex-->
-
-        <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">Erispyu</p>
-  <div class="site-description" itemprop="description"></div>
-</div>
-<div class="site-state-wrap animated">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-        <a href="/archives/">
-          <span class="site-state-item-count">108</span>
-          <span class="site-state-item-name">posts</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-          <a href="/categories/">
-        <span class="site-state-item-count">6</span>
-        <span class="site-state-item-name">categories</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-          <a href="/tags/">
-        <span class="site-state-item-count">196</span>
-        <span class="site-state-item-name">tags</span></a>
-      </div>
-  </nav>
-</div>
-  <div class="links-of-author animated">
-      <span class="links-of-author-item">
-        <a href="https://github.com/erispyu" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;erispyu" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="mailto:erispyu@gmail.com" title="E-Mail → mailto:erispyu@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="https://www.douban.com/people/erispyu00/" title="Douban → https:&#x2F;&#x2F;www.douban.com&#x2F;people&#x2F;erispyu00&#x2F;" rel="noopener me" target="_blank"><i class="fa fa-film fa-fw"></i>Douban</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="https://www.travellings.cn/go.html" title="Travellings → https:&#x2F;&#x2F;www.travellings.cn&#x2F;go.html" rel="noopener me" target="_blank"><i class="fa-solid fa-train fa-fw"></i>Travellings</a>
-      </span>
-  </div>
-  <div class="cc-license animated" itemprop="license">
-    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/big/by_nc_sa.svg" alt="Creative Commons"></a>
-  </div>
-
-        </div>
-      </div>
-    </div>
-
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
     
-        <div class="sidebar-inner sidebar-post-related">
-          <div class="animated">
-              <div class="links-of-blogroll-title"><i class="fa fa-signs-post fa-fw"></i>
-    Related Posts
-  </div>
-  <ul class="popular-posts">
-    <li class="popular-posts-item">
-      <a class="popular-posts-link" href="/posts/62098322/" rel="bookmark">
-        <time class="popular-posts-time">2024-02-20</time>
-        <br>
-      高性能MySQL（第4版）
-      </a>
-    </li>
-    <li class="popular-posts-item">
-      <a class="popular-posts-link" href="/posts/74d08199/" rel="bookmark">
-        <time class="popular-posts-time">2024-12-08</time>
-        <br>
-      High Performance MySQL
-      </a>
-    </li>
-    <li class="popular-posts-item">
-      <a class="popular-posts-link" href="/posts/a97f3045/" rel="bookmark">
-        <time class="popular-posts-time">2024-12-19</time>
-        <br>
-      Understanding the Digital World - Brian W. Kernighan
-      </a>
-    </li>
-    <li class="popular-posts-item">
-      <a class="popular-posts-link" href="/posts/4cb9231d/" rel="bookmark">
-        <time class="popular-posts-time">2024-02-13</time>
-        <br>
-      The Go Programming Language
-      </a>
-    </li>
-    <li class="popular-posts-item">
-      <a class="popular-posts-link" href="/posts/8721491d/" rel="bookmark">
-        <time class="popular-posts-time">2024-12-16</time>
-        <br>
-      Designing Data-Intensive Applications
-      </a>
-    </li>
-  </ul>
-
-          </div>
-        </div>
-  </aside>
-
-
-    </div>
-
-    <div class="main-inner post posts-expand">
-
-
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
   
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://blog.erispyu.fun/posts/53a09fb8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Erispyu">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Erispyu's Blog">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Environment Setup For Django@1.6.11 + Python@2.7 + MySQL@5.x | Erispyu's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          Environment Setup For Django@1.6.11 + Python@2.7 + MySQL@5.x
-        </h1>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2022-09-09 17:51:40" itemprop="dateCreated datePublished" datetime="2022-09-09T17:51:40+08:00">2022-09-09</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Computer-Science/" itemprop="url" rel="index"><span itemprop="name">Computer Science</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Computer-Science/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">Views: </span>
-      <span id="busuanzi_value_page_pv"></span>
-    </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/posts/53a09fb8/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="posts/53a09fb8/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="Word count in article">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">Word count in article: </span>
-      <span>3.1k</span>
-    </span>
-    <span class="post-meta-item" title="Reading time">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">Reading time &asymp;</span>
-      <span>3 mins.</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody"><h2 id="1-Prerequisite"><a href="#1-Prerequisite" class="headerlink" title="1. Prerequisite"></a>1. Prerequisite</h2><ol>
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Environment Setup For Django@1.6.11 + Python@2.7 + MySQL@5.x',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  isShuoshuo: false
+}</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/zelda_link_sleep.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">154</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">259</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">6</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><span class="site-page group"><span> About</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="fa-fw fa fa-user"></i><span> Profile</span></a></li><li><a class="site-page child" href="/sitemap.xml"><i class="fa-fw fa fa-sitemap"></i><span> Sitemap</span></a></li><li><a class="site-page child" href="/baidusitemap.xml"><i class="fa-fw fa fa-sitemap"></i><span> Baidu Sitemap</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><span> Plugins</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/hexo-stats-echarts/"><i class="fa-fw fa-solid fa-flask"></i><span> hexo-stats-echarts</span></a></li><li><a class="site-page child" href="/hexo-stats-echarts/heatmap-chart/"><i class="fa-fw fa-solid fa-braille"></i><span> Heatmap Chart</span></a></li><li><a class="site-page child" href="/hexo-stats-echarts/pie-chart/"><i class="fa-fw fa fa-chart-pie"></i><span> Pie Chart</span></a></li><li><a class="site-page child" href="/hexo-stats-echarts/radar-chart/"><i class="fa-fw fa-solid fa-hexagon-nodes"></i><span> Radar Chart</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-list"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/reading/"><i class="fa-fw fa fa-book-open"></i><span> Reading</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/img/zelda_bow.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Erispyu's Blog</span></a><a class="nav-page-title" href="/"><span class="site-name">Environment Setup For Django@1.6.11 + Python@2.7 + MySQL@5.x</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><span class="site-page group"><span> About</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="fa-fw fa fa-user"></i><span> Profile</span></a></li><li><a class="site-page child" href="/sitemap.xml"><i class="fa-fw fa fa-sitemap"></i><span> Sitemap</span></a></li><li><a class="site-page child" href="/baidusitemap.xml"><i class="fa-fw fa fa-sitemap"></i><span> Baidu Sitemap</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><span> Plugins</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/hexo-stats-echarts/"><i class="fa-fw fa-solid fa-flask"></i><span> hexo-stats-echarts</span></a></li><li><a class="site-page child" href="/hexo-stats-echarts/heatmap-chart/"><i class="fa-fw fa-solid fa-braille"></i><span> Heatmap Chart</span></a></li><li><a class="site-page child" href="/hexo-stats-echarts/pie-chart/"><i class="fa-fw fa fa-chart-pie"></i><span> Pie Chart</span></a></li><li><a class="site-page child" href="/hexo-stats-echarts/radar-chart/"><i class="fa-fw fa-solid fa-hexagon-nodes"></i><span> Radar Chart</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-list"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/reading/"><i class="fa-fw fa fa-book-open"></i><span> Reading</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">Environment Setup For Django@1.6.11 + Python@2.7 + MySQL@5.x</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2022-09-09T09:51:40.000Z" title="Created 2022-09-09 17:51:40">2022-09-09</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2022-09-09T09:51:40.000Z" title="Updated 2022-09-09 17:51:40">2022-09-09</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Computer-Science/">Computer Science</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Computer-Science/Python/">Python</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h2 id="1-Prerequisite"><a href="#1-Prerequisite" class="headerlink" title="1. Prerequisite"></a>1. Prerequisite</h2><ol>
 <li>install Python 2.7</li>
 <li>install MySQL 5.x</li>
 </ol>
@@ -427,151 +246,4 @@
 
 <p>If pending with <code>&gt; models.py</code>, we can get some auto-generated models in the <code>models.py</code> file.</p>
 <h2 id="8-Bind-to-gunicorn"><a href="#8-Bind-to-gunicorn" class="headerlink" title="8. Bind to gunicorn"></a>8. Bind to gunicorn</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pip install gunicorn</span><br><span class="line">gunicorn --bind 0.0.0.0:8000 mysite.wsgi</span><br></pre></td></tr></table></figure>
-
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-          
-
-<div class="post-copyright">
-<ul>
-  <li class="post-copyright-author">
-    <strong>Post author:  </strong>Erispyu
-  </li>
-  <li class="post-copyright-link">
-      <strong>Post link: </strong>
-      <a href="https://blog.erispyu.fun/posts/53a09fb8/" title="Environment Setup For Django@1.6.11 + Python@2.7 + MySQL@5.x">https://blog.erispyu.fun/posts/53a09fb8/</a>
-  </li>
-  <li class="post-copyright-license">
-      <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
-  </li>
-</ul>
-</div>
-
-          <div class="post-tags">
-              <a href="/tags/Python/" rel="tag"><i class="fa fa-tag"></i> Python</a>
-              <a href="/tags/Django/" rel="tag"><i class="fa fa-tag"></i> Django</a>
-              <a href="/tags/MySQL/" rel="tag"><i class="fa fa-tag"></i> MySQL</a>
-          </div>
-
-        
-
-          <div class="post-nav">
-            <div class="post-nav-item">
-            </div>
-            <div class="post-nav-item">
-                <a href="/posts/5ebed7a/" rel="next" title="King Charles III's Inaugural Address">
-                  King Charles III's Inaugural Address <i class="fa fa-angle-right"></i>
-                </a>
-            </div>
-          </div>
-    </footer>
-  </article>
-</div>
-
-
-
-
-
-
-    
-  <div class="comments" id="disqus_thread">
-    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
-  </div>
-  
-</div>
-  </main>
-
-  <footer class="footer">
-    <div class="footer-inner">
-
-  <div class="copyright">
-    &copy; 
-    <span itemprop="copyrightYear">2025</span>
-    <span class="with-love">
-      <i class="fa fa-heart"></i>
-    </span>
-    <span class="author" itemprop="copyrightHolder">Erispyu</span>
-  </div>
-<div class="wordcount">
-  <span class="post-meta-item">
-    <span class="post-meta-item-icon">
-      <i class="fa fa-chart-line"></i>
-    </span>
-    <span title="Word count total">365k</span>
-  </span>
-  <span class="post-meta-item">
-    <span class="post-meta-item-icon">
-      <i class="fa fa-coffee"></i>
-    </span>
-    <span title="Reading time total">5:32</span>
-  </span>
-</div>
-<div class="busuanzi-count">
-    <span class="post-meta-item" id="busuanzi_container_site_uv">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-user"></i>
-      </span>
-      <span class="site-uv" title="Total Visitors">
-        <span id="busuanzi_value_site_uv"></span>
-      </span>
-    </span>
-    <span class="post-meta-item" id="busuanzi_container_site_pv">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-eye"></i>
-      </span>
-      <span class="site-pv" title="Total Views">
-        <span id="busuanzi_value_site_pv"></span>
-      </span>
-    </span>
-</div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
-  </div><script color="220，220，220" opacity="0.5" zIndex="-1" count="99" src="https://cdn.jsdelivr.net/npm/canvas-nest.js@1/dist/canvas-nest.js"></script>
-
-    </div>
-  </footer>
-
-  
-  <div class="toggle sidebar-toggle" role="button">
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-  </div>
-  <div class="sidebar-dimmer"></div>
-  <div class="back-to-top" role="button" aria-label="Back to top">
-    <i class="fa fa-arrow-up fa-lg"></i>
-    <span>0%</span>
-  </div>
-
-<noscript>
-  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
-</noscript>
-
-
-  
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/algoliasearch/4.24.0/algoliasearch-lite.umd.js" integrity="sha256-b2n6oSgG4C1stMT/yc/ChGszs9EY/Mhs6oltEjQbFCQ=" crossorigin="anonymous"></script><script src="/js/third-party/search/algolia-search.js"></script>
-
-
-
-
-
-
-
-  
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-
-
-
-<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"erispyu-blog","count":true,"i18n":{"disqus":"disqus"}}</script>
-<script src="/js/third-party/comments/disqus.js"></script>
-
-</body>
-</html>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="https://blog.erispyu.fun">Erispyu</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="https://blog.erispyu.fun/posts/53a09fb8/">https://blog.erispyu.fun/posts/53a09fb8/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles on this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless otherwise stated.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Python/">Python</a><a class="post-meta__tags" href="/tags/Django/">Django</a><a class="post-meta__tags" href="/tags/MySQL/">MySQL</a></div><div class="post-share"><div class="social-share" data-image="/img/zelda_link_sleep.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/posts/5ebed7a/" title="King Charles III's Inaugural Address"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info"><div class="info-1"><div class="info-item-1">Previous</div><div class="info-item-2">King Charles III's Inaugural Address</div></div><div class="info-2"><div class="info-item-1">King Charles III delivered his first address as sovereign Friday, after the death of his mother, Queen Elizabeth II. The following is a transcript of his remarks, as released by the palace.     I speak to you today with feelings of profound sorrow. Throughout her life, Her Majesty The Queen — my beloved Mother — was an inspiration and example to me and to all my family, and we owe her the most heartfelt debt any family can owe to their mother; for her love, affection, guidance, understanding...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/zelda_link_sleep.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Erispyu</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">154</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">259</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">6</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/erispyu"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/erispyu" target="_blank" title="GitHub"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:erispyu@gmail.com" target="_blank" title="E-Mail"><i class="fa fa-envelope" style="color: #4a7dbe;"></i></a><a class="social-icon" href="https://www.goodreads.com/user/show/156410162-erispyu" target="_blank" title="Goodreads"><i class="fa fa-book-reader"></i></a><a class="social-icon" href="https://www.douban.com/people/erispyu00/" target="_blank" title="Douban"><i class="fa fa-film"></i></a><a class="social-icon" href="https://www.travellings.cn/go.html" target="_blank" title="Travellings"><i class="fa-solid fa-train"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">Stay Hungry, Stay Foolish</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Prerequisite"><span class="toc-number">1.</span> <span class="toc-text">1. Prerequisite</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Install-Django-1-6-11"><span class="toc-number">2.</span> <span class="toc-text">2. Install Django 1.6.11</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Create-a-Django-project"><span class="toc-number">3.</span> <span class="toc-text">3. Create a Django project</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-Install-the-PyMySQL-package"><span class="toc-number">4.</span> <span class="toc-text">4. Install the PyMySQL package</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-Set-up-the-setting-py-file"><span class="toc-number">5.</span> <span class="toc-text">5. Set up the setting.py file</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-Use-your-own-models-to-create-MySQL-tables"><span class="toc-number">6.</span> <span class="toc-text">6. Use your own models to create MySQL tables</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-Generate-models-from-existing-tables"><span class="toc-number">7.</span> <span class="toc-text">7. Generate models from existing tables</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-Bind-to-gunicorn"><span class="toc-number">8.</span> <span class="toc-text">8. Bind to gunicorn</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/e729026e/" title="清粥小菜">清粥小菜</a><time datetime="2025-01-09T11:46:48.000Z" title="Created 2025-01-09 19:46:48">2025-01-09</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/649adfed/" title="对称加密与非对称加密详解">对称加密与非对称加密详解</a><time datetime="2025-01-09T06:27:09.000Z" title="Created 2025-01-09 14:27:09">2025-01-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/7683439c/" title="汪曾祺全集（全12册）"><img src="https://cdn.weread.qq.com/weread/cover/4/yuewen_29499625/t7_yuewen_294996251676539569.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="汪曾祺全集（全12册）"/></a><div class="content"><a class="title" href="/posts/7683439c/" title="汪曾祺全集（全12册）">汪曾祺全集（全12册）</a><time datetime="2025-01-08T16:00:00.000Z" title="Created 2025-01-09 00:00:00">2025-01-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/97eceaba/" title="LLMQuant"><img src="http://wx.qlogo.cn/mmhead/2pm5Nb2cMaMYRvdQxlITjyxuzACyMDicszlVibD6yeyQbSEm8FhYgMk3ib4icDNUU0fp7ehJ6C5O8Ng/0" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="LLMQuant"/></a><div class="content"><a class="title" href="/posts/97eceaba/" title="LLMQuant">LLMQuant</a><time datetime="2025-01-07T16:00:00.000Z" title="Created 2025-01-08 00:00:00">2025-01-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/2b030a18/" title="政事堂2019"><img src="http://wx.qlogo.cn/mmhead/Q3auHgzwzM5Bp39F4nxFK6e8yMJ6Ju5SneIotBH1RptRJ8VBq8IZ4Q/0" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="政事堂2019"/></a><div class="content"><a class="title" href="/posts/2b030a18/" title="政事堂2019">政事堂2019</a><time datetime="2025-01-07T16:00:00.000Z" title="Created 2025-01-08 00:00:00">2025-01-08</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By Erispyu</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

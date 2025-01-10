@@ -1,0 +1,197 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><!-- hexo injector head_begin start --><script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script><!-- hexo injector head_begin end --><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Category: 导入书籍 | Erispyu's Blog</title><meta name="author" content="Erispyu"><meta name="copyright" content="Erispyu"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Building a Second Brain  作者: Tiago Forte 简介:  出版时间:  ISBN:  分类:  出版社: Profile 字数: 0 在线阅读: 微信读书 划线数量: 2 想法数量: 0">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Building a Second Brain">
+<meta property="og:url" content="https://blog.erispyu.fun/posts/84218943/index.html">
+<meta property="og:site_name" content="Erispyu&#39;s Blog">
+<meta property="og:description" content="Building a Second Brain  作者: Tiago Forte 简介:  出版时间:  ISBN:  分类:  出版社: Profile 字数: 0 在线阅读: 微信读书 划线数量: 2 想法数量: 0">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://res.weread.qq.com/wrepub/CB_8G66as6e4CIA6lS6keGcM53w_parsecover">
+<meta property="article:published_time" content="2024-01-03T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-01-10T09:08:41.378Z">
+<meta property="article:author" content="Erispyu">
+<meta property="article:tag" content="Tiago Forte">
+<meta property="article:tag" content="Profile">
+<meta property="article:tag" content="导入书籍">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://res.weread.qq.com/wrepub/CB_8G66as6e4CIA6lS6keGcM53w_parsecover"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://blog.erispyu.fun/posts/84218943/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+          
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', () => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Category: 导入书籍',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  isShuoshuo: false
+}</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/zelda_link_sleep.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">154</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">259</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">6</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><span class="site-page group"><span> About</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="fa-fw fa fa-user"></i><span> Profile</span></a></li><li><a class="site-page child" href="/sitemap.xml"><i class="fa-fw fa fa-sitemap"></i><span> Sitemap</span></a></li><li><a class="site-page child" href="/baidusitemap.xml"><i class="fa-fw fa fa-sitemap"></i><span> Baidu Sitemap</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><span> Plugins</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/hexo-stats-echarts/"><i class="fa-fw fa-solid fa-flask"></i><span> hexo-stats-echarts</span></a></li><li><a class="site-page child" href="/hexo-stats-echarts/heatmap-chart/"><i class="fa-fw fa-solid fa-braille"></i><span> Heatmap Chart</span></a></li><li><a class="site-page child" href="/hexo-stats-echarts/pie-chart/"><i class="fa-fw fa fa-chart-pie"></i><span> Pie Chart</span></a></li><li><a class="site-page child" href="/hexo-stats-echarts/radar-chart/"><i class="fa-fw fa-solid fa-hexagon-nodes"></i><span> Radar Chart</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-list"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/reading/"><i class="fa-fw fa fa-book-open"></i><span> Reading</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://res.weread.qq.com/wrepub/CB_8G66as6e4CIA6lS6keGcM53w_parsecover);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Erispyu's Blog</span></a><a class="nav-page-title" href="/"><span class="site-name">Building a Second Brain</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><span class="site-page group"><span> About</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="fa-fw fa fa-user"></i><span> Profile</span></a></li><li><a class="site-page child" href="/sitemap.xml"><i class="fa-fw fa fa-sitemap"></i><span> Sitemap</span></a></li><li><a class="site-page child" href="/baidusitemap.xml"><i class="fa-fw fa fa-sitemap"></i><span> Baidu Sitemap</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><span> Plugins</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/hexo-stats-echarts/"><i class="fa-fw fa-solid fa-flask"></i><span> hexo-stats-echarts</span></a></li><li><a class="site-page child" href="/hexo-stats-echarts/heatmap-chart/"><i class="fa-fw fa-solid fa-braille"></i><span> Heatmap Chart</span></a></li><li><a class="site-page child" href="/hexo-stats-echarts/pie-chart/"><i class="fa-fw fa fa-chart-pie"></i><span> Pie Chart</span></a></li><li><a class="site-page child" href="/hexo-stats-echarts/radar-chart/"><i class="fa-fw fa-solid fa-hexagon-nodes"></i><span> Radar Chart</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-list"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/reading/"><i class="fa-fw fa fa-book-open"></i><span> Reading</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">Building a Second Brain</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2024-01-03T16:00:00.000Z" title="Created 2024-01-04 00:00:00">2024-01-04</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2025-01-10T09:08:41.378Z" title="Updated 2025-01-10 17:08:41">2025-01-10</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/BookNotes/">BookNotes</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p><div class="note info flat"></p>
+<h2 id="Building-a-Second-Brain"><a href="#Building-a-Second-Brain" class="headerlink" title="Building a Second Brain"></a>Building a Second Brain</h2><p><img src="https://res.weread.qq.com/wrepub/CB_8G66as6e4CIA6lS6keGcM53w_parsecover" alt=" Building a Second Brain|200"></p>
+<ul>
+<li><strong>作者</strong>: Tiago Forte</li>
+<li><strong>简介</strong>: </li>
+<li><strong>出版时间</strong>: </li>
+<li><strong>ISBN</strong>: </li>
+<li><strong>分类</strong>: </li>
+<li><strong>出版社</strong>: Profile</li>
+<li><strong>字数</strong>: 0</li>
+<li><strong>在线阅读</strong>: <a target="_blank" rel="noopener" href="https://weread.qq.com/web/reader/668421f3643425f384736366173366534434941366c53366b6547634d353377103">微信读书</a></li>
+<li><strong>划线数量</strong>: 2</li>
+<li><strong>想法数量</strong>: 0<br></div></li>
+</ul>
+<span id="more"></span>
+
+<h2 id="笔记"><a href="#笔记" class="headerlink" title="笔记"></a>笔记</h2><h3 id="2-What-Is-a-Second-Brain"><a href="#2-What-Is-a-Second-Brain" class="headerlink" title="2 What Is a Second Brain?"></a>2 What Is a Second Brain?</h3><blockquote>
+<p>📌 Herbert Simon, an American economist and cognitive psychologist, wrote, “What information consumes is rather obvious: it consumes the attention of its recipients. Hence a wealth of information creates a poverty of attention . . .”</p>
+<ul>
+<li>⏱ 2024-01-04 20:45:38 ^7-28452-28682</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>📌 What information consumes is rather obvious: it consumes the attention of its recipients. Hence a wealth of information creates a poverty of attention . . .</p>
+<ul>
+<li>⏱ 2024-01-04 17:44:41 ^7-28525-28681</li>
+</ul>
+</blockquote>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="https://blog.erispyu.fun">Erispyu</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="https://blog.erispyu.fun/posts/84218943/">https://blog.erispyu.fun/posts/84218943/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles on this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless otherwise stated.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Tiago-Forte/">Tiago Forte</a><a class="post-meta__tags" href="/tags/Profile/">Profile</a><a class="post-meta__tags" href="/tags/%E5%AF%BC%E5%85%A5%E4%B9%A6%E7%B1%8D/">导入书籍</a></div><div class="post-share"><div class="social-share" data-image="https://res.weread.qq.com/wrepub/CB_8G66as6e4CIA6lS6keGcM53w_parsecover" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/posts/dae946bc/" title="本草纲目（全本插图版）（全五册）（精装）"><img class="cover" src="https://cdn.weread.qq.com/weread/cover/62/cpPlatform_gCriCcgQ4kDS1ZaThJ7otR/t7_cpPlatform_gCriCcgQ4kDS1ZaThJ7otR.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">Previous</div><div class="info-item-2">本草纲目（全本插图版）（全五册）（精装）</div></div><div class="info-2"><div class="info-item-1"> 本草纲目（全本插图版）（全五册）（精装）  作者: 【明】李时珍撰 赵尚华 赵怀舟点校 简介: 《本草纲目》为明朝药物学家李时珍对本草学进行全面整理总结之作，分为16部、60类，共有52卷，载有药物1892种，其中载有新药374种，收集药方11096个，书中还绘制了1160幅精美的插图，约200万字。每种药物分列释名（确定名称）、集解（叙述产地）、正误（更正过去文献的错误）、修治（炮制方法）、气味、主治、发明（此三项指分析药物的功能）、附方（收集民间流传的药方）等项。是对16世纪以前中医药学的系统总结，被誉为“东方药物巨典”，同时在训诂、语言文字、历史、地理、植物、动物、矿物、冶金等方面也有突出成就，对人类近代科学以及医学方面影响极大。 出版时间: 2019-05-18 ISBN: 9787101153453 分类: 文学-古典文学 出版社: 中华书局有限公司 字数: 1955788 在线阅读: 微信读书 划线数量: 1 想法数量: 0    笔记兽之四 寓类、怪类共八种 📌...</div></div></div></a><a class="pagination-related" href="/posts/451841e2/" title="内亚渊源：中古北族名号研究（九色鹿）"><img class="cover" src="https://cdn.weread.qq.com/weread/cover/63/cpplatform_wljplxp8naej78jmyhbejq/t7_cpplatform_wljplxp8naej78jmyhbejq1692871469.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">Next</div><div class="info-item-2">内亚渊源：中古北族名号研究（九色鹿）</div></div><div class="info-2"><div class="info-item-1"> 内亚渊源：中古北族名号研究（九色鹿）  作者: 罗新 简介: 本书集中收录作者研究中古时代与内亚各人群有紧密关联的各种名号的文章。通过分析这些内亚名号的结构、功能、语源、应用及流变，整理传统文献中某些难以理解的汉字音译语词，使它们发挥揭示历史复杂面向的作用。 出版时间: 2023-01-01 ISBN: 9787522802923 分类: 历史-中国古代 出版社: 社会科学文献出版社 字数: 228170 在线阅读: 微信读书 划线数量: 3 想法数量: 1    笔记第五章 北魏太武帝的鲜卑语本名📌 《宋书》记北魏太武帝拓跋焘“字佛狸”，《南齐书》亦作“字佛狸”，南朝史籍中径以佛狸称他的例子很多，兹不赘举。💭 可堪回首，佛狸祠下，一片神鸦社鼓。  ⏱ 2024-01-03 06:22:10 ^19836794-7NVZQDBoB   📌 正如姚薇元先生早就指出的，《宋书》和《南齐书》所记录的拓跋集团姓氏名字中所谓的字，其实都是他们的鲜卑本名。  ⏱ 2024-01-03 06:22:44 ^10-1150-1340    📌...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/posts/9ef3f4fa/" title="Console Wars - Blake J. Harris"><img class="cover" src="https://res.weread.qq.com/wrepub/CB_8KF0Ot0RV6Tn6sZ6swDfc35I_parsecover" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2024-12-04</div><div class="info-item-2">Console Wars - Blake J. Harris</div></div><div class="info-2"><div class="info-item-1"> Console Wars - Blake J. Harris  作者: Blake J. Harris 简介:  出版时间:  ISBN:  分类:  出版社: HarperCollins 字数: 0 在线阅读: 微信读书 划线数量: 0 想法数量: 1    笔记FOREWORD BY SETH ROGEN AND EVAN GOLDBERG📌 upbringing💭 &#x2F;ˈʌpˌbrɪŋɪŋ&#x2F;n. 抚育,养育;教养,培养  ⏱ 2024-12-04 00:30:15 ^19836794-7WaIMuLcV  </div></div></div></a><a class="pagination-related" href="/posts/8721491d/" title="Designing Data-Intensive Applications"><img class="cover" src="https://res.weread.qq.com/wrepub/CB_9WG8ea8bO8LT6kN6ke1hw8rF_parsecover" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2024-12-16</div><div class="info-item-2">Designing Data-Intensive Applications</div></div><div class="info-2"><div class="info-item-1"> Designing Data-Intensive Applications  作者: Martin Kleppmann 简介:  出版时间:  ISBN:  分类:  出版社: O’Reilly Media Inc. 字数: 0 在线阅读: 微信读书 划线数量: 1 想法数量: 2    笔记Preface📌 plethora💭 &#x2F;ˈpleθərə&#x2F;n. 太多,过多;过剩n. 【医】多血(症)  ⏱ 2024-05-17 09:44:34 ^19836794-7RfySJ47Z  📌 barely💭 &#x2F;ˈbeəlɪ&#x2F;ad. 仅仅,只不过;几乎不,简直没有ad. 贫乏地,不充分地;光秃秃地ad. ⟨古⟩公开地;不加掩饰地;不加发挥地  ⏱ 2024-05-17 19:17:10 ^19836794-7RganP8fl  1. Reliable, Scalable, and Maintainable Applications 📌 The Internet was done so well that most people...</div></div></div></a><a class="pagination-related" href="/posts/7ff0b1c1/" title="Developing Apps with GPT-4 and ChatGPT"><img class="cover" src="https://res.weread.qq.com/wrepub/CB_CxH6h96gdCBZ6iz6gn7FY9EM_parsecover" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2024-03-02</div><div class="info-item-2">Developing Apps with GPT-4 and ChatGPT</div></div><div class="info-2"><div class="info-item-1"> Developing Apps with GPT-4 and ChatGPT  作者: Olivier Caelen 简介:  出版时间:  ISBN:  分类:  出版社: O’Reilly Media 字数: 0 在线阅读: 微信读书 划线数量: 2 想法数量: 0    笔记Preface 📌 Within a mere five days of its release, ChatGPT reached an impressive one million users, sending shock waves throughout the tech industry and beyond.  ⏱ 2024-03-02 18:53:25 ^1-781-931    📌 Supplemental material (code examples, exercises, etc.) is available for download at https://oreil.ly/DevAppsGPT_GitHub.  ⏱ 2024-03-02 18:55:17...</div></div></div></a><a class="pagination-related" href="/posts/eaa24d20/" title="Dune (The Dune Sequence)"><img class="cover" src="https://res.weread.qq.com/wrepub/CB_AFP7ut7ujDi76mh6keCwZC0x_parsecover" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2024-03-14</div><div class="info-item-2">Dune (The Dune Sequence)</div></div><div class="info-2"><div class="info-item-1"> Dune (The Dune Sequence)  作者: Frank Herbert 简介:  出版时间:  ISBN:  分类:  出版社: Orion 字数: 0 在线阅读: 微信读书 划线数量: 1 想法数量: 0    笔记DUNE 📌 A beginning is the time for taking the most delicate care that the balances are correct.  ⏱ 2024-03-14 12:17:59 ^7-696-893   </div></div></div></a><a class="pagination-related" href="/posts/9ebf228e/" title="Elon Musk"><img class="cover" src="https://res.weread.qq.com/wrepub/CB_AJU53I53MAV96q36op4k61H9_parsecover" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2024-11-29</div><div class="info-item-2">Elon Musk</div></div><div class="info-2"><div class="info-item-1"> Elon Musk  作者: Walter Isaacson 简介:  出版时间:  ISBN:  分类:  出版社: Simon &amp; Schuster 字数: 0 在线阅读: 微信读书 划线数量: 1 想法数量: 0    笔记Chapter 73: “I made an offer”: Twitter, April 2022 📌 quintuple  ⏱ 2024-11-29 23:03:23 ^77-19228-19237   </div></div></div></a><a class="pagination-related" href="/posts/74d08199/" title="High Performance MySQL"><img class="cover" src="https://res.weread.qq.com/wrepub/CB_7zW8eo8fV8LT6kN6keBOP4rC_parsecover" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2024-12-08</div><div class="info-item-2">High Performance MySQL</div></div><div class="info-2"><div class="info-item-1"> High Performance MySQL  作者: Jeremy Tinley 简介:  出版时间:  ISBN:  分类:  出版社: O’Reilly Media 字数: 0 在线阅读: 微信读书 划线数量: 1 想法数量: 2    笔记Foreword 📌 the first book to get plopped down on the desk  ⏱ 2024-12-08 02:10:48 ^1-780-826   📌 destined💭 &#x2F;ˈdestɪnd&#x2F;a. 命中注定的;预定的  ⏱ 2024-12-08 02:11:45 ^19836794-7WgUFmXBL  📌 an instant classic💭 “an instant classic”是一个英语短语，用来形容一部作品、书籍、电影或音乐专辑等因为其出色的质量或广泛的受欢迎程度，而迅速被认为是经典之作。尽管“经典”通常意味着需要经过时间的考验，但“instant...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/zelda_link_sleep.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Erispyu</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">154</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">259</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">6</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/erispyu"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/erispyu" target="_blank" title="GitHub"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:erispyu@gmail.com" target="_blank" title="E-Mail"><i class="fa fa-envelope" style="color: #4a7dbe;"></i></a><a class="social-icon" href="https://www.goodreads.com/user/show/156410162-erispyu" target="_blank" title="Goodreads"><i class="fa fa-book-reader"></i></a><a class="social-icon" href="https://www.douban.com/people/erispyu00/" target="_blank" title="Douban"><i class="fa fa-film"></i></a><a class="social-icon" href="https://www.travellings.cn/go.html" target="_blank" title="Travellings"><i class="fa-solid fa-train"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">Stay Hungry, Stay Foolish</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Building-a-Second-Brain"><span class="toc-number">1.</span> <span class="toc-text">Building a Second Brain</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%94%E8%AE%B0"><span class="toc-number">2.</span> <span class="toc-text">笔记</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-What-Is-a-Second-Brain"><span class="toc-number">2.1.</span> <span class="toc-text">2 What Is a Second Brain?</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/e729026e/" title="清粥小菜">清粥小菜</a><time datetime="2025-01-09T11:46:48.000Z" title="Created 2025-01-09 19:46:48">2025-01-09</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/649adfed/" title="对称加密与非对称加密详解">对称加密与非对称加密详解</a><time datetime="2025-01-09T06:27:09.000Z" title="Created 2025-01-09 14:27:09">2025-01-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/7683439c/" title="汪曾祺全集（全12册）"><img src="https://cdn.weread.qq.com/weread/cover/4/yuewen_29499625/t7_yuewen_294996251676539569.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="汪曾祺全集（全12册）"/></a><div class="content"><a class="title" href="/posts/7683439c/" title="汪曾祺全集（全12册）">汪曾祺全集（全12册）</a><time datetime="2025-01-08T16:00:00.000Z" title="Created 2025-01-09 00:00:00">2025-01-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/97eceaba/" title="LLMQuant"><img src="http://wx.qlogo.cn/mmhead/2pm5Nb2cMaMYRvdQxlITjyxuzACyMDicszlVibD6yeyQbSEm8FhYgMk3ib4icDNUU0fp7ehJ6C5O8Ng/0" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="LLMQuant"/></a><div class="content"><a class="title" href="/posts/97eceaba/" title="LLMQuant">LLMQuant</a><time datetime="2025-01-07T16:00:00.000Z" title="Created 2025-01-08 00:00:00">2025-01-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/2b030a18/" title="政事堂2019"><img src="http://wx.qlogo.cn/mmhead/Q3auHgzwzM5Bp39F4nxFK6e8yMJ6Ju5SneIotBH1RptRJ8VBq8IZ4Q/0" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="政事堂2019"/></a><div class="content"><a class="title" href="/posts/2b030a18/" title="政事堂2019">政事堂2019</a><time datetime="2025-01-07T16:00:00.000Z" title="Created 2025-01-08 00:00:00">2025-01-08</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By Erispyu</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
