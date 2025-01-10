@@ -1,232 +1,760 @@
-<!DOCTYPE html><html lang="en" data-theme="light"><head><!-- hexo injector head_begin start --><script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script><!-- hexo injector head_begin end --><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Erispyu's Blog</title><meta name="author" content="Erispyu"><meta name="copyright" content="Erispyu"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
-<meta property="og:title" content="Erispyu&#39;s Blog">
+<!DOCTYPE html>
+<html lang="en">
+<head><!-- hexo injector head_begin start --><script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script><!-- hexo injector head_begin end -->
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.erispyu.fun","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.22.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"default"},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"algolia":{"appID":"2BILQUWIOA","apiKey":"f5aabb895c10440c28e6c77090f511eb","indexName":"github_page_erispyu","hits":{"per_page":10}}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="I’ve just developed a new plugin hexo-stats-echarts for Hexo that transforms raw blog statistics—like post frequency, tags, and categories—into stunning, customizable and interactive charts. Try it ou">
+<meta property="og:type" content="website">
+<meta property="og:title" content="👋 Welcome!">
 <meta property="og:url" content="https://blog.erispyu.fun/index.html">
 <meta property="og:site_name" content="Erispyu&#39;s Blog">
+<meta property="og:description" content="I’ve just developed a new plugin hexo-stats-echarts for Hexo that transforms raw blog statistics—like post frequency, tags, and categories—into stunning, customizable and interactive charts. Try it ou">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://blog.erispyu.fun/img/zelda_link_sleep.jpg">
+<meta property="article:published_time" content="2025-01-10T02:56:59.000Z">
+<meta property="article:modified_time" content="2025-01-10T09:45:01.204Z">
 <meta property="article:author" content="Erispyu">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://blog.erispyu.fun/img/zelda_link_sleep.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://blog.erispyu.fun/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
-    (() => {
-      
-    const saveToLocal = {
-      set: (key, value, ttl) => {
-        if (!ttl) return
-        const expiry = Date.now() + ttl * 86400000
-        localStorage.setItem(key, JSON.stringify({ value, expiry }))
-      },
-      get: key => {
-        const itemStr = localStorage.getItem(key)
-        if (!itemStr) return undefined
-        const { value, expiry } = JSON.parse(itemStr)
-        if (Date.now() > expiry) {
-          localStorage.removeItem(key)
-          return undefined
-        }
-        return value
-      }
-    }
 
-    window.btf = {
-      saveToLocal,
-      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
-        const script = document.createElement('script')
-        script.src = url
-        script.async = true
-        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
-        script.onload = script.onreadystatechange = () => {
-          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
-        }
-        script.onerror = reject
-        document.head.appendChild(script)
-      }),
-      getCSS: (url, id) => new Promise((resolve, reject) => {
-        const link = document.createElement('link')
-        link.rel = 'stylesheet'
-        link.href = url
-        if (id) link.id = id
-        link.onload = link.onreadystatechange = () => {
-          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
-        }
-        link.onerror = reject
-        document.head.appendChild(link)
-      }),
-      addGlobalFn: (key, fn, name = false, parent = window) => {
-        if (!false && key.startsWith('pjax')) return
-        const globalFn = parent.globalFn || {}
-        globalFn[key] = globalFn[key] || {}
-        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
-        parent.globalFn = globalFn
-      }
-    }
+
+<link rel="canonical" href="https://blog.erispyu.fun/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"en","comments":true,"permalink":"https://blog.erispyu.fun/index.html","path":"index.html","title":"👋 Welcome!"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>👋 Welcome! | Erispyu's Blog
+</title>
   
-      
-      const activateDarkMode = () => {
-        document.documentElement.setAttribute('data-theme', 'dark')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
-        }
-      }
-      const activateLightMode = () => {
-        document.documentElement.setAttribute('data-theme', 'light')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
-        }
-      }
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QCC01KVZ4X"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-QCC01KVZ4X","only_pageview":false,"measure_protocol_api_secret":null}</script>
+  <script src="/js/third-party/analytics/google-analytics.js"></script>
 
-      btf.activateDarkMode = activateDarkMode
-      btf.activateLightMode = activateLightMode
 
-      const theme = saveToLocal.get('theme')
-    
-          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
-          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
-          
-          if (theme === undefined) {
-            if (mediaQueryLight.matches) activateLightMode()
-            else if (mediaQueryDark.matches) activateDarkMode()
-            else {
-              const hour = new Date().getHours()
-              const isNight = hour <= 6 || hour >= 18
-              isNight ? activateDarkMode() : activateLightMode()
-            }
-            mediaQueryDark.addEventListener('change', () => {
-              if (saveToLocal.get('theme') === undefined) {
-                e.matches ? activateDarkMode() : activateLightMode()
-              }
-            })
-          } else {
-            theme === 'light' ? activateLightMode() : activateDarkMode()
-          }
-        
-      
-      const asideStatus = saveToLocal.get('aside-status')
-      if (asideStatus !== undefined) {
-        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
-      }
-    
-      
-    const detectApple = () => {
-      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
-        document.documentElement.classList.add('apple')
-      }
-    }
-    detectApple()
-  
-    })()
-  </script><script>const GLOBAL_CONFIG = {
-  root: '/',
-  algolia: undefined,
-  localSearch: undefined,
-  translate: undefined,
-  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
-  copy: {
-    success: 'Copy Successful',
-    error: 'Copy Failed',
-    noSupport: 'Browser Not Supported'
-  },
-  relativeDate: {
-    homepage: false,
-    post: false
-  },
-  runtime: '',
-  dateSuffix: {
-    just: 'Just now',
-    min: 'minutes ago',
-    hour: 'hours ago',
-    day: 'days ago',
-    month: 'months ago'
-  },
-  copyright: undefined,
-  lightbox: 'null',
-  Snackbar: undefined,
-  infinitegrid: {
-    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
-    buttonText: 'Load More'
-  },
-  isPhotoFigcaption: false,
-  islazyload: false,
-  isAnchor: false,
-  percent: {
-    toc: true,
-    rightside: false,
-  },
-  autoDarkmode: true
-}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
-  title: 'Erispyu\'s Blog',
-  isPost: false,
-  isHome: true,
-  isHighlightShrink: false,
-  isToc: false,
-  isShuoshuo: false
-}</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/zelda_link_sleep.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">154</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">259</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">6</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><span class="site-page group"><span> About</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="fa-fw fa fa-user"></i><span> Profile</span></a></li><li><a class="site-page child" href="/sitemap.xml"><i class="fa-fw fa fa-sitemap"></i><span> Sitemap</span></a></li><li><a class="site-page child" href="/baidusitemap.xml"><i class="fa-fw fa fa-sitemap"></i><span> Baidu Sitemap</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><span> Plugins</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/hexo-stats-echarts/"><i class="fa-fw fa-solid fa-flask"></i><span> hexo-stats-echarts</span></a></li><li><a class="site-page child" href="/hexo-stats-echarts/heatmap-chart/"><i class="fa-fw fa-solid fa-braille"></i><span> Heatmap Chart</span></a></li><li><a class="site-page child" href="/hexo-stats-echarts/pie-chart/"><i class="fa-fw fa fa-chart-pie"></i><span> Pie Chart</span></a></li><li><a class="site-page child" href="/hexo-stats-echarts/radar-chart/"><i class="fa-fw fa-solid fa-hexagon-nodes"></i><span> Radar Chart</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-list"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/reading/"><i class="fa-fw fa fa-book-open"></i><span> Reading</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(/img/zelda_bow.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Erispyu's Blog</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><span class="site-page group"><span> About</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="fa-fw fa fa-user"></i><span> Profile</span></a></li><li><a class="site-page child" href="/sitemap.xml"><i class="fa-fw fa fa-sitemap"></i><span> Sitemap</span></a></li><li><a class="site-page child" href="/baidusitemap.xml"><i class="fa-fw fa fa-sitemap"></i><span> Baidu Sitemap</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><span> Plugins</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/hexo-stats-echarts/"><i class="fa-fw fa-solid fa-flask"></i><span> hexo-stats-echarts</span></a></li><li><a class="site-page child" href="/hexo-stats-echarts/heatmap-chart/"><i class="fa-fw fa-solid fa-braille"></i><span> Heatmap Chart</span></a></li><li><a class="site-page child" href="/hexo-stats-echarts/pie-chart/"><i class="fa-fw fa fa-chart-pie"></i><span> Pie Chart</span></a></li><li><a class="site-page child" href="/hexo-stats-echarts/radar-chart/"><i class="fa-fw fa-solid fa-hexagon-nodes"></i><span> Radar Chart</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-list"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/reading/"><i class="fa-fw fa fa-book-open"></i><span> Reading</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">Erispyu's Blog</h1><div id="site_social_icons"><a class="social-icon" href="https://github.com/erispyu" target="_blank" title="GitHub"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:erispyu@gmail.com" target="_blank" title="E-Mail"><i class="fa fa-envelope" style="color: #4a7dbe;"></i></a><a class="social-icon" href="https://www.goodreads.com/user/show/156410162-erispyu" target="_blank" title="Goodreads"><i class="fa fa-book-reader"></i></a><a class="social-icon" href="https://www.douban.com/people/erispyu00/" target="_blank" title="Douban"><i class="fa fa-film"></i></a><a class="social-icon" href="https://www.travellings.cn/go.html" target="_blank" title="Travellings"><i class="fa-solid fa-train"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/e729026e/" title="清粥小菜">清粥小菜</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2025-01-09T11:46:48.000Z" title="Created 2025-01-09 19:46:48">2025-01-09</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a></span></div><div class="content">...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/649adfed/" title="对称加密与非对称加密详解">对称加密与非对称加密详解</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2025-01-09T06:27:09.000Z" title="Created 2025-01-09 14:27:09">2025-01-09</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Computer-Science/">Computer Science</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Computer-Science/Encryption/">Encryption</a></span></div><div class="content">1. 对称加密与非对称加密1.1 对称加密定义：通信双方共享同一把密钥，该密钥用于将明文加密为密文，或将密文解密为明文。   常见算法：AES、DES、RC4，其中AES最为常用。 优点：加密解密速度快。 缺点：安全性相对较低，一旦密钥泄露，数据将面临极大风险。 1.2 非对称加密定义：通信双方持有不同的密钥，分别为公钥（public key）和私钥（private key）。私钥仅在服务端保存，公钥可公开分发。    使用场景：  加密场景：请求方使用公钥加密数据，接收方使用私钥解密。 签名场景：请求方使用私钥生成数字签名，接收方使用公钥验证签名。  常见算法：RSA。 优点：安全性高。 缺点：加密解密速度较慢。 1.3 使用OpenSSL生成RSA密钥对生成2048位RSA私钥：   openssl genrsa -des3 -out private.pem 2048  导出公钥：   openssl rsa -in private.pem -outform PEM -pubout -out public.pem  更多信息：关于PKCS规范的详细内容，可参考简单了解...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/7683439c/" title="汪曾祺全集（全12册）"><img class="post-bg" src="https://cdn.weread.qq.com/weread/cover/4/yuewen_29499625/t7_yuewen_294996251676539569.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="汪曾祺全集（全12册）"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/7683439c/" title="汪曾祺全集（全12册）">汪曾祺全集（全12册）</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2025-01-08T16:00:00.000Z" title="Created 2025-01-09 00:00:00">2025-01-09</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/BookNotes/">BookNotes</a></span></div><div class="content"> 汪曾祺全集（全12册）  作者: 汪曾祺 简介: 《汪曾祺全集》收入迄今发现的汪曾祺全部文学作品(小说、散文、戏剧、谈艺、诗歌、杂著)以及书信、题跋等日常文书。作品以最初发表的版本为底本，校勘精良，每篇皆有题注，交待原载及收入作品集、文本改动、笔名等版本信息，书信题注介绍收信人简况等。 出版时间: 2019-01-01 ISBN: 9787020143412 分类: 文学-经典作品 出版社: 人民文学出版社 字数: 2610254 在线阅读: 微信读书 划线数量: 8 想法数量: 0    笔记关于葡萄 📌 魏文帝吃的是什么葡萄？不知道。他只说是这种葡萄很好吃：“当其夏末涉秋，尚有余暑、醉酒宿醒，掩露而食，甘而不饴，脆而不酸，冷而不寒，味长汁多，除烦解倦”，没有说是什么颜色，什么形状，——他吃的葡萄是“脆”的，这是什么葡萄？……  ⏱ 2024-10-28 00:11:07 ^1257-1964-2076    📌 中国的农民留神看他们种葡萄。哦，是这样的！这个农民撅了几根葡萄藤，插在土里。葡萄出芽了，长大了，结了很多葡萄。   这就传开了。  ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/97eceaba/" title="LLMQuant"><img class="post-bg" src="http://wx.qlogo.cn/mmhead/2pm5Nb2cMaMYRvdQxlITjyxuzACyMDicszlVibD6yeyQbSEm8FhYgMk3ib4icDNUU0fp7ehJ6C5O8Ng/0" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="LLMQuant"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/97eceaba/" title="LLMQuant">LLMQuant</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2025-01-07T16:00:00.000Z" title="Created 2025-01-08 00:00:00">2025-01-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/BookNotes/">BookNotes</a></span></div><div class="content"> LLMQuant  作者: 公众号 简介: 起源于剑桥大学的量化社区，每日分享人工智能与量化金融前沿: www.llmquant.com 出版时间:  ISBN:  分类:  出版社:  字数: 0 在线阅读: 微信读书 划线数量: 1 想法数量: 0    笔记未知章节 📌 结论：在拥有同样“最终收益”的情况下，更稳定的投资显然更受欢迎。这就引出了“风险调整后收益”的概念——我们需要让“波动”或“风险”在回报测度中占有一席之地。  ⏱ 2025-01-08 21:24:28 ^-532-610   </div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/2b030a18/" title="政事堂2019"><img class="post-bg" src="http://wx.qlogo.cn/mmhead/Q3auHgzwzM5Bp39F4nxFK6e8yMJ6Ju5SneIotBH1RptRJ8VBq8IZ4Q/0" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="政事堂2019"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/2b030a18/" title="政事堂2019">政事堂2019</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2025-01-07T16:00:00.000Z" title="Created 2025-01-08 00:00:00">2025-01-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/BookNotes/">BookNotes</a></span></div><div class="content"> 政事堂2019  作者: 公众号 简介: 另一个维度看世界 出版时间:  ISBN:  分类:  出版社:  字数: 0 在线阅读: 微信读书 划线数量: 2 想法数量: 0    笔记未知章节 📌 据贵州省纪委监委1月2日消息：丁雄军涉嫌严重违纪违法，目前正接受贵州省纪委监委纪律审查和监察调查。   2021年，丁雄军临危受命，接替高卫东、袁仁国等连续落马的茅台董事长，执掌这家长期位列中国市值最高的企业。  ⏱ 2025-01-03 12:52:17 ^-50-153    📌 对于副部级及以下官员来说，一般是不能带秘书履新的，尤其跨省任职更是禁忌。   一般，只有正部级的大员，可以破例带着秘书跨省上任，石悦这种连续跨省调任，意味着他必然是领导千挑万选的干将。  ⏱ 2025-01-08 23:07:41 ^-493-583   </div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/64771e47/" title="爱范儿"><img class="post-bg" src="http://wx.qlogo.cn/mmhead/Q3auHgzwzM6C3RREiaYxFJsBRcIlxaHH1goReOibJdtedqKIP4Yxahwg/0" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="爱范儿"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/64771e47/" title="爱范儿">爱范儿</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2025-01-07T16:00:00.000Z" title="Created 2025-01-08 00:00:00">2025-01-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/BookNotes/">BookNotes</a></span></div><div class="content"> 爱范儿  作者: 公众号 简介: 关注明日产品的数字潮牌 出版时间:  ISBN:  分类:  出版社:  字数: 0 在线阅读: 微信读书 划线数量: 1 想法数量: 0    笔记未知章节 📌 可以说，Switch 2 在性能上与 PS4 Pro 相近，而得益于内存带宽以及图像算法技术的提升，实际的游戏运行表现可能还要更好一些。  ⏱ 2025-01-08 21:17:35 ^-911-979   </div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/9aba38bc/" title="财经（2025年第1期）"><img class="post-bg" src="https://cdn.weread.qq.com/weread/cover/21/cpplatform_cf9czw9bqn9jgge5qi9ruu/t7_cpplatform_cf9czw9bqn9jgge5qi9ruu1736243978.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="财经（2025年第1期）"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/9aba38bc/" title="财经（2025年第1期）">财经（2025年第1期）</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2025-01-07T16:00:00.000Z" title="Created 2025-01-08 00:00:00">2025-01-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/BookNotes/">BookNotes</a></span></div><div class="content"> 财经（2025年第1期）  作者: 财经 简介: 医生、患者都自发地向“金字塔尖”聚拢，如何用制度找到更有效的医疗资源配置方式？ 出版时间: 2025-01-06 ISBN:  分类: 期刊杂志-财经 出版社: 财经杂志社 字数: 131824 在线阅读: 微信读书 划线数量: 1 想法数量: 0    笔记大城市的医院好 📌 优质的医生集中在少数大城市的大医院，患者的需求却散落在社区和乡村。全国约有一半多的跨省就医患者流向了上海、北京、江苏、浙江和广东。  ⏱ 2025-01-08 21:43:40 ^4-1121-1186   </div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/525cd42a/" title="第三帝国三部曲：当权的第三帝国（理想国译丛039）"><img class="post-bg" src="https://cdn.weread.qq.com/weread/cover/55/YueWen_30153140/t7_YueWen_30153140.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="第三帝国三部曲：当权的第三帝国（理想国译丛039）"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/525cd42a/" title="第三帝国三部曲：当权的第三帝国（理想国译丛039）">第三帝国三部曲：当权的第三帝国（理想国译丛039）</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2025-01-06T16:00:00.000Z" title="Created 2025-01-07 00:00:00">2025-01-07</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/BookNotes/">BookNotes</a></span></div><div class="content"> 第三帝国三部曲：当权的第三帝国（理想国译丛039）  作者: 理查德·J.埃文斯 简介: 在这部包罗万象、扣人心弦的历史巨著中，理查德·J. 埃文斯通过爬梳二战前纳粹德国在经济、文化、艺术、教育等领域的政策和影响，以海量的数据分析与官方档案描绘了第三帝国极权统治的狰狞面貌，以生动的私人材料与亲历记录勾勒出普通德国人在这段历史中的鲜活命运，揭露了纳粹党如何以残暴血腥的独裁手段将德国改造成一架全力冲刺的战争机器。 出版时间: 2020-02-01 ISBN: 9787510886294 分类: 历史-世界史 出版社: 九州出版社 字数: 670618 在线阅读: 微信读书 划线数量: 130 想法数量: 33    笔记序言 📌 本书讲的是希特勒和他的纳粹同党一起在德国建立的第三帝国的故事，始于1933年夏天纳粹党夺权成功，一直到1939年9月初德国把欧洲拖入二战。  ⏱ 2024-01-10 17:45:46 ^50-418-487    📌...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/d0a1d547/" title="虎嗅APP"><img class="post-bg" src="http://wx.qlogo.cn/mmhead/Q3auHgzwzM7C9HhFFFnhtWDyWZ5NbqCYILXgjgIGLr7oSOkH9lVceg/0" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="虎嗅APP"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/d0a1d547/" title="虎嗅APP">虎嗅APP</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2025-01-05T16:00:00.000Z" title="Created 2025-01-06 00:00:00">2025-01-06</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/BookNotes/">BookNotes</a></span></div><div class="content"> 虎嗅APP  作者: 公众号 简介: 从思考，到创造 出版时间:  ISBN:  分类:  出版社:  字数: 0 在线阅读: 微信读书 划线数量: 1 想法数量: 0    笔记未知章节 📌 刚刚过去的圣诞档期，内地电影市场创下了近十五年以来的最低纪录，票房总额为8026万元人民币（即平安夜与圣诞节两日，含服务费）。值得一提的是，2011年国内银幕数只有六千块，而现阶段这一数字则在八万块左右。  ⏱ 2025-01-06 01:13:04 ^-80-182   </div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/68f2b2c8/" title="美国对华情报解密档案（1948-1976年）（全8卷）"><img class="post-bg" src="https://cdn.weread.qq.com/weread/cover/29/cpplatform_seradg93nc5f4bcdf8pupd/t7_cpplatform_seradg93nc5f4bcdf8pupd1733740461.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="美国对华情报解密档案（1948-1976年）（全8卷）"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/68f2b2c8/" title="美国对华情报解密档案（1948-1976年）（全8卷）">美国对华情报解密档案（1948-1976年）（全8卷）</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2025-01-05T16:00:00.000Z" title="Created 2025-01-06 00:00:00">2025-01-06</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/BookNotes/">BookNotes</a></span></div><div class="content"> 美国对华情报解密档案（1948-1976年）（全8卷）  作者: 沈志华 杨奎松 简介: 《美国对华情报解密档案（1948～1976）》是以中央情报局为主的美国情报机构收集的中国情报以及对这些情报进行分析和评估的报告。中央情报局是美国最主要、最核心的情报机构，因此这些情报档案原是美国的最高国家机密。直至2004年，这些情报档案才开始陆续解密。作为中国国内第一部以美国对华情报为主题的译著，本套书有三大特点：第一，档案来源广泛，包括纸质文本、数据库和缩微文献；第二，以绝密、机密的“特别国家情报评估”和“国家情报评估”为骨架，较为全面系统地展示了冷战时期美国情报机构对中国政治、经济、军事、外交状况的认知、分析、评判和预测；第三，由国内知名学者撰写的各编“导论”，不仅概述了本编收录文件的种类、来源和内容，而且对文件判断的准确程度及其原因进行了客观公正的评价。本套书的原始文件材料始于2005年中国学者有计划的搜集，其翻译、整理和研究的课题 出版时间: 2009-04-01 ISBN:  分类: 政治军事-军事 出版社:  字数: 3582016 在线阅读: 微信读书 划线数量:...</div></div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/#content-inner">16</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/zelda_link_sleep.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Erispyu</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">154</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">259</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">6</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/erispyu"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/erispyu" target="_blank" title="GitHub"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:erispyu@gmail.com" target="_blank" title="E-Mail"><i class="fa fa-envelope" style="color: #4a7dbe;"></i></a><a class="social-icon" href="https://www.goodreads.com/user/show/156410162-erispyu" target="_blank" title="Goodreads"><i class="fa fa-book-reader"></i></a><a class="social-icon" href="https://www.douban.com/people/erispyu00/" target="_blank" title="Douban"><i class="fa fa-film"></i></a><a class="social-icon" href="https://www.travellings.cn/go.html" target="_blank" title="Travellings"><i class="fa-solid fa-train"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">Stay Hungry, Stay Foolish</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/e729026e/" title="清粥小菜">清粥小菜</a><time datetime="2025-01-09T11:46:48.000Z" title="Created 2025-01-09 19:46:48">2025-01-09</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/649adfed/" title="对称加密与非对称加密详解">对称加密与非对称加密详解</a><time datetime="2025-01-09T06:27:09.000Z" title="Created 2025-01-09 14:27:09">2025-01-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/7683439c/" title="汪曾祺全集（全12册）"><img src="https://cdn.weread.qq.com/weread/cover/4/yuewen_29499625/t7_yuewen_294996251676539569.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="汪曾祺全集（全12册）"/></a><div class="content"><a class="title" href="/posts/7683439c/" title="汪曾祺全集（全12册）">汪曾祺全集（全12册）</a><time datetime="2025-01-08T16:00:00.000Z" title="Created 2025-01-09 00:00:00">2025-01-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/97eceaba/" title="LLMQuant"><img src="http://wx.qlogo.cn/mmhead/2pm5Nb2cMaMYRvdQxlITjyxuzACyMDicszlVibD6yeyQbSEm8FhYgMk3ib4icDNUU0fp7ehJ6C5O8Ng/0" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="LLMQuant"/></a><div class="content"><a class="title" href="/posts/97eceaba/" title="LLMQuant">LLMQuant</a><time datetime="2025-01-07T16:00:00.000Z" title="Created 2025-01-08 00:00:00">2025-01-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/2b030a18/" title="政事堂2019"><img src="http://wx.qlogo.cn/mmhead/Q3auHgzwzM5Bp39F4nxFK6e8yMJ6Ju5SneIotBH1RptRJ8VBq8IZ4Q/0" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="政事堂2019"/></a><div class="content"><a class="title" href="/posts/2b030a18/" title="政事堂2019">政事堂2019</a><time datetime="2025-01-07T16:00:00.000Z" title="Created 2025-01-08 00:00:00">2025-01-08</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
-            <i class="fas fa-folder-open"></i>
-            <span>Categories</span>
-            
-          </div>
-          <ul class="card-category-list" id="aside-cat-list">
-            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/BookNotes/"><span class="card-category-list-name">BookNotes</span><span class="card-category-list-count">150</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Computer-Science/"><span class="card-category-list-name">Computer Science</span><span class="card-category-list-count">2</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Computer-Science/Encryption/"><span class="card-category-list-name">Encryption</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Computer-Science/Python/"><span class="card-category-list-name">Python</span><span class="card-category-list-count">1</span></a></li></ul></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/English/"><span class="card-category-list-name">English</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E9%9A%8F%E7%AC%94/"><span class="card-category-list-name">随笔</span><span class="card-category-list-count">1</span></a></li>
-          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA-%E7%90%86%E8%AE%BA%E7%9F%A5%E8%AF%86/" style="font-size: 1.1em; color: #999">计算机-理论知识</a> <a href="/tags/%E5%8F%B8%E9%A6%AC%E5%85%89%E8%83%A1%E4%B8%89%E7%9C%81/" style="font-size: 1.1em; color: #999">司馬光胡三省</a> <a href="/tags/%E7%A7%91%E5%AD%A6%E6%8A%80%E6%9C%AF-%E7%A7%91%E5%AD%A6%E7%A7%91%E6%99%AE/" style="font-size: 1.1em; color: #999">科学技术-科学科普</a> <a href="/tags/%E4%B8%8A%E6%B5%B7%E4%B8%89%E8%81%94%E4%B9%A6%E5%BA%97/" style="font-size: 1.3em; color: #99a1ac">上海三联书店</a> <a href="/tags/%E4%B8%AD%E5%8D%8E%E4%B9%A6%E5%B1%80/" style="font-size: 1.1em; color: #999">中华书局</a> <a href="/tags/%E4%B8%AD%E5%8D%8E%E4%B9%A6%E5%B1%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/" style="font-size: 1.4em; color: #99a5b6">中华书局有限公司</a> <a href="/tags/%E5%90%95%E9%9D%99/" style="font-size: 1.1em; color: #999">吕静</a> <a href="/tags/%E5%8E%86%E5%8F%B2-%E5%8E%86%E5%8F%B2%E5%B0%8F%E8%AF%B4/" style="font-size: 1.1em; color: #999">历史-历史小说</a> <a href="/tags/%E5%8E%86%E5%8F%B2-%E5%8E%86%E5%8F%B2%E8%AF%BB%E7%89%A9/" style="font-size: 1.2em; color: #999da3">历史-历史读物</a> <a href="/tags/%E7%BB%8F%E6%B5%8E%E7%90%86%E8%B4%A2-%E8%B4%A2%E7%BB%8F/" style="font-size: 1.1em; color: #999">经济理财-财经</a> <a href="/tags/%E5%86%AF%E6%A2%A6%E9%BE%99%E7%BC%96/" style="font-size: 1.1em; color: #999">冯梦龙编</a> <a href="/tags/%E6%B2%88%E6%97%A2%E6%B5%8E/" style="font-size: 1.1em; color: #999">沈既济</a> <a href="/tags/%E4%BA%BA%E7%89%A9%E4%BC%A0%E8%AE%B0-%E4%BC%A0%E8%AE%B0%E7%BB%BC%E5%90%88/" style="font-size: 1.1em; color: #999">人物传记-传记综合</a> <a href="/tags/%E5%87%8C%E6%BF%9B%E5%88%9D/" style="font-size: 1.1em; color: #999">凌濛初</a> <a href="/tags/%E7%90%86%E6%9F%A5%E5%BE%B7%C2%B7%E9%81%93%E9%87%91%E6%96%AF/" style="font-size: 1.1em; color: #999">理查德·道金斯</a> <a href="/tags/Kovid-Goyal/" style="font-size: 1.2em; color: #999da3">Kovid Goyal</a> <a href="/tags/%E4%B8%AD%E5%9B%BD%E7%A4%BE%E4%BC%9A%E7%A7%91%E5%AD%A6%E5%87%BA%E7%89%88%E7%A4%BE/" style="font-size: 1.1em; color: #999">中国社会科学出版社</a> <a href="/tags/%E6%9D%8E%E7%A1%95/" style="font-size: 1.1em; color: #999">李硕</a> <a href="/tags/%E5%B0%B9%E5%B0%8F%E6%9E%97%E6%A0%A1%E6%B3%A8/" style="font-size: 1.1em; color: #999">尹小林校注</a> <a href="/tags/%E4%B8%AD%E4%BF%A1%E5%87%BA%E7%89%88%E9%9B%86%E5%9B%A2/" style="font-size: 1.5em; color: #99a9bf">中信出版集团</a> <a href="/tags/%E6%B5%B7%E6%BC%84/" style="font-size: 1.1em; color: #999">海漄</a> <a href="/tags/%E5%86%AF%E6%A2%A6%E9%BE%99/" style="font-size: 1.2em; color: #999da3">冯梦龙</a> <a href="/tags/%E6%9C%B1%E5%85%89%E6%BD%9C/" style="font-size: 1.1em; color: #999">朱光潜</a> <a href="/tags/Princeton-University-Press/" style="font-size: 1.1em; color: #999">Princeton University Press</a> <a href="/tags/%E6%96%B0%E6%98%9F%E5%87%BA%E7%89%88%E7%A4%BE/" style="font-size: 1.1em; color: #999">新星出版社</a> <a href="/tags/%E5%9F%83%E9%87%8C%E5%85%8B%C2%B7%E4%B9%94%E6%A0%B9%E6%A3%AE/" style="font-size: 1.1em; color: #999">埃里克·乔根森</a> <a href="/tags/%E7%A4%BE%E4%BC%9A%E6%96%87%E5%8C%96-%E7%A4%BE%E7%A7%91/" style="font-size: 1.3em; color: #99a1ac">社会文化-社科</a> <a href="/tags/Walter-Isaacson/" style="font-size: 1.1em; color: #999">Walter Isaacson</a> <a href="/tags/%E5%A4%A9%E5%9C%B0%E5%87%BA%E7%89%88%E7%A4%BE/" style="font-size: 1.1em; color: #999">天地出版社</a> <a href="/tags/%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%E5%87%BA%E7%89%88%E7%A4%BE/" style="font-size: 1.2em; color: #999da3">清华大学出版社</a> <a href="/tags/%E5%A4%96%E8%AF%AD%E6%95%99%E5%AD%A6%E4%B8%8E%E7%A0%94%E7%A9%B6%E5%87%BA%E7%89%88%E7%A4%BE/" style="font-size: 1.1em; color: #999">外语教学与研究出版社</a> <a href="/tags/%E6%B1%9F%E8%8B%8F%E5%87%A4%E5%87%B0%E6%96%87%E8%89%BA%E5%87%BA%E7%89%88%E7%A4%BE/" style="font-size: 1.1em; color: #999">江苏凤凰文艺出版社</a> <a href="/tags/%E6%96%87%E5%AD%A6-%E7%BA%AA%E5%AE%9E%E6%96%87%E5%AD%A6/" style="font-size: 1.3em; color: #99a1ac">文学-纪实文学</a> <a href="/tags/Django/" style="font-size: 1.1em; color: #999">Django</a> <a href="/tags/%E9%A9%AC%E6%B1%89%E9%BA%9F%E8%91%97/" style="font-size: 1.1em; color: #999">马汉麟著</a> <a href="/tags/%E7%8E%8B%E7%91%9E/" style="font-size: 1.1em; color: #999">王瑞</a> <a href="/tags/%E7%A4%BE%E4%BC%9A%E7%A7%91%E5%AD%A6%E6%96%87%E7%8C%AE%E5%87%BA%E7%89%88%E7%A4%BE/" style="font-size: 1.2em; color: #999da3">社会科学文献出版社</a> <a href="/tags/%E9%A1%B9%E9%A3%99/" style="font-size: 1.1em; color: #999">项飙</a> <a href="/tags/Encryption/" style="font-size: 1.1em; color: #999">Encryption</a> <a href="/tags/%E5%B8%83%E8%8E%B1%E6%81%A9%C2%B7W-%E6%9F%AF%E5%B0%BC%E6%B1%89/" style="font-size: 1.1em; color: #999">布莱恩·W. 柯尼汉</a></div></div><div class="card-widget card-archives">
-    <div class="item-headline">
-      <i class="fas fa-archive"></i>
-      <span>Archives</span>
-      <a class="card-more-btn" href="/archives/" title="View More"><i class="fas fa-angle-right"></i></a>
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
     </div>
-    <ul class="card-archive-list">
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Erispyu's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-plugins"><a href="/hexo-stats-echarts/" rel="section"><i class="fa-solid fa-flask fa-fw"></i>Plugins</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-list fa-fw"></i>Categories</a></li><li class="menu-item menu-item-timeline"><a href="/timeline/" rel="section"><i class="fa-solid fa-hourglass-half fa-fw"></i>Timeline</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li><li class="menu-item menu-item-reading"><a href="/reading/" rel="section"><i class="fa fa-book-open fa-fw"></i>Reading</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="Searching..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fab fa-algolia fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
   
-      <li class="card-archive-list-item">
-        <a class="card-archive-list-link" href="/archives/2025/01/">
-          <span class="card-archive-list-date">January 2025</span>
-          <span class="card-archive-list-count">28</span>
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Erispyu</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">108</span>
+          <span class="site-state-item-name">posts</span>
         </a>
-      </li>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">196</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/erispyu" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;erispyu" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:erispyu@gmail.com" title="E-Mail → mailto:erispyu@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.douban.com/people/erispyu00/" title="Douban → https:&#x2F;&#x2F;www.douban.com&#x2F;people&#x2F;erispyu00&#x2F;" rel="noopener me" target="_blank"><i class="fa fa-film fa-fw"></i>Douban</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.travellings.cn/go.html" title="Travellings → https:&#x2F;&#x2F;www.travellings.cn&#x2F;go.html" rel="noopener me" target="_blank"><i class="fa-solid fa-train fa-fw"></i>Travellings</a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/big/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
     
-      <li class="card-archive-list-item">
-        <a class="card-archive-list-link" href="/archives/2024/12/">
-          <span class="card-archive-list-date">December 2024</span>
-          <span class="card-archive-list-count">32</span>
-        </a>
-      </li>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner page posts-expand">
+
+
     
-      <li class="card-archive-list-item">
-        <a class="card-archive-list-link" href="/archives/2024/11/">
-          <span class="card-archive-list-date">November 2024</span>
-          <span class="card-archive-list-count">8</span>
-        </a>
-      </li>
     
-      <li class="card-archive-list-item">
-        <a class="card-archive-list-link" href="/archives/2024/10/">
-          <span class="card-archive-list-date">October 2024</span>
-          <span class="card-archive-list-count">1</span>
-        </a>
-      </li>
     
-      <li class="card-archive-list-item">
-        <a class="card-archive-list-link" href="/archives/2024/09/">
-          <span class="card-archive-list-date">September 2024</span>
-          <span class="card-archive-list-count">3</span>
-        </a>
-      </li>
+    <div class="post-block" lang="en"><header class="post-header">
+
+<h1 class="post-title" itemprop="name headline">👋 Welcome!
+</h1>
+
+<div class="post-meta-container">
+</div>
+
+</header>
+
+      
+      
+      
+      <div class="post-body">
+          <div class="note success"><p>I’ve just developed a new plugin <a target="_blank" rel="noopener" href="https://github.com/erispyu/hexo-stats-echarts">hexo-stats-echarts</a> for Hexo that transforms raw blog statistics—like post frequency, tags, and categories—into stunning, customizable and interactive charts.</p>
+<p>Try it out on your own site! Check out the step-by-step guide <a href="/hexo-stats-echarts">here</a>.</p>
+<p>If you find this plugin helpful, please consider giving it a ⭐ on <a target="_blank" rel="noopener" href="https://github.com/erispyu/hexo-stats-echarts">GitHub</a> to show your support and help others discover it!  </p>
+</div>
+
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const heatmapChartDom = document.getElementById('heatmapChart-0');
+                if (heatmapChartDom) {
+                    const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+                    const backgroundColor = isDarkMode ? '#333' : 'transparent';
+                    let heatmapChart = echarts.init(heatmapChartDom, isDarkMode ? 'dark' : 'light');
+                    const cellSize = [16, 16];
+
+                    const groupedData = {"2022":[["2022-09-09",1],["2022-09-10",1]],"2023":[["2023-12-01",1]],"2024":[["2024-03-22",2],["2024-02-25",1],["2024-01-29",2],["2024-11-28",2],["2024-09-06",1],["2024-12-27",2],["2024-12-26",6],["2024-07-31",1],["2024-07-16",1],["2024-08-04",1],["2024-05-06",1],["2024-12-25",1],["2024-12-20",3],["2024-06-01",1],["2024-12-30",4],["2024-10-07",1],["2024-11-26",1],["2024-01-10",1],["2024-07-29",1],["2024-08-06",1],["2024-11-24",1],["2024-12-24",1],["2024-12-17",2],["2024-11-30",1],["2024-09-11",1],["2024-03-02",2],["2024-04-11",1],["2024-02-02",2],["2024-01-28",2],["2024-03-14",2],["2024-01-27",1],["2024-12-16",2],["2024-08-02",1],["2024-12-15",1],["2024-08-27",1],["2024-05-08",1],["2024-03-12",1],["2024-12-19",2],["2024-12-22",1],["2024-11-23",1],["2024-09-10",1],["2024-05-05",1],["2024-12-04",2],["2024-11-29",1],["2024-12-08",1],["2024-02-13",1],["2024-02-20",2],["2024-12-06",1],["2024-12-18",2],["2024-11-21",1],["2024-12-12",1],["2024-02-04",1],["2024-03-05",1]],"2025":[["2025-01-09",3],["2025-01-08",4],["2025-01-04",1],["2025-01-03",7],["2025-01-01",6],["2025-01-02",2],["2025-01-06",3],["2025-01-07",1],["2025-01-05",1]]};
+                    const years = Object.keys(groupedData).reverse();
+                    const initYear = '2025' || years[0];
+
+                    // Define color themes
+                    const themes = {
+                        oceanic: ['#A6D8E8', '#6FB3D2', '#4A90BF', '#2E6A8E', '#1A4461'],
+                        forest: ['#ACE7AE', '#8FD694', '#69C16D', '#549F57', '#3A7D3E'],
+                        sunset: ['#FFD1A6', '#FFA07A', '#FF6F52', '#D94A3D', '#A62B2B'],
+                        earthy: ['#E3C8A8', '#C4A076', '#A57C52', '#7A5A3A', '#4E3A28'],
+                        pastel: ['#F5D5E6', '#E8B8D0', '#D18FB8', '#A86A8E', '#7A4A61'],
+                        golden: ['#FFEBB5', '#FFD966', '#FFB74D', '#D18F4A', '#A66B2B'],
+                        berry: ['#F4C2D7', '#E88BB3', '#D94A7A', '#A62B5C', '#7A1F3D'],
+                        charcoal: ['#E0E0E0', '#9E9E9E', '#616161', '#424242', '#212121'],
+                    };
+
+                    // Function to get a random theme
+                    function getRandomTheme() {
+                        const themeKeys = Object.keys(themes);
+                        const randomKey = themeKeys[Math.floor(Math.random() * themeKeys.length)];
+                        return themes[randomKey];
+                    }
+
+                    // Use the specified theme or default to 'random'
+                    const colors = themes['random'.toLowerCase()] || getRandomTheme();
+
+                    const chartOptions = {
+                        backgroundColor: backgroundColor,
+                        tooltip: {
+                            position: 'top',
+                            confine: true,
+                            formatter: params => `${params.value[0]}: ${params.value[1]} Article${params.value[1] !== 1 ? 's' : ''}`,
+                        },
+                        calendar: {
+                            top: '13%',
+                            left: '2%',
+                            right: '8%',
+                            range: initYear,
+                            cellSize: cellSize,
+                            splitLine: { lineStyle: { color: '#E0E0E0', width: 1 } },
+                            itemStyle: { borderWidth: 1, borderColor: '#E0E0E0', color: backgroundColor },
+                            dayLabel: { show: false },
+                            monthLabel: { show: true },
+                            yearLabel: { show: false },
+                        },
+                        visualMap: {
+                            show: true,
+                            right: '8%',
+                            bottom: '5%',
+                            type: 'piecewise',
+                            orient: 'horizontal',
+                            text: ['More', 'Less'],
+                            min: 0,
+                            max: Math.max(...groupedData[initYear].map(item => item[1])),
+                            inRange: { color: colors },
+                        },
+                        legend: {
+                            type: 'scroll',
+                            icon: 'none',
+                            data: years,
+                            orient: 'vertical',
+                            top: '5%',
+                            right: 'right',
+                            itemWidth: 20,
+                            itemHeight: 20,
+                            itemGap: 10,
+                            pageIconSize: 10,
+                            pageTextStyle: { fontSize: 14 },
+                            selectedMode: 'single',
+                        },
+                        series: years.map(year => ({
+                            type: 'heatmap',
+                            coordinateSystem: 'calendar',
+                            data: groupedData[year],
+                            name: year,
+                            emphasis: { disabled: true },
+                            silent: year !== initYear,
+                        })),
+                    };
+
+                    heatmapChart.setOption(chartOptions);
+
+                    heatmapChart.dispatchAction({
+                        type: 'legendSelect',
+                        name: initYear,
+                    });
+
+                    // Function to handle legend selection changes
+                    const handleLegendSelectChanged = function(params) {
+                        const selectedYear = Object.keys(params.selected).find(key => params.selected[key]);
+                        if (selectedYear && groupedData[selectedYear]) {
+                            heatmapChart.setOption({
+                                calendar: { range: selectedYear },
+                                visualMap: {
+                                    max: Math.max(...groupedData[selectedYear].map(item => item[1])),
+                                },
+                                series: years.map(year => ({
+                                    type: 'heatmap',
+                                    coordinateSystem: 'calendar',
+                                    data: groupedData[year],
+                                    name: year,
+                                    emphasis: { disabled: true },
+                                    silent: year !== selectedYear,
+                                })),
+                            });
+                        }
+                    };
+                    
+                    const handleClick = function(params) {
+                        if (params.componentType === 'series') {
+                            const [year, month] = params.value[0].split('-');
+                            window.location.href = '/archives/' + year + '/' + month;
+                        }
+                    };
+
+                    heatmapChart.on('legendselectchanged', handleLegendSelectChanged);
+                    heatmapChart.on('click', handleClick);
+
+                    // Listen for theme changes
+                    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
+                        heatmapChart.dispose();
+                        heatmapChart = echarts.init(heatmapChartDom, event.matches ? 'dark' : 'light');
+                        const newBackgroundColor = event.matches ? '#333' : 'transparent';
+                        chartOptions.backgroundColor = newBackgroundColor;
+                        chartOptions.calendar.itemStyle.color = newBackgroundColor;
+                        heatmapChart.setOption(chartOptions);
+                        
+                        // Re-select the initial year
+                        heatmapChart.dispatchAction({
+                            type: 'legendSelect',
+                            name: initYear,
+                        });
+
+                        // Reattach the event listeners
+                        heatmapChart.on('legendselectchanged', handleLegendSelectChanged);
+                        heatmapChart.on('click', handleClick);
+                    });
+                }
+            });
+        </script>
+        <div style="width: 100%">
+            <!-- Title -->
+            
+        <div style="text-align: center; font-size: 24px; font-weight: bold; margin-bottom: 10px;">
+            Blog Heatmap
+        </div>
     
-      <li class="card-archive-list-item">
-        <a class="card-archive-list-link" href="/archives/2024/08/">
-          <span class="card-archive-list-date">August 2024</span>
-          <span class="card-archive-list-count">4</span>
-        </a>
-      </li>
+            <!-- Heatmap Chart -->
+            <div id="heatmapChart-0" style="width: 100%; height: 200px; overflow-x: auto; overflow-y: hidden;"></div>
+            <!-- Footer -->
+            
+        <div style="text-align: center; font-size: 12px; color: #666; margin-top: 10px; margin-bottom: 20px;">
+            Powered by <a href="https://github.com/erispyu/hexo-stats-echarts" style="color: inherit; text-decoration: none;" target="_blank">hexo-stats-echarts</a>
+        </div>
     
-      <li class="card-archive-list-item">
-        <a class="card-archive-list-link" href="/archives/2024/07/">
-          <span class="card-archive-list-date">July 2024</span>
-          <span class="card-archive-list-count">3</span>
-        </a>
-      </li>
+        </div>
     
-      <li class="card-archive-list-item">
-        <a class="card-archive-list-link" href="/archives/2024/06/">
-          <span class="card-archive-list-date">June 2024</span>
-          <span class="card-archive-list-count">1</span>
-        </a>
-      </li>
-    </ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Website Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article Count :</div><div class="item-count">154</div></div><div class="webinfo-item"><div class="item-name">Unique Visitors :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Page Views :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Update :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-01-10T09:10:24.692Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By Erispyu</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const pieChartDom = document.getElementById('pieChart-0');
+                const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+                let pieChart = echarts.init(pieChartDom, isDarkMode ? 'dark' : 'light');
+
+                const chartOptions = {
+                    backgroundColor: isDarkMode ? '#333' : 'transparent',
+                    legend: {
+                        bottom: '1%',
+                    },
+                    series: [
+                        {
+                            type: 'pie',
+                            label: {
+                                position: 'outside',
+                                formatter: '{b}: {c}({d}%)', // {a}: series name; {b}: data name; {c}: data value; {d}: percentage
+                            },
+                            radius: ['15%', '60%'],
+                            roseType: 'radius',
+                            itemStyle: {
+                                borderRadius: 8
+                            },
+                            data: [{"name":"文学","value":31},{"name":"公众号","value":16},{"name":"历史","value":15},{"name":"导入书籍","value":12},{"name":"上海辞书出版社","value":9},{"name":"文学-文学鉴赏","value":9},{"name":"文学-古典文学","value":7},{"name":"文学-经典作品","value":6},{"name":"计算机","value":6},{"name":"人民文学出版社","value":5}],
+                        }
+                    ]
+                };
+                
+                if ('tags' === 'years') {
+                    chartOptions.legend.data = ["Addison-Wesley Professional","Blake J. Harris","Brian W. Kernighan","calibre","Certificate","Digest","Django","Encryption","Frank Herbert","HarperCollins","J.K. Rowling","Jeremy Tinley","Kevin Wayne","Kovid Goyal","Martin Kleppmann","MySQL","Network","O'Reilly Media","Olivier Caelen","Orion","Pottermore Publishing","Princeton University Press","Python","Robert Sedgewick","RSA","Signature","Silvia Botros","Simon & Schuster","Speech","Walter Isaacson","三秦出版社","上海三联书店","上海书店出版社","上海人民出版社","上海古籍出版社","上海辞书出版社","上野千鹤子","丘吉尔","个人成长","个人成长-人在职场","中信出版集团","中华书局","中华书局有限公司","中国文史出版社","尹小林校注","九州出版社","人民出版社","人民文学出版社","人民邮电出版社","人民邮电出版社有限公司","人物传记","人物传记-传记综合","人物传记-科学家","人物传记-财经人物","余才林补订","光启书局","克拉伦斯·伦纳德·凯利·约翰逊","公众号","兰小欢","冯梦龙","冯梦龙编","凌濛初","凯·伯德","刘义庆著","刘子超","刘孝标注","劳伦斯A.坎宁安","北京大吕文化传播有限公司","北京大学出版社","北岛","南京大学出版社","南京大学文学院","历史","历史-世界史","历史-中国古代","历史-历史典籍","历史-历史地理","历史-历史文化","历史-历史读物","史蒂文·J. 米勒","吴承恩","吴楚材","吴调侯编选","商兆琦","团结出版社","埃里克·乔根森","外语教学与研究出版社","天津人民出版社","奈吉尔·波尔顿","安妮·埃尔诺","导入书籍","布莱恩·W. 柯尼汉","常青","平凯星辰","广州出版社","张岱","徐传武校点","戴维·A.帕特森","政治军事","政治军事-军事","政治军事-政治","教育学习","教育学习-外语","教育学习-教育","文学","文学-古典文学","文学-外国文学","文学-散文杂著","文学-文学鉴赏","文学-现代诗歌","文学-纪实文学","文学-经典作品","文学-语言文字","文汇出版社","斯图尔特·罗素","斯坦尼斯瓦夫·莱姆","期刊杂志","期刊杂志-财经","本哈明·拉巴图特","朱光潜","机械工业出版社","李公佐","李平武","李昉","李梦生等译注","杜光庭","杨奎松","毛泽东","江苏人民出版社","汪曾祺","沃伦E.巴菲特","沃尔特·艾萨克森","沈志华","沈既济","沈醉","浙江古籍出版社","浙江教育出版社","浙江文艺出版社","海南出版社","清华大学出版社","湖南文艺出版社","王力","王力主编","王水照","王瑞","玛吉·史密斯","理查德·J.埃文斯","生活","生活·读书·新知三联书店","电子工业出版社","社会文化","社会文化-文化","社会文化-社科","科学技术","科学技术-工业技术","科学技术-科学科普","科学技术-自然科学","精品小说","精品小说-悬疑推理","精品小说-武侠小说","精品小说-科幻小说","约翰·L.亨尼斯","经济理财","经济理财-商业","经济理财-理财","经济理财-财经","美食","胡锦涛","葛亮","计算机","计算机-人工智能","计算机-数据库","计算机-理论知识","计算机-编程设计","计算机-计算机综合","译林出版社","财经","财经杂志社","赤尔斯","辛德勇","金庸","陆玉芹","随笔","韩起澜","顾建国","顾炎武","马丁·J.舍温","马伯庸","马汉麟著","鲁迅","黄仁宇","黄钧校注","黄黎原"];
+                };
+
+                pieChart.setOption(chartOptions);
+                
+                const handleClick = function (params) {
+                    window.location.href = '/tags/' + encodeURIComponent(params.name);
+                };
+
+                pieChart.on('click', handleClick);
+
+                window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
+                    pieChart.dispose();
+                    pieChart = echarts.init(pieChartDom, event.matches ? 'dark' : 'light');
+                    chartOptions.backgroundColor = event.matches ? '#333' : 'transparent';
+                    pieChart.setOption(chartOptions);
+                    pieChart.on('click', handleClick);
+                });
+            });
+        </script>
+        <div style="width: 100%">
+            <!-- Title -->
+            
+        <div style="text-align: center; font-size: 24px; font-weight: bold; margin-bottom: 10px;">
+            Tags Pie Chart
+        </div>
+    
+            <!-- Pie Chart Container -->
+            <div id="pieChart-0" style="width: 100%; height: 425px; overflow-x: auto; overflow-y: auto;"></div>
+            <!-- Footer -->
+            
+        <div style="text-align: center; font-size: 12px; color: #666; margin-top: 10px; margin-bottom: 20px;">
+            Powered by <a href="https://github.com/erispyu/hexo-stats-echarts" style="color: inherit; text-decoration: none;" target="_blank">hexo-stats-echarts</a>
+        </div>
+    
+        </div>
+    
+
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const radarChartDom = document.getElementById('radarChart-0');
+                const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+                let radarChart = echarts.init(radarChartDom, isDarkMode ? 'dark' : 'light');
+
+                const chartOptions = {
+                    backgroundColor: isDarkMode ? '#333' : 'transparent',
+                    radar: {
+                        indicator: [{"max":31,"name":"文学"},{"max":31,"name":"公众号"},{"max":31,"name":"历史"},{"max":31,"name":"导入书籍"},{"max":31,"name":"上海辞书出版社"},{"max":31,"name":"文学-文学鉴赏"}],
+                    },
+                    tooltip: {
+                        trigger: 'item',
+                        confine: true,
+                    },
+                    series: [
+                        {
+                            type: 'radar',
+                            areaStyle: {},
+                            data: [{
+                                value: [31,16,15,12,9,9],
+                                name: 'Post Tags',
+                            }],
+                        }
+                    ]
+                };
+
+                radarChart.setOption(chartOptions);
+                
+                const handleClick = function (params) {
+                    window.location.href = '/tags/';
+                };
+
+                radarChart.on('click', handleClick);
+
+                window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
+                    radarChart.dispose();
+                    radarChart = echarts.init(radarChartDom, event.matches ? 'dark' : 'light');
+                    chartOptions.backgroundColor = event.matches ? '#333' : 'transparent';
+                    radarChart.setOption(chartOptions);
+                    radarChart.on('click', handleClick);
+                });
+            });
+        </script>
+        <div style="width: 100%">
+            <!-- Title -->
+            
+        <div style="text-align: center; font-size: 24px; font-weight: bold; margin-bottom: 10px;">
+            Tags Radar Chart
+        </div>
+    
+            <!-- Radar Chart Container -->
+            <div id="radarChart-0" style="width: 100%; height: 400px; overflow-x: auto; overflow-y: auto;"></div>
+            <!-- Footer -->
+            
+        <div style="text-align: center; font-size: 12px; color: #666; margin-top: 10px; margin-bottom: 20px;">
+            Powered by <a href="https://github.com/erispyu/hexo-stats-echarts" style="color: inherit; text-decoration: none;" target="_blank">hexo-stats-echarts</a>
+        </div>
+    
+        </div>
+    
+
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const pieChartDom = document.getElementById('pieChart-1');
+                const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+                let pieChart = echarts.init(pieChartDom, isDarkMode ? 'dark' : 'light');
+
+                const chartOptions = {
+                    backgroundColor: isDarkMode ? '#333' : 'transparent',
+                    legend: {
+                        bottom: '1%',
+                    },
+                    series: [
+                        {
+                            type: 'pie',
+                            label: {
+                                position: 'outside',
+                                formatter: '{b}: {c}({d}%)', // {a}: series name; {b}: data name; {c}: data value; {d}: percentage
+                            },
+                            radius: ['15%', '60%'],
+                            roseType: 'area',
+                            itemStyle: {
+                                borderRadius: 8
+                            },
+                            data: [{"name":"2024","value":77},{"name":"2025","value":28},{"name":"2022","value":2},{"name":"2023","value":1}],
+                        }
+                    ]
+                };
+                
+                if ('years' === 'years') {
+                    chartOptions.legend.data = ["2022","2023","2024","2025"];
+                };
+
+                pieChart.setOption(chartOptions);
+                
+                const handleClick = function (params) {
+                    window.location.href = '/archives/' + encodeURIComponent(params.name);
+                };
+
+                pieChart.on('click', handleClick);
+
+                window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
+                    pieChart.dispose();
+                    pieChart = echarts.init(pieChartDom, event.matches ? 'dark' : 'light');
+                    chartOptions.backgroundColor = event.matches ? '#333' : 'transparent';
+                    pieChart.setOption(chartOptions);
+                    pieChart.on('click', handleClick);
+                });
+            });
+        </script>
+        <div style="width: 100%">
+            <!-- Title -->
+            
+        <div style="text-align: center; font-size: 24px; font-weight: bold; margin-bottom: 10px;">
+            Years Pie Chart
+        </div>
+    
+            <!-- Pie Chart Container -->
+            <div id="pieChart-1" style="width: 100%; height: 425px; overflow-x: auto; overflow-y: auto;"></div>
+            <!-- Footer -->
+            
+        <div style="text-align: center; font-size: 12px; color: #666; margin-top: 10px; margin-bottom: 20px;">
+            Powered by <a href="https://github.com/erispyu/hexo-stats-echarts" style="color: inherit; text-decoration: none;" target="_blank">hexo-stats-echarts</a>
+        </div>
+    
+        </div>
+    
+
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const radarChartDom = document.getElementById('radarChart-1');
+                const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+                let radarChart = echarts.init(radarChartDom, isDarkMode ? 'dark' : 'light');
+
+                const chartOptions = {
+                    backgroundColor: isDarkMode ? '#333' : 'transparent',
+                    radar: {
+                        indicator: [{"max":32,"name":"Jan"},{"max":32,"name":"Feb"},{"max":32,"name":"Mar"},{"max":32,"name":"Apr"},{"max":32,"name":"May"},{"max":32,"name":"Jun"},{"max":32,"name":"Jul"},{"max":32,"name":"Aug"},{"max":32,"name":"Sep"},{"max":32,"name":"Oct"},{"max":32,"name":"Nov"},{"max":32,"name":"Dec"}],
+                    },
+                    legend: {
+                        bottom: '1%',
+                    },
+                    tooltip: {
+                        trigger: 'item',
+                        confine: true,
+                    },
+                    series: [
+                        {
+                            type: 'radar',
+                            data: [{"name":"2022","value":[0,0,0,0,0,0,0,0,2,0,0,0]},{"name":"2023","value":[0,0,0,0,0,0,0,0,0,0,0,1]},{"name":"2024","value":[6,7,8,1,3,1,3,4,3,1,8,32]},{"name":"2025","value":[28,0,0,0,0,0,0,0,0,0,0,0]}],
+                        }
+                    ]
+                };
+
+                radarChart.setOption(chartOptions);
+                
+                const handleClick = function (params) {
+                    window.location.href = '/archives/' + encodeURIComponent(params.name)
+                };
+
+                radarChart.on('click', handleClick);
+
+                window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
+                    radarChart.dispose();
+                    radarChart = echarts.init(radarChartDom, event.matches ? 'dark' : 'light');
+                    chartOptions.backgroundColor = event.matches ? '#333' : 'transparent';
+                    radarChart.setOption(chartOptions);
+                    radarChart.on('click', handleClick);
+                });
+            });
+        </script>
+        <div style="width: 100%">
+            <!-- Title -->
+            
+        <div style="text-align: center; font-size: 24px; font-weight: bold; margin-bottom: 10px;">
+            Years Radar Chart
+        </div>
+    
+            <!-- Radar Chart Container -->
+            <div id="radarChart-1" style="width: 100%; height: 425px; overflow-x: auto; overflow-y: auto;"></div>
+            <!-- Footer -->
+            
+        <div style="text-align: center; font-size: 12px; color: #666; margin-top: 10px; margin-bottom: 20px;">
+            Powered by <a href="https://github.com/erispyu/hexo-stats-echarts" style="color: inherit; text-decoration: none;" target="_blank">hexo-stats-echarts</a>
+        </div>
+    
+        </div>
+    
+      </div>
+      
+      
+      
+    </div>
+
+    
+    
+
+
+    
+  <div class="comments" id="disqus_thread">
+    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+  </div>
+  
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Erispyu</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="Word count total">365k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="Reading time total">5:32</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div><script color="220，220，220" opacity="0.5" zIndex="-1" count="99" src="https://cdn.jsdelivr.net/npm/canvas-nest.js@1/dist/canvas-nest.js"></script>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/algoliasearch/4.24.0/algoliasearch-lite.umd.js" integrity="sha256-b2n6oSgG4C1stMT/yc/ChGszs9EY/Mhs6oltEjQbFCQ=" crossorigin="anonymous"></script><script src="/js/third-party/search/algolia-search.js"></script>
+
+
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"erispyu-blog","count":true,"i18n":{"disqus":"disqus"}}</script>
+<script src="/js/third-party/comments/disqus.js"></script>
+
+</body>
+</html>
