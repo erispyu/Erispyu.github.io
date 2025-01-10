@@ -20,21 +20,17 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"blog.erispyu.fun","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.22.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"default"},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"algolia":{"appID":"2BILQUWIOA","apiKey":"f5aabb895c10440c28e6c77090f511eb","indexName":"github_page_erispyu","hits":{"per_page":10}}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="Hexo-Stats-ECharts  hexo-stats-echarts is a lightweight and visually stunning Hexo plugin designed to help you effortlessly visualize and analyze your blog’s statistical data. With just one line of co">
+    <meta name="description" content="Hexo-Stats-ECharts   [![NPM Version](https:&#x2F;&#x2F;img.shields.io&#x2F;npm&#x2F;v&#x2F;hexo-stats-echarts?color&#x3D;red&amp;logo&#x3D;npm&amp;style&#x3D;flat-square)](https:&#x2F;&#x2F;www.npmjs.com&#x2F;package&#x2F;hexo-stats-echarts)   [![NPM Downloads](https:">
 <meta property="og:type" content="website">
 <meta property="og:title" content="hexo-stats-echarts">
 <meta property="og:url" content="https://blog.erispyu.fun/hexo-stats-echarts/index.html">
 <meta property="og:site_name" content="Erispyu&#39;s Blog">
-<meta property="og:description" content="Hexo-Stats-ECharts  hexo-stats-echarts is a lightweight and visually stunning Hexo plugin designed to help you effortlessly visualize and analyze your blog’s statistical data. With just one line of co">
+<meta property="og:description" content="Hexo-Stats-ECharts   [![NPM Version](https:&#x2F;&#x2F;img.shields.io&#x2F;npm&#x2F;v&#x2F;hexo-stats-echarts?color&#x3D;red&amp;logo&#x3D;npm&amp;style&#x3D;flat-square)](https:&#x2F;&#x2F;www.npmjs.com&#x2F;package&#x2F;hexo-stats-echarts)   [![NPM Downloads](https:">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://img.shields.io/npm/v/hexo-stats-echarts?color=red&logo=npm&style=flat-square">
-<meta property="og:image" content="https://img.shields.io/npm/dm/hexo-stats-echarts?logo=npm&style=flat-square">
-<meta property="og:image" content="https://img.shields.io/badge/license-%20MIT-blue?style=flat-square&logo=gnu">
 <meta property="article:published_time" content="2025-01-07T17:28:32.000Z">
-<meta property="article:modified_time" content="2025-01-10T03:54:44.983Z">
+<meta property="article:modified_time" content="2025-01-10T04:19:57.180Z">
 <meta property="article:author" content="Erispyu">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://img.shields.io/npm/v/hexo-stats-echarts?color=red&logo=npm&style=flat-square">
 
 
 <link rel="canonical" href="https://blog.erispyu.fun/hexo-stats-echarts/">
@@ -234,7 +230,12 @@
       
       
       <div class="post-body">
-          <h1 id="Hexo-Stats-ECharts"><a href="#Hexo-Stats-ECharts" class="headerlink" title="Hexo-Stats-ECharts"></a>Hexo-Stats-ECharts</h1><p><span><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/hexo-stats-echarts"><img src="https://img.shields.io/npm/v/hexo-stats-echarts?color=red&logo=npm&style=flat-square" alt="NPM Version"></a></span><br><span><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/hexo-stats-echarts"><img src="https://img.shields.io/npm/dm/hexo-stats-echarts?logo=npm&style=flat-square" alt="NPM Downloads"></a></span><br><span><a target="_blank" rel="noopener" href="https://github.com/erispyu/hexo-stats-echarts/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-%20MIT-blue?style=flat-square&logo=gnu" alt="License"></a></span></p>
+          <h1 id="Hexo-Stats-ECharts"><a href="#Hexo-Stats-ECharts" class="headerlink" title="Hexo-Stats-ECharts"></a>Hexo-Stats-ECharts</h1><div style="display: flex;">
+  [![NPM Version](https://img.shields.io/npm/v/hexo-stats-echarts?color=red&logo=npm&style=flat-square)](https://www.npmjs.com/package/hexo-stats-echarts)
+  [![NPM Downloads](https://img.shields.io/npm/dm/hexo-stats-echarts?logo=npm&style=flat-square)](https://www.npmjs.com/package/hexo-stats-echarts)
+  [![License](https://img.shields.io/badge/license-%20MIT-blue?style=flat-square&logo=gnu)](https://github.com/erispyu/hexo-stats-echarts/blob/main/LICENSE)
+</div>
+
 <blockquote>
 <p><strong>hexo-stats-echarts</strong> is a lightweight and visually stunning Hexo plugin designed to help you effortlessly visualize and analyze your blog’s statistical data. With just <strong>one line of code</strong>, you can seamlessly integrate beautiful, customizable charts into <strong>any</strong> Hexo page or article.</p>
 </blockquote>
@@ -259,7 +260,7 @@
                     let heatmapChart = echarts.init(heatmapChartDom, isDarkMode ? 'dark' : 'light');
                     const cellSize = [16, 16];
 
-                    const groupedData = {"2022":[["2022-09-10",1],["2022-09-09",1]],"2023":[["2023-12-01",4],["2023-12-10",1],["2023-10-26",2],["2023-10-27",1],["2023-11-30",1],["2023-12-15",1],["2023-11-29",1],["2023-11-07",1],["2023-12-27",1],["2023-11-13",1],["2023-12-02",2],["2023-11-26",1],["2023-12-19",1],["2023-12-29",1],["2023-12-17",2],["2023-12-03",2],["2023-11-06",1],["2023-08-01",1],["2023-10-28",1],["2023-12-11",1],["2023-12-28",1],["2023-11-23",2],["2023-11-16",1],["2023-12-04",1]],"2024":[["2024-02-25",1],["2024-03-22",2],["2024-01-17",3],["2024-01-29",2],["2024-11-28",2],["2024-12-27",2],["2024-12-26",6],["2024-07-31",1],["2024-07-16",1],["2024-01-25",1],["2024-05-06",1],["2024-01-09",1],["2024-09-06",1],["2024-01-03",1],["2024-12-20",3],["2024-12-30",4],["2024-10-07",1],["2024-11-26",1],["2024-12-25",1],["2024-11-24",1],["2024-01-11",1],["2024-08-06",1],["2024-12-24",1],["2024-12-16",2],["2024-03-02",2],["2024-01-04",1],["2024-03-14",2],["2024-11-29",1],["2024-12-04",2],["2024-12-08",1],["2024-02-13",1],["2024-02-02",2],["2024-12-06",1],["2024-02-20",2],["2024-12-19",2],["2024-11-30",1],["2024-01-10",4],["2024-07-29",1],["2024-12-17",2],["2024-09-11",1],["2024-08-04",1],["2024-04-11",1],["2024-01-28",2],["2024-01-27",2],["2024-01-08",2],["2024-10-28",1],["2024-08-02",1],["2024-12-15",1],["2024-08-27",1],["2024-05-08",1],["2024-03-12",1],["2024-06-01",1],["2024-11-23",1],["2024-12-22",1],["2024-12-18",2],["2024-11-21",1],["2024-09-10",1],["2024-05-05",1],["2024-01-13",1],["2024-12-12",1],["2024-02-04",1],["2024-03-05",1]],"2025":[["2025-01-09",2],["2025-01-08",4],["2025-01-04",1],["2025-01-01",6],["2025-01-03",7],["2025-01-02",2],["2025-01-06",3],["2025-01-07",1],["2025-01-05",1]]};
+                    const groupedData = {"2022":[["2022-09-09",1],["2022-09-10",1]],"2023":[["2023-12-01",4],["2023-11-07",1],["2023-12-27",1],["2023-12-10",1],["2023-10-26",2],["2023-10-27",1],["2023-12-15",1],["2023-11-30",1],["2023-11-29",1],["2023-11-13",1],["2023-12-03",2],["2023-11-26",1],["2023-12-02",2],["2023-12-19",1],["2023-12-29",1],["2023-12-17",2],["2023-11-06",1],["2023-08-01",1],["2023-10-28",1],["2023-12-04",1],["2023-12-28",1],["2023-12-11",1],["2023-11-23",2],["2023-11-16",1]],"2024":[["2024-03-22",2],["2024-11-28",2],["2024-12-27",2],["2024-02-25",1],["2024-09-06",1],["2024-01-17",3],["2024-01-29",2],["2024-01-11",1],["2024-08-06",1],["2024-11-24",1],["2024-07-31",1],["2024-12-26",6],["2024-07-16",1],["2024-01-25",1],["2024-05-06",1],["2024-01-09",1],["2024-01-03",1],["2024-08-04",1],["2024-12-20",3],["2024-12-25",1],["2024-12-30",4],["2024-06-01",1],["2024-11-26",1],["2024-10-07",1],["2024-07-29",1],["2024-12-24",1],["2024-01-04",1],["2024-12-04",2],["2024-03-02",2],["2024-12-16",2],["2024-03-14",2],["2024-01-10",4],["2024-12-08",1],["2024-02-13",1],["2024-02-02",2],["2024-02-20",2],["2024-12-06",1],["2024-11-29",1],["2024-12-19",2],["2024-11-30",1],["2024-12-17",2],["2024-09-11",1],["2024-01-08",2],["2024-04-11",1],["2024-01-28",2],["2024-01-27",2],["2024-10-28",1],["2024-08-02",1],["2024-12-15",1],["2024-08-27",1],["2024-05-08",1],["2024-03-12",1],["2024-12-22",1],["2024-11-23",1],["2024-01-13",1],["2024-05-05",1],["2024-09-10",1],["2024-12-12",1],["2024-12-18",2],["2024-02-04",1],["2024-03-05",1],["2024-11-21",1]],"2025":[["2025-01-09",2],["2025-01-08",4],["2025-01-04",1],["2025-01-01",6],["2025-01-03",7],["2025-01-02",2],["2025-01-06",3],["2025-01-05",1],["2025-01-07",1]]};
                     const years = Object.keys(groupedData).reverse();
                     const initYear = '2025' || years[0];
 
@@ -450,7 +451,7 @@
                             itemStyle: {
                                 borderRadius: 8
                             },
-                            data: [{"name":"在读","value":46},{"name":"读完","value":23},{"name":"公众号","value":17},{"name":"读过","value":12},{"name":"文学-文学鉴赏","value":12},{"name":"上海辞书出版社","value":11},{"name":"文学-古典文学","value":10},{"name":"文学-经典作品","value":10},{"name":"历史-中国古代","value":8},{"name":"中信出版集团","value":8}],
+                            data: [{"name":"在读","value":46},{"name":"读完","value":23},{"name":"公众号","value":17},{"name":"读过","value":12},{"name":"文学-文学鉴赏","value":12},{"name":"上海辞书出版社","value":11},{"name":"文学-古典文学","value":10},{"name":"文学-经典作品","value":10},{"name":"中信出版集团","value":8},{"name":"历史-中国古代","value":8}],
                         }
                     ]
                 };
