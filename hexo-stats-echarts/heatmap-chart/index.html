@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><!-- hexo injector head_begin start --><script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script><!-- hexo injector head_begin end -->
+<head><!-- hexo injector head_begin start --><script src="https://cdn.jsdelivr.net/npm/echarts@5.6.0/dist/echarts.min.js"></script><!-- hexo injector head_begin end -->
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
@@ -155,7 +155,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">108</span>
+          <span class="site-state-item-count">154</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -166,7 +166,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">196</span>
+        <span class="site-state-item-count">259</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -257,36 +257,29 @@
             document.addEventListener('DOMContentLoaded', function() {
                 const heatmapChartDom = document.getElementById('heatmapChart-2');
                 if (heatmapChartDom) {
-                    const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-                    const backgroundColor = isDarkMode ? '#333' : 'transparent';
+                    let isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+                    if ('auto' === 'light') {
+                        isDarkMode = false;
+                    } else if ('auto' === 'dark') {
+                        isDarkMode = true;
+                    }
+                    const backgroundColor = isDarkMode ? '#333' : '#F5F5F5';
                     let heatmapChart = echarts.init(heatmapChartDom, isDarkMode ? 'dark' : 'light');
                     const cellSize = [16, 16];
 
-                    const groupedData = {"2022":[["2022-09-09",1],["2022-09-10",1]],"2023":[["2023-12-01",1]],"2024":[["2024-03-22",2],["2024-02-25",1],["2024-01-29",2],["2024-11-28",2],["2024-09-06",1],["2024-12-27",2],["2024-12-26",6],["2024-07-31",1],["2024-07-16",1],["2024-08-04",1],["2024-05-06",1],["2024-12-25",1],["2024-12-20",3],["2024-06-01",1],["2024-12-30",4],["2024-10-07",1],["2024-11-26",1],["2024-01-10",1],["2024-07-29",1],["2024-08-06",1],["2024-11-24",1],["2024-12-24",1],["2024-12-17",2],["2024-11-30",1],["2024-09-11",1],["2024-03-02",2],["2024-04-11",1],["2024-02-02",2],["2024-01-28",2],["2024-03-14",2],["2024-01-27",1],["2024-12-16",2],["2024-08-02",1],["2024-12-15",1],["2024-08-27",1],["2024-05-08",1],["2024-03-12",1],["2024-12-19",2],["2024-12-22",1],["2024-11-23",1],["2024-09-10",1],["2024-05-05",1],["2024-12-04",2],["2024-11-29",1],["2024-12-08",1],["2024-02-13",1],["2024-02-20",2],["2024-12-06",1],["2024-12-18",2],["2024-11-21",1],["2024-12-12",1],["2024-02-04",1],["2024-03-05",1]],"2025":[["2025-01-09",3],["2025-01-08",4],["2025-01-04",1],["2025-01-03",7],["2025-01-01",6],["2025-01-02",2],["2025-01-06",3],["2025-01-07",1],["2025-01-05",1]]};
+                    const groupedData = {"2022":[["2022-09-09",1],["2022-09-10",1]],"2023":[["2023-12-01",4],["2023-12-27",1],["2023-11-07",1],["2023-12-10",1],["2023-10-26",2],["2023-12-15",1],["2023-10-27",1],["2023-11-30",1],["2023-11-29",1],["2023-11-13",1],["2023-12-02",2],["2023-12-04",1],["2023-10-28",1],["2023-12-03",2],["2023-11-26",1],["2023-12-19",1],["2023-12-29",1],["2023-12-17",2],["2023-11-06",1],["2023-08-01",1],["2023-12-11",1],["2023-12-28",1],["2023-11-23",2],["2023-11-16",1]],"2024":[["2024-03-22",2],["2024-11-28",2],["2024-12-27",2],["2024-02-25",1],["2024-01-17",3],["2024-09-06",1],["2024-01-29",2],["2024-11-24",1],["2024-01-11",1],["2024-08-06",1],["2024-12-26",6],["2024-07-31",1],["2024-07-16",1],["2024-01-25",1],["2024-05-06",1],["2024-01-09",1],["2024-01-03",1],["2024-08-04",1],["2024-12-25",1],["2024-06-01",1],["2024-12-30",4],["2024-12-20",3],["2024-11-26",1],["2024-10-07",1],["2024-07-29",1],["2024-12-24",1],["2024-01-04",1],["2024-12-04",2],["2024-03-02",2],["2024-12-16",2],["2024-03-14",2],["2024-11-29",1],["2024-12-08",1],["2024-02-13",1],["2024-02-02",2],["2024-01-10",4],["2024-02-20",2],["2024-12-06",1],["2024-12-19",2],["2024-12-17",2],["2024-11-30",1],["2024-09-11",1],["2024-01-08",2],["2024-04-11",1],["2024-01-28",2],["2024-01-27",2],["2024-12-15",1],["2024-08-02",1],["2024-08-27",1],["2024-05-08",1],["2024-03-12",1],["2024-09-10",1],["2024-05-05",1],["2024-01-13",1],["2024-12-18",2],["2024-12-12",1],["2024-03-05",1],["2024-11-21",1],["2024-02-04",1],["2024-12-22",1],["2024-11-23",1]],"2025":[["2025-01-09",3],["2025-01-08",4],["2025-01-01",6],["2025-01-03",7],["2025-01-04",1],["2025-01-02",2],["2025-01-05",1],["2025-01-06",3],["2025-01-14",1]]};
                     const years = Object.keys(groupedData).reverse();
                     const initYear = '2025' || years[0];
 
-                    // Define color themes
-                    const themes = {
-                        oceanic: ['#A6D8E8', '#6FB3D2', '#4A90BF', '#2E6A8E', '#1A4461'],
-                        forest: ['#ACE7AE', '#8FD694', '#69C16D', '#549F57', '#3A7D3E'],
-                        sunset: ['#FFD1A6', '#FFA07A', '#FF6F52', '#D94A3D', '#A62B2B'],
-                        earthy: ['#E3C8A8', '#C4A076', '#A57C52', '#7A5A3A', '#4E3A28'],
-                        pastel: ['#F5D5E6', '#E8B8D0', '#D18FB8', '#A86A8E', '#7A4A61'],
-                        golden: ['#FFEBB5', '#FFD966', '#FFB74D', '#D18F4A', '#A66B2B'],
-                        berry: ['#F4C2D7', '#E88BB3', '#D94A7A', '#A62B5C', '#7A1F3D'],
-                        charcoal: ['#E0E0E0', '#9E9E9E', '#616161', '#424242', '#212121'],
-                    };
-
                     // Function to get a random theme
                     function getRandomTheme() {
-                        const themeKeys = Object.keys(themes);
+                        const themeKeys = Object.keys({"oceanic":["#A6D8E8","#6FB3D2","#4A90BF","#2E6A8E","#1A4461"],"forest":["#ACE7AE","#8FD694","#69C16D","#549F57","#3A7D3E"],"sunset":["#FFD1A6","#FFA07A","#FF6F52","#D94A3D","#A62B2B"],"earthy":["#E3C8A8","#C4A076","#A57C52","#7A5A3A","#4E3A28"],"pastel":["#F5D5E6","#E8B8D0","#D18FB8","#A86A8E","#7A4A61"],"golden":["#FFEBB5","#FFD966","#FFB74D","#D18F4A","#A66B2B"],"berry":["#F4C2D7","#E88BB3","#D94A7A","#A62B5C","#7A1F3D"],"charcoal":["#E0E0E0","#9E9E9E","#616161","#424242","#212121"]});
                         const randomKey = themeKeys[Math.floor(Math.random() * themeKeys.length)];
-                        return themes[randomKey];
+                        return {"oceanic":["#A6D8E8","#6FB3D2","#4A90BF","#2E6A8E","#1A4461"],"forest":["#ACE7AE","#8FD694","#69C16D","#549F57","#3A7D3E"],"sunset":["#FFD1A6","#FFA07A","#FF6F52","#D94A3D","#A62B2B"],"earthy":["#E3C8A8","#C4A076","#A57C52","#7A5A3A","#4E3A28"],"pastel":["#F5D5E6","#E8B8D0","#D18FB8","#A86A8E","#7A4A61"],"golden":["#FFEBB5","#FFD966","#FFB74D","#D18F4A","#A66B2B"],"berry":["#F4C2D7","#E88BB3","#D94A7A","#A62B5C","#7A1F3D"],"charcoal":["#E0E0E0","#9E9E9E","#616161","#424242","#212121"]}[randomKey];
                     }
 
-                    // Use the specified theme or default to 'random'
-                    const colors = themes['random'.toLowerCase()] || getRandomTheme();
+                    // Use the specified color theme or default to 'random'
+                    const colors = {"oceanic":["#A6D8E8","#6FB3D2","#4A90BF","#2E6A8E","#1A4461"],"forest":["#ACE7AE","#8FD694","#69C16D","#549F57","#3A7D3E"],"sunset":["#FFD1A6","#FFA07A","#FF6F52","#D94A3D","#A62B2B"],"earthy":["#E3C8A8","#C4A076","#A57C52","#7A5A3A","#4E3A28"],"pastel":["#F5D5E6","#E8B8D0","#D18FB8","#A86A8E","#7A4A61"],"golden":["#FFEBB5","#FFD966","#FFB74D","#D18F4A","#A66B2B"],"berry":["#F4C2D7","#E88BB3","#D94A7A","#A62B5C","#7A1F3D"],"charcoal":["#E0E0E0","#9E9E9E","#616161","#424242","#212121"]}['random'.toLowerCase()] || getRandomTheme();
 
                     const chartOptions = {
                         backgroundColor: backgroundColor,
@@ -380,25 +373,27 @@
                     heatmapChart.on('legendselectchanged', handleLegendSelectChanged);
                     heatmapChart.on('click', handleClick);
 
-                    // Listen for theme changes
-                    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
-                        heatmapChart.dispose();
-                        heatmapChart = echarts.init(heatmapChartDom, event.matches ? 'dark' : 'light');
-                        const newBackgroundColor = event.matches ? '#333' : 'transparent';
-                        chartOptions.backgroundColor = newBackgroundColor;
-                        chartOptions.calendar.itemStyle.color = newBackgroundColor;
-                        heatmapChart.setOption(chartOptions);
-                        
-                        // Re-select the initial year
-                        heatmapChart.dispatchAction({
-                            type: 'legendSelect',
-                            name: initYear,
+                    // Listen for scheme changes if color shceme is 'auto'
+                    if ('auto' === 'auto') {
+                        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
+                            heatmapChart.dispose();
+                            heatmapChart = echarts.init(heatmapChartDom, event.matches ? 'dark' : 'light');
+                            const newBackgroundColor = event.matches ? '#333' : '#F5F5F5';
+                            chartOptions.backgroundColor = newBackgroundColor;
+                            chartOptions.calendar.itemStyle.color = newBackgroundColor;
+                            heatmapChart.setOption(chartOptions);
+                            
+                            // Re-select the initial year
+                            heatmapChart.dispatchAction({
+                                type: 'legendSelect',
+                                name: initYear,
+                            });
+    
+                            // Reattach the event listeners
+                            heatmapChart.on('legendselectchanged', handleLegendSelectChanged);
+                            heatmapChart.on('click', handleClick);
                         });
-
-                        // Reattach the event listeners
-                        heatmapChart.on('legendselectchanged', handleLegendSelectChanged);
-                        heatmapChart.on('click', handleClick);
-                    });
+                    }
                 }
             });
         </script>
@@ -510,36 +505,29 @@
             document.addEventListener('DOMContentLoaded', function() {
                 const heatmapChartDom = document.getElementById('heatmapChart-3');
                 if (heatmapChartDom) {
-                    const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-                    const backgroundColor = isDarkMode ? '#333' : 'transparent';
+                    let isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+                    if ('auto' === 'light') {
+                        isDarkMode = false;
+                    } else if ('auto' === 'dark') {
+                        isDarkMode = true;
+                    }
+                    const backgroundColor = isDarkMode ? '#333' : '#F5F5F5';
                     let heatmapChart = echarts.init(heatmapChartDom, isDarkMode ? 'dark' : 'light');
                     const cellSize = [16, 16];
 
-                    const groupedData = {"2022":[["2022-09-09",1],["2022-09-10",1]],"2023":[["2023-12-01",1]],"2024":[["2024-03-22",2],["2024-02-25",1],["2024-01-29",2],["2024-11-28",2],["2024-09-06",1],["2024-12-27",2],["2024-12-26",6],["2024-07-31",1],["2024-07-16",1],["2024-08-04",1],["2024-05-06",1],["2024-12-25",1],["2024-12-20",3],["2024-06-01",1],["2024-12-30",4],["2024-10-07",1],["2024-11-26",1],["2024-01-10",1],["2024-07-29",1],["2024-08-06",1],["2024-11-24",1],["2024-12-24",1],["2024-12-17",2],["2024-11-30",1],["2024-09-11",1],["2024-03-02",2],["2024-04-11",1],["2024-02-02",2],["2024-01-28",2],["2024-03-14",2],["2024-01-27",1],["2024-12-16",2],["2024-08-02",1],["2024-12-15",1],["2024-08-27",1],["2024-05-08",1],["2024-03-12",1],["2024-12-19",2],["2024-12-22",1],["2024-11-23",1],["2024-09-10",1],["2024-05-05",1],["2024-12-04",2],["2024-11-29",1],["2024-12-08",1],["2024-02-13",1],["2024-02-20",2],["2024-12-06",1],["2024-12-18",2],["2024-11-21",1],["2024-12-12",1],["2024-02-04",1],["2024-03-05",1]],"2025":[["2025-01-09",3],["2025-01-08",4],["2025-01-04",1],["2025-01-03",7],["2025-01-01",6],["2025-01-02",2],["2025-01-06",3],["2025-01-07",1],["2025-01-05",1]]};
+                    const groupedData = {"2022":[["2022-09-09",1],["2022-09-10",1]],"2023":[["2023-12-01",4],["2023-12-27",1],["2023-11-07",1],["2023-12-10",1],["2023-10-26",2],["2023-12-15",1],["2023-10-27",1],["2023-11-30",1],["2023-11-29",1],["2023-11-13",1],["2023-12-02",2],["2023-12-04",1],["2023-10-28",1],["2023-12-03",2],["2023-11-26",1],["2023-12-19",1],["2023-12-29",1],["2023-12-17",2],["2023-11-06",1],["2023-08-01",1],["2023-12-11",1],["2023-12-28",1],["2023-11-23",2],["2023-11-16",1]],"2024":[["2024-03-22",2],["2024-11-28",2],["2024-12-27",2],["2024-02-25",1],["2024-01-17",3],["2024-09-06",1],["2024-01-29",2],["2024-11-24",1],["2024-01-11",1],["2024-08-06",1],["2024-12-26",6],["2024-07-31",1],["2024-07-16",1],["2024-01-25",1],["2024-05-06",1],["2024-01-09",1],["2024-01-03",1],["2024-08-04",1],["2024-12-25",1],["2024-06-01",1],["2024-12-30",4],["2024-12-20",3],["2024-11-26",1],["2024-10-07",1],["2024-07-29",1],["2024-12-24",1],["2024-01-04",1],["2024-12-04",2],["2024-03-02",2],["2024-12-16",2],["2024-03-14",2],["2024-11-29",1],["2024-12-08",1],["2024-02-13",1],["2024-02-02",2],["2024-01-10",4],["2024-02-20",2],["2024-12-06",1],["2024-12-19",2],["2024-12-17",2],["2024-11-30",1],["2024-09-11",1],["2024-01-08",2],["2024-04-11",1],["2024-01-28",2],["2024-01-27",2],["2024-12-15",1],["2024-08-02",1],["2024-08-27",1],["2024-05-08",1],["2024-03-12",1],["2024-09-10",1],["2024-05-05",1],["2024-01-13",1],["2024-12-18",2],["2024-12-12",1],["2024-03-05",1],["2024-11-21",1],["2024-02-04",1],["2024-12-22",1],["2024-11-23",1]],"2025":[["2025-01-09",3],["2025-01-08",4],["2025-01-01",6],["2025-01-03",7],["2025-01-04",1],["2025-01-02",2],["2025-01-05",1],["2025-01-06",3],["2025-01-14",1]]};
                     const years = Object.keys(groupedData).reverse();
                     const initYear = '2024' || years[0];
 
-                    // Define color themes
-                    const themes = {
-                        oceanic: ['#A6D8E8', '#6FB3D2', '#4A90BF', '#2E6A8E', '#1A4461'],
-                        forest: ['#ACE7AE', '#8FD694', '#69C16D', '#549F57', '#3A7D3E'],
-                        sunset: ['#FFD1A6', '#FFA07A', '#FF6F52', '#D94A3D', '#A62B2B'],
-                        earthy: ['#E3C8A8', '#C4A076', '#A57C52', '#7A5A3A', '#4E3A28'],
-                        pastel: ['#F5D5E6', '#E8B8D0', '#D18FB8', '#A86A8E', '#7A4A61'],
-                        golden: ['#FFEBB5', '#FFD966', '#FFB74D', '#D18F4A', '#A66B2B'],
-                        berry: ['#F4C2D7', '#E88BB3', '#D94A7A', '#A62B5C', '#7A1F3D'],
-                        charcoal: ['#E0E0E0', '#9E9E9E', '#616161', '#424242', '#212121'],
-                    };
-
                     // Function to get a random theme
                     function getRandomTheme() {
-                        const themeKeys = Object.keys(themes);
+                        const themeKeys = Object.keys({"oceanic":["#A6D8E8","#6FB3D2","#4A90BF","#2E6A8E","#1A4461"],"forest":["#ACE7AE","#8FD694","#69C16D","#549F57","#3A7D3E"],"sunset":["#FFD1A6","#FFA07A","#FF6F52","#D94A3D","#A62B2B"],"earthy":["#E3C8A8","#C4A076","#A57C52","#7A5A3A","#4E3A28"],"pastel":["#F5D5E6","#E8B8D0","#D18FB8","#A86A8E","#7A4A61"],"golden":["#FFEBB5","#FFD966","#FFB74D","#D18F4A","#A66B2B"],"berry":["#F4C2D7","#E88BB3","#D94A7A","#A62B5C","#7A1F3D"],"charcoal":["#E0E0E0","#9E9E9E","#616161","#424242","#212121"]});
                         const randomKey = themeKeys[Math.floor(Math.random() * themeKeys.length)];
-                        return themes[randomKey];
+                        return {"oceanic":["#A6D8E8","#6FB3D2","#4A90BF","#2E6A8E","#1A4461"],"forest":["#ACE7AE","#8FD694","#69C16D","#549F57","#3A7D3E"],"sunset":["#FFD1A6","#FFA07A","#FF6F52","#D94A3D","#A62B2B"],"earthy":["#E3C8A8","#C4A076","#A57C52","#7A5A3A","#4E3A28"],"pastel":["#F5D5E6","#E8B8D0","#D18FB8","#A86A8E","#7A4A61"],"golden":["#FFEBB5","#FFD966","#FFB74D","#D18F4A","#A66B2B"],"berry":["#F4C2D7","#E88BB3","#D94A7A","#A62B5C","#7A1F3D"],"charcoal":["#E0E0E0","#9E9E9E","#616161","#424242","#212121"]}[randomKey];
                     }
 
-                    // Use the specified theme or default to 'random'
-                    const colors = themes['forest'.toLowerCase()] || getRandomTheme();
+                    // Use the specified color theme or default to 'random'
+                    const colors = {"oceanic":["#A6D8E8","#6FB3D2","#4A90BF","#2E6A8E","#1A4461"],"forest":["#ACE7AE","#8FD694","#69C16D","#549F57","#3A7D3E"],"sunset":["#FFD1A6","#FFA07A","#FF6F52","#D94A3D","#A62B2B"],"earthy":["#E3C8A8","#C4A076","#A57C52","#7A5A3A","#4E3A28"],"pastel":["#F5D5E6","#E8B8D0","#D18FB8","#A86A8E","#7A4A61"],"golden":["#FFEBB5","#FFD966","#FFB74D","#D18F4A","#A66B2B"],"berry":["#F4C2D7","#E88BB3","#D94A7A","#A62B5C","#7A1F3D"],"charcoal":["#E0E0E0","#9E9E9E","#616161","#424242","#212121"]}['forest'.toLowerCase()] || getRandomTheme();
 
                     const chartOptions = {
                         backgroundColor: backgroundColor,
@@ -633,25 +621,27 @@
                     heatmapChart.on('legendselectchanged', handleLegendSelectChanged);
                     heatmapChart.on('click', handleClick);
 
-                    // Listen for theme changes
-                    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
-                        heatmapChart.dispose();
-                        heatmapChart = echarts.init(heatmapChartDom, event.matches ? 'dark' : 'light');
-                        const newBackgroundColor = event.matches ? '#333' : 'transparent';
-                        chartOptions.backgroundColor = newBackgroundColor;
-                        chartOptions.calendar.itemStyle.color = newBackgroundColor;
-                        heatmapChart.setOption(chartOptions);
-                        
-                        // Re-select the initial year
-                        heatmapChart.dispatchAction({
-                            type: 'legendSelect',
-                            name: initYear,
+                    // Listen for scheme changes if color shceme is 'auto'
+                    if ('auto' === 'auto') {
+                        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
+                            heatmapChart.dispose();
+                            heatmapChart = echarts.init(heatmapChartDom, event.matches ? 'dark' : 'light');
+                            const newBackgroundColor = event.matches ? '#333' : '#F5F5F5';
+                            chartOptions.backgroundColor = newBackgroundColor;
+                            chartOptions.calendar.itemStyle.color = newBackgroundColor;
+                            heatmapChart.setOption(chartOptions);
+                            
+                            // Re-select the initial year
+                            heatmapChart.dispatchAction({
+                                type: 'legendSelect',
+                                name: initYear,
+                            });
+    
+                            // Reattach the event listeners
+                            heatmapChart.on('legendselectchanged', handleLegendSelectChanged);
+                            heatmapChart.on('click', handleClick);
                         });
-
-                        // Reattach the event listeners
-                        heatmapChart.on('legendselectchanged', handleLegendSelectChanged);
-                        heatmapChart.on('click', handleClick);
-                    });
+                    }
                 }
             });
         </script>
@@ -678,36 +668,29 @@
             document.addEventListener('DOMContentLoaded', function() {
                 const heatmapChartDom = document.getElementById('heatmapChart-4');
                 if (heatmapChartDom) {
-                    const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-                    const backgroundColor = isDarkMode ? '#333' : 'transparent';
+                    let isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+                    if ('auto' === 'light') {
+                        isDarkMode = false;
+                    } else if ('auto' === 'dark') {
+                        isDarkMode = true;
+                    }
+                    const backgroundColor = isDarkMode ? '#333' : '#F5F5F5';
                     let heatmapChart = echarts.init(heatmapChartDom, isDarkMode ? 'dark' : 'light');
                     const cellSize = [16, 16];
 
-                    const groupedData = {"2022":[["2022-09-09",1],["2022-09-10",1]],"2023":[["2023-12-01",1]],"2024":[["2024-03-22",2],["2024-02-25",1],["2024-01-29",2],["2024-11-28",2],["2024-09-06",1],["2024-12-27",2],["2024-12-26",6],["2024-07-31",1],["2024-07-16",1],["2024-08-04",1],["2024-05-06",1],["2024-12-25",1],["2024-12-20",3],["2024-06-01",1],["2024-12-30",4],["2024-10-07",1],["2024-11-26",1],["2024-01-10",1],["2024-07-29",1],["2024-08-06",1],["2024-11-24",1],["2024-12-24",1],["2024-12-17",2],["2024-11-30",1],["2024-09-11",1],["2024-03-02",2],["2024-04-11",1],["2024-02-02",2],["2024-01-28",2],["2024-03-14",2],["2024-01-27",1],["2024-12-16",2],["2024-08-02",1],["2024-12-15",1],["2024-08-27",1],["2024-05-08",1],["2024-03-12",1],["2024-12-19",2],["2024-12-22",1],["2024-11-23",1],["2024-09-10",1],["2024-05-05",1],["2024-12-04",2],["2024-11-29",1],["2024-12-08",1],["2024-02-13",1],["2024-02-20",2],["2024-12-06",1],["2024-12-18",2],["2024-11-21",1],["2024-12-12",1],["2024-02-04",1],["2024-03-05",1]],"2025":[["2025-01-09",3],["2025-01-08",4],["2025-01-04",1],["2025-01-03",7],["2025-01-01",6],["2025-01-02",2],["2025-01-06",3],["2025-01-07",1],["2025-01-05",1]]};
+                    const groupedData = {"2022":[["2022-09-09",1],["2022-09-10",1]],"2023":[["2023-12-01",4],["2023-12-27",1],["2023-11-07",1],["2023-12-10",1],["2023-10-26",2],["2023-12-15",1],["2023-10-27",1],["2023-11-30",1],["2023-11-29",1],["2023-11-13",1],["2023-12-02",2],["2023-12-04",1],["2023-10-28",1],["2023-12-03",2],["2023-11-26",1],["2023-12-19",1],["2023-12-29",1],["2023-12-17",2],["2023-11-06",1],["2023-08-01",1],["2023-12-11",1],["2023-12-28",1],["2023-11-23",2],["2023-11-16",1]],"2024":[["2024-03-22",2],["2024-11-28",2],["2024-12-27",2],["2024-02-25",1],["2024-01-17",3],["2024-09-06",1],["2024-01-29",2],["2024-11-24",1],["2024-01-11",1],["2024-08-06",1],["2024-12-26",6],["2024-07-31",1],["2024-07-16",1],["2024-01-25",1],["2024-05-06",1],["2024-01-09",1],["2024-01-03",1],["2024-08-04",1],["2024-12-25",1],["2024-06-01",1],["2024-12-30",4],["2024-12-20",3],["2024-11-26",1],["2024-10-07",1],["2024-07-29",1],["2024-12-24",1],["2024-01-04",1],["2024-12-04",2],["2024-03-02",2],["2024-12-16",2],["2024-03-14",2],["2024-11-29",1],["2024-12-08",1],["2024-02-13",1],["2024-02-02",2],["2024-01-10",4],["2024-02-20",2],["2024-12-06",1],["2024-12-19",2],["2024-12-17",2],["2024-11-30",1],["2024-09-11",1],["2024-01-08",2],["2024-04-11",1],["2024-01-28",2],["2024-01-27",2],["2024-12-15",1],["2024-08-02",1],["2024-08-27",1],["2024-05-08",1],["2024-03-12",1],["2024-09-10",1],["2024-05-05",1],["2024-01-13",1],["2024-12-18",2],["2024-12-12",1],["2024-03-05",1],["2024-11-21",1],["2024-02-04",1],["2024-12-22",1],["2024-11-23",1]],"2025":[["2025-01-09",3],["2025-01-08",4],["2025-01-01",6],["2025-01-03",7],["2025-01-04",1],["2025-01-02",2],["2025-01-05",1],["2025-01-06",3],["2025-01-14",1]]};
                     const years = Object.keys(groupedData).reverse();
                     const initYear = '2025' || years[0];
 
-                    // Define color themes
-                    const themes = {
-                        oceanic: ['#A6D8E8', '#6FB3D2', '#4A90BF', '#2E6A8E', '#1A4461'],
-                        forest: ['#ACE7AE', '#8FD694', '#69C16D', '#549F57', '#3A7D3E'],
-                        sunset: ['#FFD1A6', '#FFA07A', '#FF6F52', '#D94A3D', '#A62B2B'],
-                        earthy: ['#E3C8A8', '#C4A076', '#A57C52', '#7A5A3A', '#4E3A28'],
-                        pastel: ['#F5D5E6', '#E8B8D0', '#D18FB8', '#A86A8E', '#7A4A61'],
-                        golden: ['#FFEBB5', '#FFD966', '#FFB74D', '#D18F4A', '#A66B2B'],
-                        berry: ['#F4C2D7', '#E88BB3', '#D94A7A', '#A62B5C', '#7A1F3D'],
-                        charcoal: ['#E0E0E0', '#9E9E9E', '#616161', '#424242', '#212121'],
-                    };
-
                     // Function to get a random theme
                     function getRandomTheme() {
-                        const themeKeys = Object.keys(themes);
+                        const themeKeys = Object.keys({"oceanic":["#A6D8E8","#6FB3D2","#4A90BF","#2E6A8E","#1A4461"],"forest":["#ACE7AE","#8FD694","#69C16D","#549F57","#3A7D3E"],"sunset":["#FFD1A6","#FFA07A","#FF6F52","#D94A3D","#A62B2B"],"earthy":["#E3C8A8","#C4A076","#A57C52","#7A5A3A","#4E3A28"],"pastel":["#F5D5E6","#E8B8D0","#D18FB8","#A86A8E","#7A4A61"],"golden":["#FFEBB5","#FFD966","#FFB74D","#D18F4A","#A66B2B"],"berry":["#F4C2D7","#E88BB3","#D94A7A","#A62B5C","#7A1F3D"],"charcoal":["#E0E0E0","#9E9E9E","#616161","#424242","#212121"]});
                         const randomKey = themeKeys[Math.floor(Math.random() * themeKeys.length)];
-                        return themes[randomKey];
+                        return {"oceanic":["#A6D8E8","#6FB3D2","#4A90BF","#2E6A8E","#1A4461"],"forest":["#ACE7AE","#8FD694","#69C16D","#549F57","#3A7D3E"],"sunset":["#FFD1A6","#FFA07A","#FF6F52","#D94A3D","#A62B2B"],"earthy":["#E3C8A8","#C4A076","#A57C52","#7A5A3A","#4E3A28"],"pastel":["#F5D5E6","#E8B8D0","#D18FB8","#A86A8E","#7A4A61"],"golden":["#FFEBB5","#FFD966","#FFB74D","#D18F4A","#A66B2B"],"berry":["#F4C2D7","#E88BB3","#D94A7A","#A62B5C","#7A1F3D"],"charcoal":["#E0E0E0","#9E9E9E","#616161","#424242","#212121"]}[randomKey];
                     }
 
-                    // Use the specified theme or default to 'random'
-                    const colors = themes['sunset'.toLowerCase()] || getRandomTheme();
+                    // Use the specified color theme or default to 'random'
+                    const colors = {"oceanic":["#A6D8E8","#6FB3D2","#4A90BF","#2E6A8E","#1A4461"],"forest":["#ACE7AE","#8FD694","#69C16D","#549F57","#3A7D3E"],"sunset":["#FFD1A6","#FFA07A","#FF6F52","#D94A3D","#A62B2B"],"earthy":["#E3C8A8","#C4A076","#A57C52","#7A5A3A","#4E3A28"],"pastel":["#F5D5E6","#E8B8D0","#D18FB8","#A86A8E","#7A4A61"],"golden":["#FFEBB5","#FFD966","#FFB74D","#D18F4A","#A66B2B"],"berry":["#F4C2D7","#E88BB3","#D94A7A","#A62B5C","#7A1F3D"],"charcoal":["#E0E0E0","#9E9E9E","#616161","#424242","#212121"]}['sunset'.toLowerCase()] || getRandomTheme();
 
                     const chartOptions = {
                         backgroundColor: backgroundColor,
@@ -801,25 +784,27 @@
                     heatmapChart.on('legendselectchanged', handleLegendSelectChanged);
                     heatmapChart.on('click', handleClick);
 
-                    // Listen for theme changes
-                    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
-                        heatmapChart.dispose();
-                        heatmapChart = echarts.init(heatmapChartDom, event.matches ? 'dark' : 'light');
-                        const newBackgroundColor = event.matches ? '#333' : 'transparent';
-                        chartOptions.backgroundColor = newBackgroundColor;
-                        chartOptions.calendar.itemStyle.color = newBackgroundColor;
-                        heatmapChart.setOption(chartOptions);
-                        
-                        // Re-select the initial year
-                        heatmapChart.dispatchAction({
-                            type: 'legendSelect',
-                            name: initYear,
+                    // Listen for scheme changes if color shceme is 'auto'
+                    if ('auto' === 'auto') {
+                        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
+                            heatmapChart.dispose();
+                            heatmapChart = echarts.init(heatmapChartDom, event.matches ? 'dark' : 'light');
+                            const newBackgroundColor = event.matches ? '#333' : '#F5F5F5';
+                            chartOptions.backgroundColor = newBackgroundColor;
+                            chartOptions.calendar.itemStyle.color = newBackgroundColor;
+                            heatmapChart.setOption(chartOptions);
+                            
+                            // Re-select the initial year
+                            heatmapChart.dispatchAction({
+                                type: 'legendSelect',
+                                name: initYear,
+                            });
+    
+                            // Reattach the event listeners
+                            heatmapChart.on('legendselectchanged', handleLegendSelectChanged);
+                            heatmapChart.on('click', handleClick);
                         });
-
-                        // Reattach the event listeners
-                        heatmapChart.on('legendselectchanged', handleLegendSelectChanged);
-                        heatmapChart.on('click', handleClick);
-                    });
+                    }
                 }
             });
         </script>
@@ -842,36 +827,29 @@
             document.addEventListener('DOMContentLoaded', function() {
                 const heatmapChartDom = document.getElementById('heatmapChart-5');
                 if (heatmapChartDom) {
-                    const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-                    const backgroundColor = isDarkMode ? '#333' : 'transparent';
+                    let isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+                    if ('auto' === 'light') {
+                        isDarkMode = false;
+                    } else if ('auto' === 'dark') {
+                        isDarkMode = true;
+                    }
+                    const backgroundColor = isDarkMode ? '#333' : '#F5F5F5';
                     let heatmapChart = echarts.init(heatmapChartDom, isDarkMode ? 'dark' : 'light');
                     const cellSize = [16, 16];
 
-                    const groupedData = {"2022":[["2022-09-09",1],["2022-09-10",1]],"2023":[["2023-12-01",1]],"2024":[["2024-03-22",2],["2024-02-25",1],["2024-01-29",2],["2024-11-28",2],["2024-09-06",1],["2024-12-27",2],["2024-12-26",6],["2024-07-31",1],["2024-07-16",1],["2024-08-04",1],["2024-05-06",1],["2024-12-25",1],["2024-12-20",3],["2024-06-01",1],["2024-12-30",4],["2024-10-07",1],["2024-11-26",1],["2024-01-10",1],["2024-07-29",1],["2024-08-06",1],["2024-11-24",1],["2024-12-24",1],["2024-12-17",2],["2024-11-30",1],["2024-09-11",1],["2024-03-02",2],["2024-04-11",1],["2024-02-02",2],["2024-01-28",2],["2024-03-14",2],["2024-01-27",1],["2024-12-16",2],["2024-08-02",1],["2024-12-15",1],["2024-08-27",1],["2024-05-08",1],["2024-03-12",1],["2024-12-19",2],["2024-12-22",1],["2024-11-23",1],["2024-09-10",1],["2024-05-05",1],["2024-12-04",2],["2024-11-29",1],["2024-12-08",1],["2024-02-13",1],["2024-02-20",2],["2024-12-06",1],["2024-12-18",2],["2024-11-21",1],["2024-12-12",1],["2024-02-04",1],["2024-03-05",1]],"2025":[["2025-01-09",3],["2025-01-08",4],["2025-01-04",1],["2025-01-03",7],["2025-01-01",6],["2025-01-02",2],["2025-01-06",3],["2025-01-07",1],["2025-01-05",1]]};
+                    const groupedData = {"2022":[["2022-09-09",1],["2022-09-10",1]],"2023":[["2023-12-01",4],["2023-12-27",1],["2023-11-07",1],["2023-12-10",1],["2023-10-26",2],["2023-12-15",1],["2023-10-27",1],["2023-11-30",1],["2023-11-29",1],["2023-11-13",1],["2023-12-02",2],["2023-12-04",1],["2023-10-28",1],["2023-12-03",2],["2023-11-26",1],["2023-12-19",1],["2023-12-29",1],["2023-12-17",2],["2023-11-06",1],["2023-08-01",1],["2023-12-11",1],["2023-12-28",1],["2023-11-23",2],["2023-11-16",1]],"2024":[["2024-03-22",2],["2024-11-28",2],["2024-12-27",2],["2024-02-25",1],["2024-01-17",3],["2024-09-06",1],["2024-01-29",2],["2024-11-24",1],["2024-01-11",1],["2024-08-06",1],["2024-12-26",6],["2024-07-31",1],["2024-07-16",1],["2024-01-25",1],["2024-05-06",1],["2024-01-09",1],["2024-01-03",1],["2024-08-04",1],["2024-12-25",1],["2024-06-01",1],["2024-12-30",4],["2024-12-20",3],["2024-11-26",1],["2024-10-07",1],["2024-07-29",1],["2024-12-24",1],["2024-01-04",1],["2024-12-04",2],["2024-03-02",2],["2024-12-16",2],["2024-03-14",2],["2024-11-29",1],["2024-12-08",1],["2024-02-13",1],["2024-02-02",2],["2024-01-10",4],["2024-02-20",2],["2024-12-06",1],["2024-12-19",2],["2024-12-17",2],["2024-11-30",1],["2024-09-11",1],["2024-01-08",2],["2024-04-11",1],["2024-01-28",2],["2024-01-27",2],["2024-12-15",1],["2024-08-02",1],["2024-08-27",1],["2024-05-08",1],["2024-03-12",1],["2024-09-10",1],["2024-05-05",1],["2024-01-13",1],["2024-12-18",2],["2024-12-12",1],["2024-03-05",1],["2024-11-21",1],["2024-02-04",1],["2024-12-22",1],["2024-11-23",1]],"2025":[["2025-01-09",3],["2025-01-08",4],["2025-01-01",6],["2025-01-03",7],["2025-01-04",1],["2025-01-02",2],["2025-01-05",1],["2025-01-06",3],["2025-01-14",1]]};
                     const years = Object.keys(groupedData).reverse();
                     const initYear = '2025' || years[0];
 
-                    // Define color themes
-                    const themes = {
-                        oceanic: ['#A6D8E8', '#6FB3D2', '#4A90BF', '#2E6A8E', '#1A4461'],
-                        forest: ['#ACE7AE', '#8FD694', '#69C16D', '#549F57', '#3A7D3E'],
-                        sunset: ['#FFD1A6', '#FFA07A', '#FF6F52', '#D94A3D', '#A62B2B'],
-                        earthy: ['#E3C8A8', '#C4A076', '#A57C52', '#7A5A3A', '#4E3A28'],
-                        pastel: ['#F5D5E6', '#E8B8D0', '#D18FB8', '#A86A8E', '#7A4A61'],
-                        golden: ['#FFEBB5', '#FFD966', '#FFB74D', '#D18F4A', '#A66B2B'],
-                        berry: ['#F4C2D7', '#E88BB3', '#D94A7A', '#A62B5C', '#7A1F3D'],
-                        charcoal: ['#E0E0E0', '#9E9E9E', '#616161', '#424242', '#212121'],
-                    };
-
                     // Function to get a random theme
                     function getRandomTheme() {
-                        const themeKeys = Object.keys(themes);
+                        const themeKeys = Object.keys({"oceanic":["#A6D8E8","#6FB3D2","#4A90BF","#2E6A8E","#1A4461"],"forest":["#ACE7AE","#8FD694","#69C16D","#549F57","#3A7D3E"],"sunset":["#FFD1A6","#FFA07A","#FF6F52","#D94A3D","#A62B2B"],"earthy":["#E3C8A8","#C4A076","#A57C52","#7A5A3A","#4E3A28"],"pastel":["#F5D5E6","#E8B8D0","#D18FB8","#A86A8E","#7A4A61"],"golden":["#FFEBB5","#FFD966","#FFB74D","#D18F4A","#A66B2B"],"berry":["#F4C2D7","#E88BB3","#D94A7A","#A62B5C","#7A1F3D"],"charcoal":["#E0E0E0","#9E9E9E","#616161","#424242","#212121"]});
                         const randomKey = themeKeys[Math.floor(Math.random() * themeKeys.length)];
-                        return themes[randomKey];
+                        return {"oceanic":["#A6D8E8","#6FB3D2","#4A90BF","#2E6A8E","#1A4461"],"forest":["#ACE7AE","#8FD694","#69C16D","#549F57","#3A7D3E"],"sunset":["#FFD1A6","#FFA07A","#FF6F52","#D94A3D","#A62B2B"],"earthy":["#E3C8A8","#C4A076","#A57C52","#7A5A3A","#4E3A28"],"pastel":["#F5D5E6","#E8B8D0","#D18FB8","#A86A8E","#7A4A61"],"golden":["#FFEBB5","#FFD966","#FFB74D","#D18F4A","#A66B2B"],"berry":["#F4C2D7","#E88BB3","#D94A7A","#A62B5C","#7A1F3D"],"charcoal":["#E0E0E0","#9E9E9E","#616161","#424242","#212121"]}[randomKey];
                     }
 
-                    // Use the specified theme or default to 'random'
-                    const colors = themes['charcoal'.toLowerCase()] || getRandomTheme();
+                    // Use the specified color theme or default to 'random'
+                    const colors = {"oceanic":["#A6D8E8","#6FB3D2","#4A90BF","#2E6A8E","#1A4461"],"forest":["#ACE7AE","#8FD694","#69C16D","#549F57","#3A7D3E"],"sunset":["#FFD1A6","#FFA07A","#FF6F52","#D94A3D","#A62B2B"],"earthy":["#E3C8A8","#C4A076","#A57C52","#7A5A3A","#4E3A28"],"pastel":["#F5D5E6","#E8B8D0","#D18FB8","#A86A8E","#7A4A61"],"golden":["#FFEBB5","#FFD966","#FFB74D","#D18F4A","#A66B2B"],"berry":["#F4C2D7","#E88BB3","#D94A7A","#A62B5C","#7A1F3D"],"charcoal":["#E0E0E0","#9E9E9E","#616161","#424242","#212121"]}['charcoal'.toLowerCase()] || getRandomTheme();
 
                     const chartOptions = {
                         backgroundColor: backgroundColor,
@@ -965,25 +943,27 @@
                     heatmapChart.on('legendselectchanged', handleLegendSelectChanged);
                     heatmapChart.on('click', handleClick);
 
-                    // Listen for theme changes
-                    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
-                        heatmapChart.dispose();
-                        heatmapChart = echarts.init(heatmapChartDom, event.matches ? 'dark' : 'light');
-                        const newBackgroundColor = event.matches ? '#333' : 'transparent';
-                        chartOptions.backgroundColor = newBackgroundColor;
-                        chartOptions.calendar.itemStyle.color = newBackgroundColor;
-                        heatmapChart.setOption(chartOptions);
-                        
-                        // Re-select the initial year
-                        heatmapChart.dispatchAction({
-                            type: 'legendSelect',
-                            name: initYear,
+                    // Listen for scheme changes if color shceme is 'auto'
+                    if ('auto' === 'auto') {
+                        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
+                            heatmapChart.dispose();
+                            heatmapChart = echarts.init(heatmapChartDom, event.matches ? 'dark' : 'light');
+                            const newBackgroundColor = event.matches ? '#333' : '#F5F5F5';
+                            chartOptions.backgroundColor = newBackgroundColor;
+                            chartOptions.calendar.itemStyle.color = newBackgroundColor;
+                            heatmapChart.setOption(chartOptions);
+                            
+                            // Re-select the initial year
+                            heatmapChart.dispatchAction({
+                                type: 'legendSelect',
+                                name: initYear,
+                            });
+    
+                            // Reattach the event listeners
+                            heatmapChart.on('legendselectchanged', handleLegendSelectChanged);
+                            heatmapChart.on('click', handleClick);
                         });
-
-                        // Reattach the event listeners
-                        heatmapChart.on('legendselectchanged', handleLegendSelectChanged);
-                        heatmapChart.on('click', handleClick);
-                    });
+                    }
                 }
             });
         </script>
@@ -1010,36 +990,29 @@
             document.addEventListener('DOMContentLoaded', function() {
                 const heatmapChartDom = document.getElementById('heatmapChart-6');
                 if (heatmapChartDom) {
-                    const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-                    const backgroundColor = isDarkMode ? '#333' : 'transparent';
+                    let isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+                    if ('auto' === 'light') {
+                        isDarkMode = false;
+                    } else if ('auto' === 'dark') {
+                        isDarkMode = true;
+                    }
+                    const backgroundColor = isDarkMode ? '#333' : '#F5F5F5';
                     let heatmapChart = echarts.init(heatmapChartDom, isDarkMode ? 'dark' : 'light');
                     const cellSize = [16, 16];
 
-                    const groupedData = {"2022":[["2022-09-09",1],["2022-09-10",1]],"2023":[["2023-12-01",1]],"2024":[["2024-03-22",2],["2024-02-25",1],["2024-01-29",2],["2024-11-28",2],["2024-09-06",1],["2024-12-27",2],["2024-12-26",6],["2024-07-31",1],["2024-07-16",1],["2024-08-04",1],["2024-05-06",1],["2024-12-25",1],["2024-12-20",3],["2024-06-01",1],["2024-12-30",4],["2024-10-07",1],["2024-11-26",1],["2024-01-10",1],["2024-07-29",1],["2024-08-06",1],["2024-11-24",1],["2024-12-24",1],["2024-12-17",2],["2024-11-30",1],["2024-09-11",1],["2024-03-02",2],["2024-04-11",1],["2024-02-02",2],["2024-01-28",2],["2024-03-14",2],["2024-01-27",1],["2024-12-16",2],["2024-08-02",1],["2024-12-15",1],["2024-08-27",1],["2024-05-08",1],["2024-03-12",1],["2024-12-19",2],["2024-12-22",1],["2024-11-23",1],["2024-09-10",1],["2024-05-05",1],["2024-12-04",2],["2024-11-29",1],["2024-12-08",1],["2024-02-13",1],["2024-02-20",2],["2024-12-06",1],["2024-12-18",2],["2024-11-21",1],["2024-12-12",1],["2024-02-04",1],["2024-03-05",1]],"2025":[["2025-01-09",3],["2025-01-08",4],["2025-01-04",1],["2025-01-03",7],["2025-01-01",6],["2025-01-02",2],["2025-01-06",3],["2025-01-07",1],["2025-01-05",1]]};
+                    const groupedData = {"2022":[["2022-09-09",1],["2022-09-10",1]],"2023":[["2023-12-01",4],["2023-12-27",1],["2023-11-07",1],["2023-12-10",1],["2023-10-26",2],["2023-12-15",1],["2023-10-27",1],["2023-11-30",1],["2023-11-29",1],["2023-11-13",1],["2023-12-02",2],["2023-12-04",1],["2023-10-28",1],["2023-12-03",2],["2023-11-26",1],["2023-12-19",1],["2023-12-29",1],["2023-12-17",2],["2023-11-06",1],["2023-08-01",1],["2023-12-11",1],["2023-12-28",1],["2023-11-23",2],["2023-11-16",1]],"2024":[["2024-03-22",2],["2024-11-28",2],["2024-12-27",2],["2024-02-25",1],["2024-01-17",3],["2024-09-06",1],["2024-01-29",2],["2024-11-24",1],["2024-01-11",1],["2024-08-06",1],["2024-12-26",6],["2024-07-31",1],["2024-07-16",1],["2024-01-25",1],["2024-05-06",1],["2024-01-09",1],["2024-01-03",1],["2024-08-04",1],["2024-12-25",1],["2024-06-01",1],["2024-12-30",4],["2024-12-20",3],["2024-11-26",1],["2024-10-07",1],["2024-07-29",1],["2024-12-24",1],["2024-01-04",1],["2024-12-04",2],["2024-03-02",2],["2024-12-16",2],["2024-03-14",2],["2024-11-29",1],["2024-12-08",1],["2024-02-13",1],["2024-02-02",2],["2024-01-10",4],["2024-02-20",2],["2024-12-06",1],["2024-12-19",2],["2024-12-17",2],["2024-11-30",1],["2024-09-11",1],["2024-01-08",2],["2024-04-11",1],["2024-01-28",2],["2024-01-27",2],["2024-12-15",1],["2024-08-02",1],["2024-08-27",1],["2024-05-08",1],["2024-03-12",1],["2024-09-10",1],["2024-05-05",1],["2024-01-13",1],["2024-12-18",2],["2024-12-12",1],["2024-03-05",1],["2024-11-21",1],["2024-02-04",1],["2024-12-22",1],["2024-11-23",1]],"2025":[["2025-01-09",3],["2025-01-08",4],["2025-01-01",6],["2025-01-03",7],["2025-01-04",1],["2025-01-02",2],["2025-01-05",1],["2025-01-06",3],["2025-01-14",1]]};
                     const years = Object.keys(groupedData).reverse();
                     const initYear = '2025' || years[0];
 
-                    // Define color themes
-                    const themes = {
-                        oceanic: ['#A6D8E8', '#6FB3D2', '#4A90BF', '#2E6A8E', '#1A4461'],
-                        forest: ['#ACE7AE', '#8FD694', '#69C16D', '#549F57', '#3A7D3E'],
-                        sunset: ['#FFD1A6', '#FFA07A', '#FF6F52', '#D94A3D', '#A62B2B'],
-                        earthy: ['#E3C8A8', '#C4A076', '#A57C52', '#7A5A3A', '#4E3A28'],
-                        pastel: ['#F5D5E6', '#E8B8D0', '#D18FB8', '#A86A8E', '#7A4A61'],
-                        golden: ['#FFEBB5', '#FFD966', '#FFB74D', '#D18F4A', '#A66B2B'],
-                        berry: ['#F4C2D7', '#E88BB3', '#D94A7A', '#A62B5C', '#7A1F3D'],
-                        charcoal: ['#E0E0E0', '#9E9E9E', '#616161', '#424242', '#212121'],
-                    };
-
                     // Function to get a random theme
                     function getRandomTheme() {
-                        const themeKeys = Object.keys(themes);
+                        const themeKeys = Object.keys({"oceanic":["#A6D8E8","#6FB3D2","#4A90BF","#2E6A8E","#1A4461"],"forest":["#ACE7AE","#8FD694","#69C16D","#549F57","#3A7D3E"],"sunset":["#FFD1A6","#FFA07A","#FF6F52","#D94A3D","#A62B2B"],"earthy":["#E3C8A8","#C4A076","#A57C52","#7A5A3A","#4E3A28"],"pastel":["#F5D5E6","#E8B8D0","#D18FB8","#A86A8E","#7A4A61"],"golden":["#FFEBB5","#FFD966","#FFB74D","#D18F4A","#A66B2B"],"berry":["#F4C2D7","#E88BB3","#D94A7A","#A62B5C","#7A1F3D"],"charcoal":["#E0E0E0","#9E9E9E","#616161","#424242","#212121"]});
                         const randomKey = themeKeys[Math.floor(Math.random() * themeKeys.length)];
-                        return themes[randomKey];
+                        return {"oceanic":["#A6D8E8","#6FB3D2","#4A90BF","#2E6A8E","#1A4461"],"forest":["#ACE7AE","#8FD694","#69C16D","#549F57","#3A7D3E"],"sunset":["#FFD1A6","#FFA07A","#FF6F52","#D94A3D","#A62B2B"],"earthy":["#E3C8A8","#C4A076","#A57C52","#7A5A3A","#4E3A28"],"pastel":["#F5D5E6","#E8B8D0","#D18FB8","#A86A8E","#7A4A61"],"golden":["#FFEBB5","#FFD966","#FFB74D","#D18F4A","#A66B2B"],"berry":["#F4C2D7","#E88BB3","#D94A7A","#A62B5C","#7A1F3D"],"charcoal":["#E0E0E0","#9E9E9E","#616161","#424242","#212121"]}[randomKey];
                     }
 
-                    // Use the specified theme or default to 'random'
-                    const colors = themes['unknown'.toLowerCase()] || getRandomTheme();
+                    // Use the specified color theme or default to 'random'
+                    const colors = {"oceanic":["#A6D8E8","#6FB3D2","#4A90BF","#2E6A8E","#1A4461"],"forest":["#ACE7AE","#8FD694","#69C16D","#549F57","#3A7D3E"],"sunset":["#FFD1A6","#FFA07A","#FF6F52","#D94A3D","#A62B2B"],"earthy":["#E3C8A8","#C4A076","#A57C52","#7A5A3A","#4E3A28"],"pastel":["#F5D5E6","#E8B8D0","#D18FB8","#A86A8E","#7A4A61"],"golden":["#FFEBB5","#FFD966","#FFB74D","#D18F4A","#A66B2B"],"berry":["#F4C2D7","#E88BB3","#D94A7A","#A62B5C","#7A1F3D"],"charcoal":["#E0E0E0","#9E9E9E","#616161","#424242","#212121"]}['unknown'.toLowerCase()] || getRandomTheme();
 
                     const chartOptions = {
                         backgroundColor: backgroundColor,
@@ -1133,25 +1106,27 @@
                     heatmapChart.on('legendselectchanged', handleLegendSelectChanged);
                     heatmapChart.on('click', handleClick);
 
-                    // Listen for theme changes
-                    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
-                        heatmapChart.dispose();
-                        heatmapChart = echarts.init(heatmapChartDom, event.matches ? 'dark' : 'light');
-                        const newBackgroundColor = event.matches ? '#333' : 'transparent';
-                        chartOptions.backgroundColor = newBackgroundColor;
-                        chartOptions.calendar.itemStyle.color = newBackgroundColor;
-                        heatmapChart.setOption(chartOptions);
-                        
-                        // Re-select the initial year
-                        heatmapChart.dispatchAction({
-                            type: 'legendSelect',
-                            name: initYear,
+                    // Listen for scheme changes if color shceme is 'auto'
+                    if ('auto' === 'auto') {
+                        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
+                            heatmapChart.dispose();
+                            heatmapChart = echarts.init(heatmapChartDom, event.matches ? 'dark' : 'light');
+                            const newBackgroundColor = event.matches ? '#333' : '#F5F5F5';
+                            chartOptions.backgroundColor = newBackgroundColor;
+                            chartOptions.calendar.itemStyle.color = newBackgroundColor;
+                            heatmapChart.setOption(chartOptions);
+                            
+                            // Re-select the initial year
+                            heatmapChart.dispatchAction({
+                                type: 'legendSelect',
+                                name: initYear,
+                            });
+    
+                            // Reattach the event listeners
+                            heatmapChart.on('legendselectchanged', handleLegendSelectChanged);
+                            heatmapChart.on('click', handleClick);
                         });
-
-                        // Reattach the event listeners
-                        heatmapChart.on('legendselectchanged', handleLegendSelectChanged);
-                        heatmapChart.on('click', handleClick);
-                    });
+                    }
                 }
             });
         </script>
@@ -1210,13 +1185,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="Word count total">365k</span>
+    <span title="Word count total">465k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">5:32</span>
+    <span title="Reading time total">7:03</span>
   </span>
 </div>
 <div class="busuanzi-count">
